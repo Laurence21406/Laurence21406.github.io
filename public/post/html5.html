@@ -3,195 +3,137 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML5</title>
-    <link rel="shortcut icon" href="../imag/favicon.ico"><!--favicon.io-->
-
+    <link rel="shortcut icon" href="../imag/favicon.ico">
   </head>
   
-  <!--this is comment-->
   <body>
-    <!--在网页中HTML专门用来负责网页的结构，关注标签的语义，而不是样式-->
-    <!--
-	网页分成三个部分:
-	结构(HTML)
-	表现(CSS)： 网页实际上是个多层结构，通过CSS可以分别为网页的每一个层来设置样式
-	行为(JavaScript)
-      -->
-    <!--導航欄-->
-    <nav>
-      <a href="https://techbrood.com/en/tagsref/">Tags</a> |
-      <a href="https://techbrood.com/en/cssref/">Cssref</a> |
-      <a href="https://techbrood.com/en/jsref/">Jsref</a> |
-      <a href="https://techbrood.com">Techbrood</a>
-    </nav>
-
+    
+    <header>
+      <h1>City Gallery</h1>
+    </header>
+    
+    <time datetime="2021-12-12">12/12/2021</time>
     
     
-    <h1 id="head1">head1 head1 head1 </h1>
-    <h2>head2 head2 head2</h2>
-    <p>hell world, I feel good</p>
-
+    <h2 id="head2">head2 head2 head2 </h2>
+    <p>hello world, I feel good &#128512;</p>
     <p>I'm <mark>Tom cat</mark>,do you like <strong>Tom</strong> and <em>Jerry</em></p>
-
-    <h3>head5 head5 head5</h3>
     <p>I've readed a lot of books about Linux and C/C++.</p>
+    <p>Please press <kbd>F5</kbd> to resfash this page.</p>
     
-    <p>
-      <ruby>
-        &#28450;
-        <rt> &#12559;&#12578;&#715; </rt>
-      </ruby>
-    </p>
+    <h3>link link link</h3>
+    <picture>
+      <img src="../imag/books.png" alt="I love books" title="Books about C++" width="700" height="400" />
+      <figcaption>Fig.1 - Another picture about picture.</figcaption>
+    </picture>
+    <strong>Note:</strong> The  <a href="https://calibre-ebook.com" target="_blank">Calibre</a> is a cross-platform software.<!-- _blank在新標籤中打開-->
 
-    <p>
-      Please press <kbd>F5</kbd> to resfash this page.
-    </p>
+    <h3>錨鏈接 錨鏈接 錨鏈接</h3>
+    <p><a href="html5.html#head2">回到開頭</a></p>
     
+    <h3>
+      <p>
+      </p>
+    </h3>
+    <h3>List Learning</h3>
 
+    <ol>
+      <li>C</li>
+      <li>C++</li>
+      <li>Linux</li>
+    </ol>
+    <!--水平線標籤-->
+    <hr/>
 
-<h3>link link link</h3>
-<picture>
-  <img src="../imag/books.png" alt="I love books" title="Books about C++" width="700" height="400" />
-  <figcaption>Fig.1 - Another picture about picture.</figcaption>
-</picture>
-<strong>Note:</strong> The  <a href="https://calibre-ebook.com" target="_blank">Calibre</a> is a cross-platform software.<!-- _blank在新標籤中打開-->
-
-<!-- <h3>video</h3> -->
-<!-- <audio controls> -->
-<!--   <source src="../audio/A-Place-Nearby.flac" type="autdio/mpeg"> -->
-<!-- <audio>   -->
+    <ul>
+      <li>C</li>
+      <li>C++</li>
+      <li>Linux</li>
+    </ul>
+    <hr/>
+    <dl>
+      <dt>學科</dt>
+      <dd>C</dd>
+      <dd>C++</dd>
+      <dd>Linux</dd>
       
-      
-    
-<h3>錨鏈接 錨鏈接 錨鏈接</h3>
-<p>
-  <a href="html5.html#head1">回到開頭</a>
-</p>
+      <dt>位置</dt>
+      <dd>深圳</dd>
+      <dd>上海</dd>
+      <dd>蘇州</dd>
 
-<h3>
-  <p>
+    </dl>
+
+    <h3>表格</h3>
+    <!--
+	基本結構：
+	單元格
+	行 tr
+	列 td
+	跨行
+	跨列
+      -->
+    <table border="1px">
+      <caption>表格說明</caption>
+      <tr>
+	<td>1-1</td>
+	<td>1-2</td>
+	<td>1-3</td>
+      </tr>
+
+      <tr>
+	<td>2-1</td>
+	<td>2-2</td>
+	<td>2-3</td>
+      </tr>
+
+      <tr>
+	<td>3-1</td>
+	<td>3-2</td>
+	<td>3-3</td>
+      </tr>
+    </table>
+
+    <!--
+	頁面結構分析：
+	header: 
+	footer:
+	section: Web頁面列和一塊獨立區域
+	article: 獨立和文章內容
+	aside: 相關內容(常用與側邊欄)
+	nav: 導航輔助內容
+      -->
+    <h3>特性</h3>
+    <h4>縮寫</h4>
+    <p>
+      The <abbr title="World Health Organization">WHO</abbr> was founded in 1948. </p>
+
+    <h4>Blockquote</h4>
+    <p>
+      Jerry Lee:<br>
+      <blockquote cite="//www.worldwildlife.org/who/index">
+	For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization,WWF works in <em>100 countries</em> and is supported by 1.2 million members in <u>the United States</u> and <del>close to 5 million globally</del>.
+      </blockquote> 
     </p>
-</h3>
-<h3>列表學習</h3>
-<!--有序列表-->
-<ol>
-  <li>C</li>
-  <li>C++</li>
-  <li>Linux</li>
-</ol>
-<!--水平線標籤-->
-<hr/>
-<!--無序列表
-    應用範圍： 導航，側邊欄
-  -->
-<ul>
-  <li>C</li>
-  <li>C++</li>
-  <li>Linux</li>
-</ul>
-<hr/>
-<!--自定義列表
-    dl: 標籤
-    dt: 列表名稱
-    dd: 列表內容
-    應用： 公司網站底部
-  -->
-<dl>
-  <dt>學科</dt>
-  <dd>C</dd>
-  <dd>C++</dd>
-  <dd>Linux</dd>
-  
-  <dt>位置</dt>
-  <dd>深圳</dd>
-  <dd>上海</dd>
-  <dd>蘇州</dd>
 
-</dl>
-
-<h3>表格</h3>
-<!--
-    基本結構：
-    單元格
-    行 tr
-    列 td
-    跨行
-    跨列
-  -->
-<table border="1px">
-  <caption>表格說明</caption>
-  <tr>
-    <td>1-1</td>
-    <td>1-2</td>
-    <td>1-3</td>
-  </tr>
-
-  <tr>
-    <td>2-1</td>
-    <td>2-2</td>
-    <td>2-3</td>
-  </tr>
-
-  <tr>
-    <td>3-1</td>
-    <td>3-2</td>
-    <td>3-3</td>
-  </tr>
-</table>
-
-
-<!-- <h3>視頻和音頻</h3> -->
-<!-- <video src="screen.flv" control> </video> -->
-<!-- <audio src= "hh.mp4" control autoplay></audio> -->
-
-<!--
-    頁面結構分析：
-    header: 
-    footer:
-    section: Web頁面列和一塊獨立區域
-    article: 獨立和文章內容
-    aside: 相關內容(常用與側邊欄)
-    nav: 導航輔助內容
-  -->
-<h3>特性</h3>
-<h4>縮寫</h4>
-<p>
-  The <abbr title="World Health Organization">WHO</abbr> was founded in 1948. </p>
-
-
-<h4>Blockquote</h4>
-<p>
-  Jerry Lee:<br>
-  <blockquote cite="//www.worldwildlife.org/who/index">
-    For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization,WWF works in <em>100 countries</em> and is supported by 1.2 million members in <u>the United States</u> and <del>close to 5 million globally</del>.
-  </blockquote> 
-</p>
-
-
-<article>
-  <header>
-    <h1>Most important heading here</h1>
-    <h3>Less important heading here</h3>
-    <p>Some additional information here.</p>
-  </header>
-  <p>Lorem Ipsum dolor set amet....</p>
-</article>
+    <h4>Address</h4>
+    <p>
+      <address>
+	Written by <a href="mailto:2473743@qq.com">Jon Doe</a>.<br>
+	Visit us at:<br>
+	Example.com<br>
+	Box 564, Disneyland<br>
+	USA
+      </address>
+    </p>
 
 
 
-<h4>Address</h4>
-<p>
-  <address>
-    Written by <a href="mailto:2473743@qq.com">Jon Doe</a>.<br>
-    Visit us at:<br>
-    Example.com<br>
-    Box 564, Disneyland<br>
-    USA
-  </address>
-</p>
+    <footer>
+      <small>Copyright &copy; <a href="mailto:2473743@qq.com">Hege Refsnes</a> 2021<br>
+	Please feel free to reuse or share stuff under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution</a>  license unless otherwise noted. 
+    </footer>
 
-
-<h4>Footer</h4>
-<p>Posted by: Hege Refsnes</p>
-<p>Contact information:<a href="mailto:someone@example.com">someone@example.com</a></p>
-</body>
+    
+  </body>
 </html>
