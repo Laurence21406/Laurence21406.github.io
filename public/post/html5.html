@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html> 
   <head>
     <meta charset="UTF-8">
     <title>HTML5</title>
     <link rel="shortcut icon" href="../imag/favicon.ico">
+    <!-- <link rel="stylesheet" href="../css/test.css" type="text/css">   -->
   </head>
   
   <body>
@@ -14,28 +15,24 @@
 
     <div>Date: <time>2021-12-12</time>. Last updated: <time>2021-12-13</time>.</div>
     
-    <h2 id="head2">head2 head2 head2 </h2>
+    <h2 id="head2">head2</h2>
     <p>hello world, I feel good &#128512;</p>
     <p>I'm <mark>Tom cat</mark>,do you like <strong>Tom</strong> and <em>Jerry</em></p>
     <p>I've readed a lot of books about Linux and C/C++.</p>
     <p>Please press <kbd>F5</kbd> to resfash this page.</p>
     
-    <h3>link link link</h3>
+    <h3>link</h3>
     <picture>
       <img src="../imag/books.png" alt="I love books" title="Books about C++" width="700" height="400" />
       <figcaption>Fig.1 - Another picture about picture.</figcaption>
     </picture>
-    <strong>Note:</strong> The  <a href="https://calibre-ebook.com" target="_blank">Calibre</a> is a cross-platform software.<!-- _blank在新標籤中打開-->
+    <!-- _blank在新標籤中打開-->
+    <strong>Note:</strong> The  <a href="../post/assembly_programming.html" target="_blank">Calibre</a> is a cross-platform software.
 
-    <h3>錨鏈接 錨鏈接 錨鏈接</h3>
-    <p><a href="#head2">回到開頭</a></p>
+    <h3>Anchor</h3>
+    <p><a href="#head2">back to begin</a></p>
     
-    <h3>
-      <p>
-      </p>
-    </h3>
     <h3>List Learning</h3>
-
     <ol>
       <li>C</li>
       <li>C++</li>
@@ -50,47 +47,56 @@
       <li>Linux</li>
     </ul>
     <hr/>
+    
+    <!--自定义列表-->
     <dl>
-      <dt>學科</dt>
+      <dt>學科</dt> <!--自定义列表主题-->
       <dd>C</dd>
       <dd>C++</dd>
       <dd>Linux</dd>
       
-      <dt>位置</dt>
+      <dt>位置</dt><!--自定义列表主题-->
       <dd>深圳</dd>
       <dd>上海</dd>
       <dd>蘇州</dd>
-
     </dl>
 
     <h3>表格</h3>
-    <!--
-	基本結構：
-	單元格
-	行 tr
-	列 td
-	跨行
-	跨列
-      -->
+    
     <table border="1px">
       <caption>表格說明</caption>
-      <tr>
-	<td>1-1</td>
-	<td>1-2</td>
-	<td>1-3</td>
-      </tr>
+      <thead>
+	<tr>             <!-- 表格行 -->
+	  <td>1-1</td>
+	  <td>1-2</td>
+	  <td>1-3</td>
+	  <td>1-4</td>
+	</tr>
+      </thead>
 
-      <tr>
-	<td>2-1</td>
-	<td>2-2</td>
-	<td>2-3</td>
-      </tr>
+      <tbody>
+	<tr>
+	  <td>2-1</td>
+	  <td rowspan="2">2-2</td> <!-- 跨行合并 -->
+	  <td>2-3</td>
+	  <td>2-4</td>
+	</tr>
+	
+	<tr>
+	  <td>3-1</td>
+	  <td>3-3</td>
+	  <td>3-4</td>
+	</tr>
+      </tbody>
 
-      <tr>
-	<td>3-1</td>
-	<td>3-2</td>
-	<td>3-3</td>
-      </tr>
+      <tfoot>
+	<tr>             <!-- 表格行 -->
+	  <td>4-1</td>
+	  <td>4-2</td>
+	  <td colspan="2">4-3</td> <!-- 跨列合并 -->
+	 
+	</tr>
+      </tfoot>
     </table>
 
     <!--
@@ -110,7 +116,7 @@
     <h4>Blockquote</h4>
     <p>
       Jerry Lee:<br>
-      <blockquote cite="//www.worldwildlife.org/who/index">
+      <blockquote cite="//www.worldwildlife.org/who/index"> 
 	For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization,WWF works in <em>100 countries</em> and is supported by 1.2 million members in <u>the United States</u> and <del>close to 5 million globally</del>.
       </blockquote> 
     </p>
