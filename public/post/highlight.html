@@ -7,18 +7,23 @@
 
     <link rel="stylesheet" href="../highlight/styles/default.min.css">
     <script src="../highlight/highlight.min.js"></script>
+    <!-- <script src="../line_number/src/highlightjs-line-numbers.js"></script> -->
     <script>hljs.highlightAll();</script>
-    
+    <!-- <script>hljs.initLineNumbersOnLoad();</script> -->
   </head>
+  
   <body>
+    <header>
+      <h1>Hello World!</h1>
+    </header>
     
-    <h1>Hello World!</h1>
+    <div>Date: <time>2022-2-13</time>. Last updated: <time>2021-2-13</time>.</div>
     
     <pre><code class="language-c">
-	#include <stdio.h>
-	  #include <stdlib.h>
-	    #include <sys/types.h>
-#include <unistd.h>
+#include &lt stdio.h &gt
+#include &ltstdlib.h&gt
+#include &ltsys/types.h&gt
+#include &ltunistd.h&gt
 
 int main(int argc, char *argv[])
 {
@@ -41,8 +46,9 @@ int main(int argc, char *argv[])
 
   return 0;
 }
-	    
-      </code></pre>
+
+  			  
+    </code></pre>
     
     
   </body>
