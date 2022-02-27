@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>HTML5</title>
+    <title>GDB</title>
     <link rel="shortcut icon" href="../imag/favicon.ico">
   </head>
   
@@ -12,8 +12,94 @@
       <h1>GDB</h1>
     </header>
     
-    <div>Date: <time>2021-12-14</time>. Last updated: <time>2021-12-14</time>.</div>
-    
+    <div>Date: <time>2021-12-14</time>. Last updated: <time>2021-12-26</time>.</div>
+    <section>
+      <h1>GDB调试入门</h1>
+      <h2>启动调试</h2>
+      <p>
+	<ol>
+	  <li>
+	    启动调试并传入参数：<br />
+	    <ul>
+	      <li>gdb --args &lt exe &gt arg1 arg2 "arg3 agr4"</li>
+	      <li>set args &lt args &gt</li>
+	      <li>run &lt args &gt</li>
+	    </ul>
+	  </li>
+	
+	  <li>
+	    附加到进程： <br />
+	    <small>适用于程序已经启动了</small> <br />
+	    <ul>
+	      <li>gdb attach &lt pid &gt</li>
+	      <li>gdb --pid &lt pid &gt</li>
+	    </ul>
+	  </li>
+	
+	  <li>
+	    逐过程执行： <br />
+	    <small>单步执行(step-over),遇到函数跳过函数</small>
+	    <ul>
+	      <li>next</li>
+	      <li>n</li>
+	    </ul>
+	  </li>
+
+	  <li>
+	    逐语句执行： <br />
+	    <small>单步执行(step-into),遇到函数进入函数</small>
+	    <ul>
+	      <li>step</li>
+	      <li>s</li>
+	    </ul>
+	  </li>
+
+	  <li>
+	    退出当前函数： <br />
+	    <ul>
+	      <li>finish</li>
+	    </ul>
+	  </li>
+
+	  <li>
+	    退出调试： <br />
+	    <ul>
+	      <li>detach(分离)</li>
+	      <li>quit(退出)</li>
+	      <li>q</li>
+	    </ul>
+	  </li>
+	</ol>
+      </p>
+
+      <h2>调试断点管理</h2>
+      <p>
+	<ol>
+	  <li></li>
+	  
+	  <li></li>
+	</ol>
+      </p>
+
+      
+
+      
+      <h2>breakpoints</h2>
+      <p>
+	<ul>
+	  <li>break main</li>
+	  <li>break section1.cpp:8</li>
+	  <li>run</li>
+	  <li>info breaks</li>
+	  <li>info locals</li>
+	  <li>run</li>
+	  <li>next</li>
+	  <li>print var_name</li>
+	  <li>continue</li>
+	</ul>
+      </p>
+      
+    </section>
 
 
 
