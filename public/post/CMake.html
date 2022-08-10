@@ -5,9 +5,9 @@
     <title>CMake</title>
     <link rel="shortcut icon" href="../imag/favicon.ico">
   </head>
-  
+
   <body>
-    
+
     <header>
       <h1>Learn CMake</h1>
     </header>
@@ -30,19 +30,20 @@
       </ul>
     </p>
 
-    
     <p>
 	<blockquote>
 	    Not only are there three categories of variables – normal, cache, and environment – but they also reside in different scopes,
-	    with specific rules on how one scope affects the other. 
+	    with specific rules on how one scope affects the other.
 	</blockquote>
     </p>
 
     <h2>CMake Command</h2>
     <p>
-      <em>cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1</em>
+      <em>cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1</em> <br />
+      <em>cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -D-DCMAKE_EXPORT_COMPILE_COMMANDS=ON</em> <br />
+      <em>cmake --build build/ --clean-first --parallel 10</em> <br />
     </p>
-    
+
     <h4>Address</h4>
     <p>
       <address>
@@ -56,9 +57,9 @@
 
     <footer>
       Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - 2022<br>
-      Please feel free to reuse or share stuff under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution</a>  license unless otherwise noted. 
+      Please feel free to reuse or share stuff under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution</a>  license unless otherwise noted.
     </footer>
 
-    
+
   </body>
 </html>
