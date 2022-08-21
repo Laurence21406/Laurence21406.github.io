@@ -3,15 +3,16 @@
 /*     text-align: center; */
 /* } */
 
+nav {
+    width:100%;
+    text-align: right;
+}
 body {
-    /* font-size: medium; */
-    /* font-family: sans-serif; */
-
-    /* margin-left: 500px; */
-    /* margin-right: 500px; */
-    /* border-style: dashed; */
-    /* border-radius: 15px; */
-    /* border-corlor: white */
+    /* width:1028px; */
+    /* margin: auto; */
+    /* border-radius: 5px; */
+    /* border:1px solid#bbbbbb; */
+    /* padding:15px; */
 }
 
 p {
@@ -22,10 +23,17 @@ p {
     /* text-decoration: underline; */
 }
 
-aside {
-    display: table-cell;
-    vertical-align: top;
+aside{
+    float:right;
+    width:25%;
+    margin-right: 0;
+    margin-left: 1%.
+		 padding:10px;
+    /* background-color: white;*/
+    border-radius: 5px;
+    border:1px solid#bbbbbb;
 }
+
 
 footer {
     /* text-align: center; */
