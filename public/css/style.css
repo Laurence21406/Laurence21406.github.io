@@ -22,6 +22,10 @@ p {
     /* text-decoration: underline; */
 }
 
+aside {
+    display: table-cell;
+    vertical-align: top;
+}
 
 footer {
     /* text-align: center; */
