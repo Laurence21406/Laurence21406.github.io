@@ -8,111 +8,30 @@
     <link rel="stylesheet" href="../cc-icons-cc-icons/css/cc-icons.min.css" type="text/css">
   </head>
 
-  <nav>
-    <a href="../index.html" target="_blank">HOME</a>
-    <a href="../about.html" target="_blank">ABOUT</a>
-  </nav>
 
   <body>
 
     <header>
-      <h1>GDB</h1>
+      <nav>
+	<a href="../index.html" target="_blank">HOME</a>
+	<a href="../about.html" target="_blank">ABOUT</a>
+      </nav>
     </header>
 
-    <div>Date: <time>2021-12-14</time>. Last updated: <time>2021-12-26</time>.</div>
-    <section>
-      <h1>GDB调试入门</h1>
-      <h2>启动调试</h2>
-      <p>
-	<ol>
-	  <li>
-	    启动调试并传入参数：<br />
-	    <ul>
-	      <li>gdb --args &lt exe &gt arg1 arg2 "arg3 agr4"</li>
-	      <li>set args &lt args &gt</li>
-	      <li>run &lt args &gt</li>
-	    </ul>
-	  </li>
+    <h1>GDB</h1>
+    <div>Date: <time>2021-12-14</time>. Last updated: <time>2022-08-28</time>.</div>
 
-	  <li>
-	    附加到进程： <br />
-	    <small>适用于程序已经启动了</small> <br />
-	    <ul>
-	      <li>gdb attach &lt pid &gt</li>
-	      <li>gdb --pid &lt pid &gt</li>
-	    </ul>
-	  </li>
-
-	  <li>
-	    逐过程执行： <br />
-	    <small>单步执行(step-over),遇到函数跳过函数</small>
-	    <ul>
-	      <li>next</li>
-	      <li>n</li>
-	    </ul>
-	  </li>
-
-	  <li>
-	    逐语句执行： <br />
-	    <small>单步执行(step-into),遇到函数进入函数</small>
-	    <ul>
-	      <li>step</li>
-	      <li>s</li>
-	    </ul>
-	  </li>
-
-	  <li>
-	    退出当前函数： <br />
-	    <ul>
-	      <li>finish</li>
-	    </ul>
-	  </li>
-
-	  <li>
-	    退出调试： <br />
-	    <ul>
-	      <li>detach(分离)</li>
-	      <li>quit(退出)</li>
-	      <li>q</li>
-	    </ul>
-	  </li>
-	</ol>
-      </p>
-
-      <h2>调试断点管理</h2>
-      <p>
-	<ol>
-	  <li></li>
-
-	  <li></li>
-	</ol>
-      </p>
+    <h2>backup</h2>
+    <p>
+      <em>info vtbl EXPRESSION</em>
 
 
-
-
-      <h2>breakpoints</h2>
-      <p>
-	<ul>
-	  <li>break main</li>
-	  <li>break section1.cpp:8</li>
-	  <li>run</li>
-	  <li>info breaks</li>
-	  <li>info locals</li>
-	  <li>run</li>
-	  <li>next</li>
-	  <li>print var_name</li>
-	  <li>continue</li>
-	</ul>
-      </p>
-
-    </section>
-
-
+    </p>
 
 
     <footer>
       Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
     </footer>
+
   </body>
 </html>
