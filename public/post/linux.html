@@ -29,7 +29,8 @@
     <p>
       <ol>
 	<li><em>grep -iwrn --color=auto "to_upper" /usr/include/boost/</em></li>
-	<li><em>find /usr/include/boost -name time.hpp</em></bli>
+	<li><em>find /usr/include/boost -name time.hpp --print</em></li>
+	<li><em>find /usr/include/boost -name "*.hpp" | xargs grep -irn --color=auto "test"</em></li>
       </ol>
     </p>
 
