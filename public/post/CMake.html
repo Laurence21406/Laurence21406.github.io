@@ -47,8 +47,10 @@
     <h2>CMake Command</h2>
     <p>
       <em>cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1</em> <br />
-      <em>cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -D-DCMAKE_EXPORT_COMPILE_COMMANDS=ON</em> <br />
+      <em>cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_COMPILER=/usr/bin/g++-10  -G "Unix Makefiles"</em> <br />
       <em>cmake --build build/ --clean-first --parallel 10</em> <br />
+      <em>cmake --build build/ --target "foo"</em>
+      <em>cmake --build build/ --verbose</em>
     </p>
 
     <h4>Address</h4>
