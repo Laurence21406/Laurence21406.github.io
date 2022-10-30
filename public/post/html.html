@@ -6,6 +6,17 @@
     <link rel="shortcut icon" href="../imag/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="../cc-icons-cc-icons/css/cc-icons.min.css" type="text/css">
+    <script id="MathJax-script" async src="../mathjax/tex-chtml.js"></script>
+    <style>
+      aside {
+	  width: 30%;
+	  padding-left: 15px;
+	  margin-left: 15px;
+	  float: right;
+	  font-style: italic;
+	  background-color: lightgray;
+      }
+    </style>
   </head>
 
 
@@ -25,6 +36,12 @@
       <p>hello world, I feel good &#128512;</p>
       <p>I'm <mark>Tom cat</mark>,do you like <strong>Tom</strong> and <em>Jerry</em></p>
       <p>I've <ins>readed<ins> a lot of books about <b>Linux and C/C++.</b></p>
+      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+      <aside>
+	<p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+      </aside>
+      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
       <p><del>Please press <kbd>F5</kbd> to resfash <i>this page.</i></del></p>
       <p><s>Struck-throuht text here</s></p>
       <p><sup>superscript here</sup></p>
@@ -132,6 +149,34 @@
       </blockquote>
     </p>
 
+    <h4>Math</h4>
+    <p>
+	In equation, we find the value of an
+	interesting integral:
+
+	\begin{equation}
+	\int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+	\label{eq:sample}
+	\end{equation}
+    </p>
+
+    <p>
+	\begin{equation}\begin{split}
+	H(Y|X)&=\sum_{x\in X} p(x)H(Y|X)\\
+	&=-\sum_{x\in X} p(x)\sum_{y\in Y}p(y|x)\log p(y|x)\\
+	&=-\sum_{x\in X} \sum_{y\in Y}p(y,x)\log p(y|x)
+	\end{split}\end{equation}
+    </p>
+
+    <p>
+	\begin{array}{*{20}{l}}
+	{{}_{ }^{ } \int _{ }^{ }k \text{d} x=kx+C}\\
+	{{}_{ }^{ } \int _{ }^{ }\mathop{{x}}\nolimits^{{ \mu }} \text{d} x=\frac{{\mathop{{x}}\nolimits^{{ \mu +1}}}}{{ \mu +1}}+C,{ \left( { \mu  \neq -1} \right) }}\\
+	{{}_{ }^{ } \int _{ }^{ }\frac{{1}}{{x}} \text{d} x= \text{ln} { \left| {x} \right| }+C}\\
+	{{}_{ }^{ } \int _{ }^{ }\frac{{1}}{{1+\mathop{{x}}\nolimits^{{2}}}} \text{d} x= \text{arctan} x+C}\\
+	{{}_{ }^{ } \int _{ }^{ }\frac{{1}}{{\sqrt{{1-\mathop{{x}}\nolimits^{{2}}}}}} \text{d} x= \text{arcsin} x+C}
+	\end{array}
+    </p>
     <details>
       <summary>Epcot Center</summary>
       <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
