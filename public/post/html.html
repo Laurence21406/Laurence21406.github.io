@@ -4,21 +4,56 @@
     <meta charset="UTF-8">
     <title>HTML5</title>
     <link rel="shortcut icon" href="../imag/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">    <!-- 引入外部样式表: 浏览器缓存，加快网页加载 -->
     <link rel="stylesheet" href="../cc-icons-cc-icons/css/cc-icons.min.css" type="text/css">
     <script id="MathJax-script" async src="../mathjax/tex-chtml.js"></script>
     <style>
-      aside {
-	  width: 30%;
-	  padding-left: 15px;
-	  margin-left: 15px;
-	  float: right;
-	  font-style: italic;
-	  background-color: lightgray;
-      }
+     /*
+	选择器 声明块
+	选择器： 选中页面中的指定元素
+	声明块： 指定要为元素设置样式 一个样式名对应一个样式值
+      */
+     aside {
+	 width: 30%;
+	 padding-left: 15px;
+	 margin-left: 15px;
+	 float: right;
+	 font-style: italic;
+	 background-color: lightgray;
+     }
+
+     #head2 { /* id选择器 */
+	 color: green;
+     }
+
+     .blue { /* class选择器 */
+	 color: blue;
+     }
+
+     div.red { /* 交集选择器 */
+	 font-size: 30px;
+     }
+     h1,span { /* 并集选择器 */
+	 corlor: yellow;
+     }
+     /* 属性选择器 */
+     p[title=hello] {
+	 color: orange;
+     }
+
+     h2 > p::first-letter {
+	 font-size: 50px;
+     }
+
+     /* 样式不生效 要考虑权重：
+	內联样式
+	id选择器
+	class选择器
+	元素选择器
+	继承
+      */
     </style>
   </head>
-
 
   <body>
 
@@ -33,8 +68,10 @@
     <div>Date: <time>2021-12-12</time>. Last updated: <time>2021-12-13</time>.</div>
     <section>
       <h2 id="head2">head2</h2>
-      <p>hello world, I feel good &#128512;</p>
-      <p>I'm <mark>Tom cat</mark>,do you like <strong>Tom</strong> and <em>Jerry</em></p>
+      <p class ="blue">hello world, I feel good &#128512;</p>
+      <div class="red">我是div</div>
+      <span>我是span</span>
+      <p title="hello">I'm <mark>Tom cat</mark>,do you like <strong>Tom</strong> and <em>Jerry</em></p>
       <p>I've <ins>readed<ins> a lot of books about <b>Linux and C/C++.</b></p>
       <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
       <aside>
@@ -47,17 +84,43 @@
       <p><sup>superscript here</sup></p>
 
       <h3>link</h3>
+      <!--
+	   图片：
+	   alt    图片的描述
+	   width  图片的宽度
+	   height 图片的高度
+	   注意：
+	   一般情况下，不建议修改图片的大小，需要多大的图片就裁多大
+	   但是在移动端，经常需要对图片进行缩放(大图片缩小)
+
+	   图片的格式：
+	   jpeg(jpg) 支持的颜色比较丰富，不支持动图，不支持动图 一般用来显示照片
+	   gif       支持的颜色比较少，支持简单透明，支持动图
+	   png       支持的颜色丰富，支持复杂透明，不支持动图
+	   webp      google推出,具备其他图片的所有优点，文件小，但兼容性不好
+	   base64    将图片使用base64进行编码，通过字符的形式来引入图片；
+	             一般都是一些需要和网页一起加载的图片才会使用base64
+
+	   效果一样,用小的；效果不一样，用效果好的
+
+      -->
       <picture>
-	<img src="../imag/books.png" alt="I love books" title="Books about C++" width="700" height="400" />
-	<figcaption>Fig.1 - Another picture about picture.</figcaption>
+	  <img src="../imag/books.png" alt="I love books" title="Books about C++" width="700" height="400" />
+	  <figcaption>Fig.1 - Another picture about picture.</figcaption>
       </picture>
-      <!-- _blank在新標籤中打開-->
+
+      <!-- _blank 在新標籤中打開
+	   -self  在当前页面中打开
+      -->
       <strong>Note:</strong> The  <a href="../post/assembly_programming.html" target="_blank">Calibre</a> is a cross-platform software.
     </section>
 
+
+
     <h3>Anchor</h3>
     <p>
-      <a href="#head2">back to begin</a>
+	<!-- href="#id"  -->
+      <a style="color:red;font-size: 60px" href="#head2">back to begin</a>
     </p>
 
     <h3>表格</h3>
@@ -156,6 +219,7 @@
     <!--   USA -->
     <!-- </address> -->
 
+    <a href="#">TOP</a>x
     <footer>
       Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
     </footer>
