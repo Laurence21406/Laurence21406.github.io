@@ -10,45 +10,57 @@
 	<script id="MathJax-script" async src="../node_modules/mathjax/es5/tex-chtml.js"></script>
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </head>
 
   <body>
-
     <header id="header">
-	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-	    <a href="#" class="navbar-brand" style="font-family:Cursive">HOWER CHOW</a>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	    <!-- Brand -->
+	    <a class="navbar-brand" href="#" style="font-family:Cursive;font-style:italic">HOWER CHOW</a>
 
-	    <!-- <button class="navbar-toggler" type="button" data-bs-toogle="collapse" data-bs-target="#navmenu">
-		 <span class="navbar-toggler-icon"></span>
-		 </button> -->
+	    <!-- Toggler/collapsibe Button -->
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	    </button>
 
-	    <div class="collaps navbar-collapse">
+	    <!-- Navbar links -->
+	    <div class="collapse navbar-collapse" id="collapsibleNavbar">
 		<ul class="navbar-nav ms-auto">
-		    <li class="nav-item"><a class="nav-link" href="../index.html" target="_blank">HOME</a></li>
-		    <li class="nav-item"><a class="nav-link" href="../about.html" target="_blank">ABOUT</a></li>
+		    <li class="nav-item">
+			<a class="nav-link" href="../index.html">HOME</a>
+		    </li>
+		    <li class="nav-item">
+			<a class="nav-link" href="../about.html">ABOUT</a>
+		    </li>
 		</ul>
 	    </div>
 	</nav>
     </header>
 
-    <h1 id="head1">Learn html5</h1>
-    <div>Date: <time>2021-12-12</time>. Last updated: <time>2021-12-13</time>.</div>
+    <center>
+    <h1>Learn html5</h1>
+    <div>Date: <time>2021-12-12</time>. Last updated: <time>2022-11-16</time>.</div>
+    </center>
     <section>
-      <h2 id="head2">head2</h2>
-      <p class ="blue">hello world, I feel good &#128512;</p>
-      <div class="red">我是div</div>
-      <span>我是span</span>
-      <p title="hello">I'm <mark>Tom cat</mark>,do you like <strong>Tom</strong> and <em>Jerry</em></p>
+      <h2>head2</h2>
+      <p>hello world, I feel good &#128512;</p>
+      <div>I'm div</div>
+      <span>I'm span</span>
+      <p>I'm <mark>Tom cat</mark>,do you like <strong>Tom</strong> and <em>Jerry</em></p>
       <p>I've <ins>readed<ins> a lot of books about <b>Linux and C/C++.</b></p>
-      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-      <aside>
-	<p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-      </aside>
-      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-      <p><del>Please press <kbd>F5</kbd> to resfash <i>this page.</i></del></p>
+
+	  <div>
+	      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+	      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+	      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+	  </div>
+	  <aside>
+	      <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+	  </aside>
+
+	  <p>Please press <kbd>CTRL</kbd> + <kbd>C</kbd> to resfash <i>this page.</i></p>
       <p><s>Struck-throuht text here</s></p>
-      <p><sup>superscript here</sup></p>
 
       <h3>link</h3>
       <!--
@@ -82,49 +94,32 @@
       <strong>Note:</strong> The  <a href="../post/assembly_programming.html" target="_blank">Calibre</a> is a cross-platform software.
     </section>
 
-
-
-    <h3>Anchor</h3>
-    <p>
-	<!-- href="#id"  -->
-      <a style="color:red;font-size: 60px" href="#head2">back to begin</a>
-    </p>
-
-    <h3>表格</h3>
-    <table border="1px">
-      <caption>表格說明</caption>
-      <thead>
-	<tr>             <!-- 表格行 -->
-	  <td>1-1</td>
-	  <td>1-2</td>
-	  <td>1-3</td>
-	  <td>1-4</td>
-	</tr>
-      </thead>
-
-      <tbody>
-	<tr>
-	  <td>2-1</td>
-	  <td rowspan="2">2-2</td> <!-- 跨行合并 -->
-	  <td>2-3</td>
-	  <td>2-4</td>
-	</tr>
-
-	<tr>
-	  <td>3-1</td>
-	  <td>3-3</td>
-	  <td>3-4</td>
-	</tr>
-      </tbody>
-
-      <tfoot>
-	<tr>             <!-- 表格行 -->
-	  <td>4-1</td>
-	  <td>4-2</td>
-	  <td colspan="2">4-3</td> <!-- 跨列合并 -->
-
-	</tr>
-      </tfoot>
+    <h3>table</h3>
+    <table class="table table-striped">
+	<thead>
+	    <tr>
+		<th>Firstname</th>
+		<th>Lastname</th>
+		<th>Email</th>
+	    </tr>
+	</thead>
+	<tbody>
+	    <tr>
+		<td>John</td>
+		<td>Doe</td>
+		<td>john@example.com</td>
+	    </tr>
+	    <tr>
+		<td>Mary</td>
+		<td>Moe</td>
+		<td>mary@example.com</td>
+	    </tr>
+	    <tr>
+		<td>July</td>
+		<td>Dooley</td>
+		<td>july@example.com</td>
+	    </tr>
+	</tbody>
     </table>
 
     <h4>Math</h4>
@@ -186,11 +181,12 @@
     <!--   USA -->
     <!-- </address> -->
 
-    <a href="#">TOP</a>
+    <p class="text-end">
+	<a href="#">TOP</a>
+    </p>
     <footer>
       Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
     </footer>
-
 
   </body>
 </html>
