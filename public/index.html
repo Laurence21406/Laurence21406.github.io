@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome</title>
-    <link rel="shortcut icon" href="imag/favicon.ico"><!--favicon.io-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="cc-icons-cc-icons/css/cc-icons.min.css" type="text/css">
-  </head>
+    <head>
+	<meta charset="UTF-8">
+	<title>HTTPS</title>
+	<link rel="shortcut icon" href="../imag/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="../cc-icons-cc-icons/css/cc-icons.min.css" type="text/css">
+	<script id="MathJax-script" async src="./node_modules/mathjax/es5/tex-chtml.js"></script>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+	<style>
+	 aside {
+	     width: 30%;
+	     padding-left: 15px;
+	     margin-left: 15px;
+	     float: right;
+	     font-style: italic;
+	     background-color: lightgray;
+	 }
+	</style>
+    </head>
 
 
-  <body>
-    <header>
-      <nav>
-	<a href="index.html" target="_blank">HOME</a>
-	<a href="about.html" target="_blank">ABOUT</a>
-      </nav>
-    </header>
+    <body>
 
-    <p>
-      <h2>Archive</h2>
-      <ul>
-	<li><a href="post/html.html" target="_blank">html</a></li>
-	<li><a href="post/highlight.html" target="_blank">highlight</a></li>
-	<li><a href="post/movie.html" target="_blank">Movie</a></li>
-	<li><a href="post/assembly_programming.html" target="_blank">Assembly Programming</a></li>
-	<li><a href="post/gdb.html" target="_blank">GDB</a></li>
-	<li><a href="post/c++_collection.html" target="_blank">C++ Collection</a></li>
-	<li><a href="post/git.html" target="_blank">Git Operations</a></li>
-	<li><a href="post/CMake.html" target="_blank">CMake</a></li>
-	<li><a href="post/design_pattern.html" target="_blank">Design Pattern</a></li>
-	<li><a href="post/linux.html" target="_blank">Linux Tools</a></li>
-	<li><a href="post/emacs.html" target="_blank">Emacs</a></li>
-	<li><a href="post/3GPP.html" target="_blank">3GPP</a></li>
-	<li><a href="post/https.html" target="_blank">HTTPS</a></li>
-      </ul>
-    </p>
+	<header>
+	    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="./index.html" style="font-family:Cursive;font-style:italic">HOWER CHOW</a>
 
-    <footer>
-      Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-    </footer>
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
 
-  </body>
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav ms-auto">
+			<li class="nav-item">
+			    <a class="nav-link" href="./archive.html">ARCHIVE</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="./about.html">ABOUT</a>
+			</li>
+		    </ul>
+		</div>
+	    </nav>
+	</header>
+
+
+	<center>
+	    <h1 id="head1">Learn Https</h1>
+	    <div>Date: <time>2022-11-03</time>. Last updated: <time>2022-11-03</time>.</div>
+	</center>
+
+	<section>
+	    <ul>
+		<li><a href="https://my.oschina.net/helloworldnet/blog/5587819" target="_blank">通俗大白话，彻底弄懂 https 原理本质</a></li>
+	    </ul>
+	</section>
+
+	<footer>
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
+
+    </body>
 </html>
