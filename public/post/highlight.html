@@ -8,11 +8,23 @@
     <link rel="stylesheet" href="../cc-icons/css/cc-icons.min.css" type="text/css">
 
     <!-- hightlight code -->
-    <link rel="stylesheet" href="../highlight/styles/default.min.css">
-    <script src="../highlight/highlight.min.js"></script>
-    <!-- <script src="../line_number/src/highlightjs-line-numbers.js"></script> -->
-    <script>hljs.highlightAll();</script>
-    <!-- <script>hljs.initLineNumbersOnLoad();</script> -->
+    <!-- <link rel="stylesheet" href="../highlight/styles/default.min.css">
+	 <script src="../highlight/highlight.min.js"></script>
+	 <script>hljs.highlightAll();</script> -->
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/github.css">
+    <script type="module">
+     import hljs from '../node_modules/highlight.js/lib/core.js';
+     import javascript from '../node_modules/highlight.js/lib/languages/javascript.js';
+     highlight.hljs.registerLanguage('javascript', javascript);
+
+     document.addEventListener('DOMContentLoaded', (event) => {
+	 document.querySelectorAll('pre code').forEach((el) => {
+	     highlight.hljs.highlightElement(el);
+	 });
+     });
+    </script>
+
+
   </head>
 
   <body>
@@ -28,35 +40,14 @@
 
     <div>Date: <time>2022-2-13</time>. Last updated: <time>2021-2-13</time>.</div>
 
-    <pre><code class="language-c">
-#include &ltstdio.h&gt
-#include &ltstdlib.h&gt
-#include &ltsys/types.h&gt
-#include &ltunistd.h&gt
+    <p>
+	<pre><code class="go">
+	 console.log ("hello worls");
+	 let a = 3;
+	</code></pre>
+    </p>
 
-int main(int argc, char *argv[])
-{
-  pid_t pid;
 
-  printf("[%d]Begin!\n",getpid());
-  fflush(NULL);
-  pid = fork();
-  if (pid < 0) {
-    perror("fork():");
-    exit(EXIT_FAILURE);
-  }
-
-  if (pid == 0) {
-    printf("[%d]:Child is working!\n",getpid());
-  }else{
-    printf("[%d]:Parent is working!\n",getpid());
-  }
-  printf("[%d]:End!\n",getpid());
-
-  return 0;
-}
-
-    </code></pre>
 
     <footer>
       Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
