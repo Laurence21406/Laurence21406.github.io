@@ -25,7 +25,7 @@ p {
     /* text-decoration: underline; */
 }
 
-aside{
+aside {
     float:right;
     width:25%;
     margin-right: 0;
@@ -40,3 +40,5 @@ aside{
 footer {
     /* text-align: center; */
 }
+
+a:visited {color: grey}
