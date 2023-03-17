@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>redis源碼分析</title>
+	<link rel="shortcut icon" href="../imag/favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css">
+	<script id="MathJax-script" async src="../module/mathjax/es5/tex-chtml.js"></script>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../module/bootstrap/dist/css/bootstrap.css">
+	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </head>
+
+    <body>
+
+	<header>
+	    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="../index.html" style="font-family:Cursive;font-style:italic">HOWER CHOW</a>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav ms-auto">
+			<li class="nav-item">
+			    <a class="nav-link" href="../archive.html">ARCHIVES</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../tag.html">TAGS</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../about.html">ABOUT</a>
+			</li>
+		    </ul>
+		</div>
+	    </nav>
+	</header>
+
+	<article>
+	    <center>
+		<h1>redis源碼分析</h1>
+		<div>Date: <time>2023-03-07</time>. Last updated: <time>2023-03-07</time>.</div>
+	    </center>
+
+	    <section>
+		<h2>Redis源碼架構</h2>
+		<p>
+		    <table class="table table-striped">
+			<thead>
+			    <tr>
+				<th>底層數據結構</th>
+				<th>對應數據類型</th>
+				<th>對應源碼文件</th>
+			    </tr>
+			</thead>
+			<tbody>
+			    <tr>
+				<td>SDS</td>
+				<td>String</td>
+				<td>sds.h/sds.csdsalloc.h</td>
+			    </tr>
+			    <tr>
+				<td>雙向鏈表</td>
+				<td>List</td>
+				<td>adlist.h/adlist.c</td>
+			    </tr>
+			    <tr>
+				<td>壓縮鏈表</td>
+				<td>List,HASH,Sorted Set</td>
+				<td>ziplist.h/ziplist.c</td>
+			    </tr>
+			    <tr>
+				<td>QuickList</td>
+				<td>List,HASH,Sorted Set</td>
+				<td>quicklist.h/quicklist.c</td>
+			    </tr>
+			    <tr>
+				<td>整數列表</td>
+				<td>Set</td>
+				<td>intset.h/intset.c</td>
+			    </tr>
+			    <tr>
+				<td>Zipmap</td>
+				<td>Hash</td>
+				<td>zipmap.h/zipmap.c</td>
+			    </tr>
+			    <tr>
+				<td>哈希表</td>
+				<td>Hash</td>
+				<td>dict.h/dict.c</td>
+			    </tr>
+			    <tr>
+				<td>HyperLogLog</td>
+				<td>HyperLogLog</td>
+				<td>hyperloglog.c</td>
+			    </tr>
+			    <tr>
+				<td>GeoHash</td>
+				<td>Geo</td>
+				<td>geo.h/geo.c geohash.h/geohash.c geohash_helper.h/geohash_helper.c</td>
+			    </tr>
+			    <tr>
+				<td>位圖</td>
+				<td>位圖</td>
+				<td>bitops.c</td>
+			    </tr>
+			    <tr>
+				<td>Stream</td>
+				<td>時序數據</td>
+				<td>stream.h/stream.c</td>
+			    </tr>
+
+			</tbody>
+		    </table>
+		</p>
+
+		<br>
+
+		<p>
+		    <table class="table table-striped">
+			<thead>
+			    <tr>
+				<th>主要數據類型</th>
+				<th>對應源碼文件</th>
+			    </tr>
+			</thead>
+			<tbody>
+			    <tr>
+				<td>String</td>
+				<td>t_string.c sds.h/sds.c bitops.c</td>
+			    </tr>
+			    <tr>
+				<td>List</td>
+				<td>t_list.c ziplist.c </td>
+			    </tr>
+			    <tr>
+				<td>HASH</td>
+				<td>t_hash.c ziplist.h/ziplist.c dict.h/dict.c</td>
+			    </tr>
+			    <tr>
+				<td>Set</td>
+				<td>t_set.c intset.h/intset.c</td>
+			    </tr>
+			    <tr>
+				<td>Sorted Set</td>
+				<td>t_zset.c ziplist.c dict.c</td>
+			    </tr>
+			    <tr>
+				<td>HyperLogLog</td>
+				<td>hyperloglog.c</td>
+			    </tr>
+			    <tr>
+				<td>Geo</td>
+				<td>geo.h/geo.c geohash.h/geohash.c geohash_helper.h/geohash_helper.c</td>
+			    </tr>
+			    <tr>
+				<td>Bitmap</td>
+				<td>bitops.c</td>
+			    </tr>
+			    <tr>
+				<td>Stream</td>
+				<td> t_stream.c rax.h/rax.c listpack.h/listpack.c stream.h</td>
+			    </tr>
+
+			</tbody>
+		    </table>
+		</p>
+
+		<br />
+
+		<p>
+		    <strong>全局</strong>：
+		    <ul>
+			<li>Server: server.h/server.c anet.h/anet.c</li>
+			<li>Object: object.c</li>
+			<li>鍵值對: db.c</li>
+			<li>事件驅動: ae.h/ae.c ae_epoll.c ae_kqueue.c ae_evport.c ae_select.c networking.c</li>
+			<li>內存回收: expire.c lazyfree.c</li>
+			<li>數據替換: evict.c</li>
+			<li>後臺線程: bio.h/bio.c</li>
+			<li>事務: multi.c</li>
+			<li>PubSub: pubsub.c</li>
+			<li>內存分配: zmalloc.h/zmalloc.c</li>
+			<li>雙向鏈表: adlist.h/adlist.c</li>
+		    </ul>
+
+		    <strong>高可用&集羣</strong>：
+		    <ul>
+			<li>持久化-RDB: rdb.h/rdb.c redis-check-rdb.c</li>
+			<li>持久化-AOF: aof.c redis-check-aof.c</li>
+			<li>主從複製: replication.c</li>
+			<li>哨兵: sentinel.c</li>
+			<li>內存回收: expire.c lazyfree.c</li>
+			<li>集羣: cluster.h/cluster.c</li>
+		    </ul>
+
+		    <strong>輔助功能</strong>：
+		    <ul>
+			<li>延遲統計: latency.h/latency.c</li>
+			<li>慢日誌: slowlog.h/slowlog.c</li>
+			<li>通知: notify.c</li>
+			<li>基準性能: redis-benchmark.c</li>
+		    </ul>
+		</p>
+
+		<p>
+		    <ol>
+			<li>创建eventloop: main->initServer->aeCreateEventLoop->aeApiCreate->epoll_create</li>
+			<li>main->initServer->listenToPort->anetTcpServer->anetListen</li>
+		    </ol>
+		</p>
+
+		<p>
+		    <a href="https://blog.csdn.net/gps666666/category_11287308.html">小高求学之路Redis</a>
+		</p>
+	    </section>
+	</article>
+
+	<footer>
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
+
+    </body>
+</html>
