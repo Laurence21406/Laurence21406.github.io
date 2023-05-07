@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML5</title>
+	<link rel="shortcut icon" href="../imag/favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css">
+	<script id="MathJax-script" async src="../module/mathjax/es5/tex-chtml.js"></script>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../module/bootstrap/dist/css/bootstrap.css">
+	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- hightlight code -->
+    <link rel="stylesheet" href="../module/highlight/styles/default.min.css">
+    <script src="../module/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    </head>
+
+    <body>
+
+	<header>
+	    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="../index.html" style="font-family:Cursive;font-style:italic">HOWER CHOW</a>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav ms-auto">
+			<li class="nav-item">
+			    <a class="nav-link" href="../archive.html">ARCHIVES</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../tag.html">TAGS</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../about.html">ABOUT</a>
+			</li>
+		    </ul>
+		</div>
+	    </nav>
+	</header>
+
+	<article>
+	    <center>
+		<h1>Learn Lua</h1>
+		<div>Date: <time>2023-5-7</time>. Last updated: <time>2022-5-7</time>.</div>
+	    </center>
+    
+        <h2>弱引用表</h2>
+        <p>
+         在Lua中，变量没有类型，它可以是任何东西，而值有类型 <br>
+         如果一个对象只有弱引用指向它，那么gc会自动回收该对象的内存并删除这些弱引用<br>
+         弱引用表weak table的用途一般都是出于GC考虑的 <br>
+        </p>
+        <h2>函数</h2>
+        <p>
+            多返回值 <br>
+            可变参数 <br>
+            函数闭包 主要应用在嵌套函数和匿名函数<br>
+            闭包应用:
+            <ul>
+                <li>作为高阶函数的参数，比如像table.sort函数的参数</li>
+                <li>创建其他的函数的函数，即函数返回一个闭包(工厂)</li>
+                <li>闭包对于回调函数也非常有用。典型的例子就是界面上按钮的回调函数，这些函数代码逻辑可能是一模一样，只是回调函数参数不一样而已，即upvalue的值不一样而已。</li>
+                <li>创建一个安全的运行环境，即所谓的沙盒（sandbox）。当执行一些未受信任的代码时就需要一个安全的运行环境</li>
+                <li>实现迭代器,每个迭代器都需要在每次成功调用之间保持一些状态，这样才能知道它所在的位置及如何进到下一个位置</li>
+            </ul>
+            尾调用: 某个函数的最后一步操作是调用另一个函数 <br>
+            尾递归：
+<pre><code class="Lua">
+function factorial(n,total)
+    total = total or 1 -- default parameter
+    if(n == 1) then
+        return total
+    end
+    return factorial(n-1,n*total)
+end
+print(factorial(5)) -- 120
+</code></pre>
+            <br> upvalue 实际指的是变量而不是值，这些变量可以在内部函数之间共享，即 upvalue 提供一种闭包之间共享数据的方法 <br>
+            <a href="https://blog.csdn.net/maximuszhou/article/details/44280109">深入理解Lua的闭包一：概念、应用和实现原理</a> <br>
+            <a href="https://www.cnblogs.com/zzy-frisrtblog/category/881943.html">lua成长笔记</a>
+        </p>
+        <h2>字符串</h2>
+        <p>
+            正则 <br>
+<pre><code class="Lua"> -- string.find, string.match, string.gmatch, string.gsub
+-- . ：表示任何字符
+-- %a: 表示任何字母。
+-- %c: 表示任何控制字符。
+-- %d: 表示任何数字。
+-- %g: 表示任何除空白符外的可打印字符。
+-- %l: 表示所有小写字母。
+-- %p: 表示所有标点符号。
+-- %s: 表示所有空白字符。
+-- %u: 表示所有大写字母。
+-- %w: 表示所有字母及数字。
+-- %x: 表示所有 16 进制数字符号。
+--  （这里的 x 是任意非字母或数字的字符） 表示字符 x。 这是对魔法字符转义的标准方法。 所有非字母或数字的字符 （包括所有标点，也包括非魔法字符） 都可以用前置一个 '%' 放在模式串中表示自身
+-- (). % + - * ? [ ^ $： 特殊字符，需要用%转义
+
+-- +：匹配前一字符 1 次或多次，最长匹配
+-- *：匹配前一字符 0 次或多次，最长匹配
+-- -: 匹配前一字符 0 次或多次，最短匹配
+-- ?: 匹配前一字符 0 次或 1次
+</code></pre>           
+            截取 <br>
+<pre><code class="Lua">-- string.sub (s, i [, j])
+str = "https://www.lua.org/"
+string.sub( str, 2, 3) 
+string.sub( str, -4,-2)
+</code></pre>
+           替换 <br>
+<pre><code class="Lua">-- string.gsub (s, pattern, repl [, n])
+str = "https://www.lua.org/"
+string.gsub( str, "w", "m")    -- https://mmm.lua.org/    3
+string.gsub( str, "w", "m",2)  -- https://mmw.lua.org/    2
+</code></pre>
+            查找 <br>
+<pre><code class="Lua">-- string.find (s, pattern [, init [, plain]]) plain->true 关闭正则
+str = "https://www.lua.org/"
+string.find( str, "lua")    -- 13      15
+string.find( str, "lua",15) -- nil
+</code></pre>            
+            匹配 <br>
+<pre><code class="Lua">-- string.match (s, pattern [, init])
+str = "https://www.lua.org/"
+string.match( str, "%a+")    -- https
+string.find( str, "%a+",13)  -- lua
+</code></pre>              
+            迭代匹配 <br>
+<pre><code class="Lua">-- string.gmatch (s, pattern [, init])
+str = "https://www.lua.org/"
+local words = {}
+for w in string.gmatch(str,"%a+") do
+    table.insert(words,w)
+end
+print(table.concat(words," ")) -- https www lua org
+</code></pre>             
+           格式化 <br>
+<pre><code class="Lua">-- string.format (formatstring, ···)    
+string.format("age = %d",10)
+</code></pre>
+           重复 <br>
+<pre><code class="Lua">-- string.rep (s, n [, sep])  
+str = "https://www.lua.org/"
+string.rep(str,2," ") -- https://www.lua.org/ https://www.lua.org/
+</code></pre>          
+           反转 <br>
+<pre><code class="Lua">-- string.reverse (s)
+str = "https://www.lua.org/"
+string.reverse(str) -- /gro.aul.www//:sptth
+</code></pre> 
+            WIP <br>
+<pre><code class="Lua">-- string.pack (fmt, v1, v2, ···)
+-- string.packsize (fmt)
+-- string.unpack (fmt, s [, pos])
+</code></pre>        
+            <a href="https://blog.csdn.net/Brave_boy666/article/details/118754444">Lua 字符串操作</a>
+        </p>
+
+        <h2>表</h2>
+        <p>
+            拼接 <br>
+<pre><code class="Lua">-- table.concat (list [, sep [, i [, j]]])
+tab = {"lua","table","string"}
+table.concat(tab," "，2，3)  -- table string
+</code></pre>
+            插入 <br>
+<pre><code class="Lua">-- table.insert (list, [pos,] value)
+tab = {"lua","table","string"}
+table.insert(tab,"function")
+table.concat(tab," ")  -- lua table string function
+</code></pre>
+            删除 <br>
+<pre><code class="Lua">-- table.remove (list [, pos])
+tab = {"lua","table","string"}
+table.remove(tab)     -- string
+table.concat(tab," ") -- lua table
+</code></pre>
+            移动 <br>
+<pre><code class="Lua">-- table.move (a1, f, e, t [,a2])
+tab1 = {"lua","table","string"}
+tab2 = {128}
+table.move(tab1,2,3,2,tab2)  -- table: 000001bd5dec0e10
+table.concat(tab2," ") -- 128 table string
+</code></pre>
+            排序 <br>
+<pre><code class="Lua">-- table.sort (list [, comp])
+tab = {"lua","table","string"}
+table.sort(tab)     
+table.concat(tab," ") -- lua string table
+</code></pre>
+
+        </p>
+      
+    <blockquote>
+        "Success is the ability to go from one failure to another without losing enthusiasm." --Winston Churchill
+    </blockquote>
+</article>
+	<footer>
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
+		</div>
+    </body>
+</html>
