@@ -3,7 +3,7 @@
     <head>
 	<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>HTML5</title>
+	<title>Lua</title>
 	<link rel="shortcut icon" href="../imag/favicon.ico">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css">
@@ -50,7 +50,7 @@
 	<article>
 	    <center>
 		<h1>Learn Lua</h1>
-		<div>Date: <time>2023-5-7</time>. Last updated: <time>2022-5-7</time>.</div>
+		<div>Date: <time>2023-5-7</time>. Last updated: <time>2023-5-9</time>.</div>
 	    </center>
     
         <h2>弱引用表</h2>
@@ -173,17 +173,17 @@ string.reverse(str) -- /gro.aul.www//:sptth
 tab = {"lua","table","string"}
 table.concat(tab," "，2，3)  -- table string
 </code></pre>
-            插入 <br>
-<pre><code class="Lua">-- table.insert (list, [pos,] value)
+            插入 <br>   
+<pre><code class="Lua">-- table.insert (list, [pos,] value) 数组能用, 字典不行
 tab = {"lua","table","string"}
-table.insert(tab,"function")
+table.insert(tab,"function") 
 table.concat(tab," ")  -- lua table string function
 </code></pre>
             删除 <br>
-<pre><code class="Lua">-- table.remove (list [, pos])
+<pre><code class="Lua">-- table.remove (list [, pos]) 数组能用, 字典不行
 tab = {"lua","table","string"}
-table.remove(tab)     -- string
-table.concat(tab," ") -- lua table
+table.remove(tab)     -- string 
+table.concat(tab," ") -- lua table  
 </code></pre>
             移动 <br>
 <pre><code class="Lua">-- table.move (a1, f, e, t [,a2])
@@ -200,13 +200,53 @@ table.concat(tab," ") -- lua string table
 </code></pre>
 
         </p>
-      
+
+        <h2>时间</h2>
+        <p>
+            日期 <br>
+<pre><code class="Lua">-- os.date ([format [, time]])
+os.date()  -- 05/08/23 23:52:29
+os.date
+</code></pre>   
+            时间戳 <br>
+<pre><code class="Lua">-- os.time ([table]) 
+os.time() -- 1683561264
+os.time({year=2023, month = 5, day=8, hour=23, min=57,sec=30,isdst=false}) -- 1683561450
+</code></pre>   
+
+<pre><code class="Lua">-- os.difftime (t2, t1)
+t1 = os.time()
+t2 = os.time()
+os.difftime(t2,t1) -- 5.0
+</code></pre>   
+    
+        <a href="https://blog.csdn.net/fightsyj/article/details/85214282">Lua中时间函数的用法整理</a>
+        </p>
+
+
+        <h2>Lua坑</h2>
+            <p>
+<pre><code class="Lua"> -- function table
+local t = { name = "lua" }
+function func(tab)
+    tab.name = string.upper(tab.name) -- 改变t.name字段
+    tab = { name = "AUL"}             -- 不影响t表
+end
+func(t); print(t.name) -- LUA
+</code></pre>              
+                <a href="https://blog.csdn.net/weixin_43994445/article/details/109135215">Lua踩坑记录</a>
+            </p>
+        
+
     <blockquote>
         "Success is the ability to go from one failure to another without losing enthusiasm." --Winston Churchill
     </blockquote>
+    
 </article>
+
 	<footer>
-	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+        <p>Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i></p>
+        <p class="text-end"><a href="#">Back to top</a></p>
 	</footer>
 		</div>
     </body>
