@@ -20,7 +20,7 @@
 
     <body>
 
-	<header>
+	<header class="container">
 	    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
 		<!-- Brand -->
 		<a class="navbar-brand" href="../index.html" style="font-family:Cursive;font-style:italic">HOWER CHOW</a>
@@ -47,7 +47,7 @@
 	    </nav>
 	</header>
 
-	<article>
+	<article class="container">
 	    <center>
 		<h1>Learn Lua</h1>
 		<div>Date: <time>2023-5-7</time>. Last updated: <time>2023-5-9</time>.</div>
@@ -206,7 +206,27 @@ table.concat(tab," ") -- lua string table
             日期 <br>
 <pre><code class="Lua">-- os.date ([format [, time]])
 os.date()  -- 05/08/23 23:52:29
-os.date
+-- format
+-- %a 一个星期中天数的简写(如：Wed) 
+-- %A 一个星期中天数的全称(如: Wednesday) 
+-- %b 月份的简写(如: Sep) 
+-- %B 月份的全称(如：September) 
+-- %c 日期和时间(如: 08/22/2017 10:50:05) 
+-- %d 一个月中的第几天(22) [0 - 31] 
+-- %H 24小时中的小时数(15) [0 - 23]  
+-- %I 12小时中的小时数(8)[1 - 12]  
+-- %j 一年中的第几天(259)[1 - 366]   
+-- %M 分钟数 (48) [0 - 59] 
+-- %m 月份数 (09) [1 - 12] 
+-- %p "上午(am)"或"下午(pm)" (如: pm) 
+-- %S 秒数(10) [0 - 59] 
+-- %w 一个星期中的第几天(3) [0 - 6 周天-周六] 
+-- %x 日期(如：08/22/17) 
+-- %X 时间(如：10:50:05) 
+-- %y 两位数的年份(17) [00 - 99] 
+-- %Y 完整的年份(2023) 
+-- %% 字符'%' 
+
 </code></pre>   
             时间戳 <br>
 <pre><code class="Lua">-- os.time ([table]) 
@@ -223,7 +243,33 @@ os.difftime(t2,t1) -- 5.0
         <a href="https://blog.csdn.net/fightsyj/article/details/85214282">Lua中时间函数的用法整理</a>
         </p>
 
+        <h2>随机数</h2>
+        <p>
+<pre><code class="Lua">-- math.randomseed ([x [, y]])
+-- math.random ([m [, n]])
+math.randomseed(tostring(os.time()):reverse():sub(1,7))
+for i = 1, 5 do
+    print(math.random(1,100))
+end
+-- math.random()  --> (0,1)
+-- math.random(n) --> (0,n)
+-- math.random(m,n) --> (m,n)
+</code></pre>   
+        </p>
 
+        <h2>数学库</h2>
+        <p>
+<pre><code class="Lua">-- math.abs (x) -- 取绝对值
+math.abs(-2023.511) -- 2023.511
+-- math.ceil (x) -- 向上取整
+math.ceil(2.5) -- 3
+-- math.floor (x) -- 向下取整
+math.floor(2.5) -- 2
+-- math.fmod (x, y)
+</code></pre>   
+<a href="https://blog.csdn.net/MokeXing/article/details/78839452">数学库</a> <br>
+<a href="https://www.cnblogs.com/Fallever/p/6880710.html">lua取模运算math.fmod和% 的区别</a>
+        </p>
         <h2>Lua坑</h2>
             <p>
 <pre><code class="Lua"> -- function table
@@ -244,7 +290,7 @@ func(t); print(t.name) -- LUA
     
 </article>
 
-	<footer>
+	<footer class="container">
         <p>Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i></p>
         <p class="text-end"><a href="#">Back to top</a></p>
 	</footer>
