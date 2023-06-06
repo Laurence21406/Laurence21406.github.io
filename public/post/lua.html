@@ -204,7 +204,7 @@ table.concat(tab," ") -- lua string table
         <h2>时间</h2>
         <p>
             日期 <br>
-<pre><code class="Lua">-- os.date ([format [, time]])
+<pre><code class="Lua">-- os.date ([format [, time]]) --返回本地化的时间字符串
 os.date()  -- 05/08/23 23:52:29
 -- format
 -- %a 一个星期中天数的简写(如：Wed) 
@@ -226,6 +226,7 @@ os.date()  -- 05/08/23 23:52:29
 -- %y 两位数的年份(17) [00 - 99] 
 -- %Y 完整的年份(2023) 
 -- %% 字符'%' 
+-- *t 返回表 hour min wday day month year sec yday isdst 
 
 </code></pre>   
             时间戳 <br>
@@ -265,8 +266,14 @@ math.abs(-2023.511) -- 2023.511
 math.ceil(2.5) -- 3
 -- math.floor (x) -- 向下取整
 math.floor(2.5) -- 2
--- math.fmod (x, y)
+-- math.fmod (x, y) -- 取余
+math.fmod(-2,3) -- -2
+-- math.modf (x) --取整数部分和小数部分
+math.modf(-16.78) -- -16 -0.78
+-- + - * / 加减乘除
+--  // % ^ 整除 取余 幂运算
 </code></pre>   
+<a href="https://www.cnblogs.com/whiteyun/archive/2009/08/10/1543040.html">Lua中的数学库</a> <br>
 <a href="https://blog.csdn.net/MokeXing/article/details/78839452">数学库</a> <br>
 <a href="https://www.cnblogs.com/Fallever/p/6880710.html">lua取模运算math.fmod和% 的区别</a>
         </p>
