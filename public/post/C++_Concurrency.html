@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>C++ Concepts</title>
+    <title>C++ Concurrency</title>
     <link rel="shortcut icon" href="../imag/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css" type="text/css">
@@ -18,16 +18,22 @@
 
   <body>
     <header>
-      <h1>C++ Concepts</h1>
+      <h1>C++ Concurrency</h1>
     </header>
 
-    <div>Date: <time>2023-06-13</time>. Last updated: <time>2023-06-13</time>.</div>
+    <div>Date: <time>2023-06-22</time>. Last updated: <time>2023-06-22</time>.</div>
 
-    <h2>抽象类 VS 接口</h2>
+    <h2>虚假唤醒(spurious wakeup)</h2>
     <p>
-        抽象类(Abstract Class)： 含有一个或多个纯虚函数, 可以有状态，可以有被实现的方法，不能被实例化；可以继承抽象类而不实现纯虚函数/抽象方法；未实现的父类的抽象方法的子类仍是抽象类<br>
-        接口(Interface): 只包含虚析构函数(virtual destructor)和纯虚函数(pure virtual function)；没有状态；实现接口必须实现接口所有方法;  
+      <ul>
+        <li><a href="manongjc.com/detail/15-skvyvcwcmkgurum.html">虚假唤醒（spurious wakeups）的原因</a></li>
+        <li><a href="https://blog.csdn.net/anwh9295/article/details/120444450" target="_blank">C++并发编程之线程同步 std::condition_variable用法总结</a></li>
+
+      </ul>
+        
     </p>
+
+
     <footer>
       Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
     </footer>
