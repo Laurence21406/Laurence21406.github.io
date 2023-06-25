@@ -26,14 +26,14 @@ p {
 }
 
 aside {
-    float:right;
-    width:25%;
-    margin-right: 0;
-    margin-left: 1%.
-		 padding:10px;
-    /* background-color: white;*/
-    border-radius: 5px;
-    border:1px solid#bbbbbb;
+    /* float:right; */
+    /* width:25%; */
+    /* margin-right: 0; */
+    /* margin-left: 1%. */
+    /* 		 padding:10px; */
+    /* /\* background-color: white;*\/ */
+    /* border-radius: 5px; */
+    /* border:1px solid#bbbbbb; */
 }
 
 
