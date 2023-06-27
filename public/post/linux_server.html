@@ -34,10 +34,11 @@
 	    对于非阻塞socket: connetct函数立即返回;
 	    send函数无法发完全部数据，立即返回, 不阻塞线程执行流;
 	    recev函数收不到任何数据，立即返回，不阻塞线程执行流;
+	    <ul><li><a href="https://rigtorp.se/sockets/">Tips for using the sockets API</a></li></ul>
 	</p>
 	<p>
-
-
+	    lsof: list opened filescriptor 去看网络链接状况 看sokcet: lsof -i -Pn <br />
+	    nc: client-> nc -v [-p 1234] 127.0.0.1 1234 server->nc -v -kl 0.0.0.1 12345 <br />
 	</p>
 
 	<footer>
