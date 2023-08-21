@@ -74,6 +74,18 @@
       </ul>
     </p>
 
+    <h2>Git Submodule</h2>
+    <p>
+	<ul>
+	    <li><em>git submodule init</em></li>
+	    <li><em>git submodule add https://github.com/libevent/libevent.git<em></li>
+		<li><em>git submodule update</em></li>
+		<li><em>git checkout release-2.1.8-stable</em></li>
+		<li><em>add_subdirectory(extern/libevent)</em></li>
+		<li><em>git submodule update --init --recursive</em></li>
+	</ul>
+    </p>
+
     <h2>Proxy</h2>
     <p>
       git config --global --add remote.origin.proxy "127.0.0.1:7890"
