@@ -6,6 +6,10 @@
 	<link rel="shortcut icon" href="../imag/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css" type="text/css">
+	<!-- hightlight code -->
+	<link rel="stylesheet" href="../module/highlight/styles/default.min.css">
+	<script src="../module/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
     </head>
 
     <nav>
@@ -20,8 +24,17 @@
 
 	<div>Date: <time>2023-07-28</time>. Last updated: <time>2023-07-28</time>.</div>
 
-	<h2>C</h2>
+	<h2>string</h2>
 	<p>
+	    <pre><code class="C">
+// strspn返回s起始部分匹配accept中任意字符的字符数，一旦从起始部分开始，不能从accept中找到匹配的字符，就截断，返回前面匹配的总的字符
+size_t strspn(const char *s, const char *accept);
+
+// strpbrk在字符串s中找到与accept任何字符匹配的第一个字符（不包括终止空字符）。
+char *strpbrk(const char *s, const char *accept);
+	    </code></pre>
+
+	</p>
 
 	<footer>
 	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
