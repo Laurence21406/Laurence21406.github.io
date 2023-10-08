@@ -2,7 +2,7 @@
 <html>
     <head>
 	<meta charset="UTF-8">
-	<title>C++ Collection</title>
+	<title>C String</title>
 	<link rel="shortcut icon" href="../../imag/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
@@ -19,22 +19,82 @@
 
     <body>
 	<header>
-	    <h1>C Collection</h1>
+	    <h1>C String</h1>
 	</header>
 
-	<div>Date: <time>2023-07-28</time>. Last updated: <time>2023-07-28</time>.</div>
+	<div>Date: <time>2023-07-28</time>. Last updated: <time>2023-10-09</time>.</div>
 
-	<h2>string</h2>
+	<h2>Search String</h2>
+	<h3>strspn strcspn strpbrk</h3>
 	<p>
 	    <pre><code class="C">
-// strspn返回s起始部分匹配accept中任意字符的字符数，一旦从起始部分开始，不能从accept中找到匹配的字符，就截断，返回前面匹配的总的字符
+/* strspn返回s起始部分匹配accept中任意字符的字符数，一旦从起始部分开始，不能从accept中找到匹配的字符，就截断，返回前面匹配的总的字符 */
 size_t strspn(const char *s, const char *accept);
+/* strspn返回s起始部分不匹配reject中任意字符的字符数 */
+size_t strcspn(const char *s, const char *reject);
 
-// strpbrk在字符串s中找到与accept任何字符匹配的第一个字符（不包括终止空字符）。
+/* strpbrk在字符串s中找到与accept任何字符匹配的第一个字符（不包括终止空字符）*/
 char *strpbrk(const char *s, const char *accept);
 	    </code></pre>
 
 	</p>
+
+	<h3>strstr的三种用法</h3>
+	<p>
+	    <pre><code class="C">
+/* strstr函数在第一个字符串haystack中搜索第二个字符串needle, 找到返回第二字符串needle首地址，未找到返回NULL*/
+char *strstr(const char *haystack, const char *needle);
+	    </code></pre>
+	    1.单次查找，返回查找成功的字符串以及后面的字符串 <br/>
+	    <pre><code class="C">
+void test1() {
+  char *haystck = "The  strstr() function finds the first occurrence of the substring nee‐";
+  char *needle  = "substring";
+  char *p = strstr(haystck, needle);
+  puts(p); // substring nee‐
+}
+	    </code></pre>
+	    2. 单次查找,返回子串在母串中位置 <br/>
+	    <pre><code class="C">
+void test2() {
+  char *haystck = "The substring nee‐";
+  char *needle  = "substring";
+  char *p = strstr(haystck, needle);
+  if(p != NULL) {
+      ptrdiff_t pdf = p  - haystck;
+  printf("%td\n", pdf);
+ }
+}
+	    </code></pre>
+	    3. 多次查找,记录子串在母串中出现次数 <br/>
+	    <pre><code class="C">
+void test3() {
+  char *haystck = "The substring nee‐substring， substring";
+  char *needle  = "substring";
+  int k = 0;
+  char *p = haystck;
+  size_t len = strlen(needle);
+  while ((p = strstr(p, needle)) != NULL) {
+    ++k;
+    p += len;
+  }
+  printf("%d\n", k);
+}
+	    </code></pre>
+
+	    <h2>strdup, strndup, strdupa, strndupa - duplicate a string
+	    </h2>
+	</p>
+
+
+
+
+
+
+
+
+
+
 
 	<footer>
 	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
