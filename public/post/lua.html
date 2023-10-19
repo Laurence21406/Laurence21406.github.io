@@ -2,57 +2,33 @@
 <html>
     <head>
 	<meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<title>Lua</title>
 	<link rel="shortcut icon" href="../imag/favicon.ico">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css">
 	<script id="MathJax-script" async src="../module/mathjax/es5/tex-chtml.js"></script>
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="../module/bootstrap/dist/css/bootstrap.css">
-	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
-    <!-- hightlight code -->
-    <link rel="stylesheet" href="../module/highlight/styles/default.min.css">
-    <script src="../module/highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+	<!-- hightlight code -->
+	<link rel="stylesheet" href="../module/highlight/styles/default.min.css">
+	<script src="../module/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
     </head>
 
     <body>
 
-	<header class="container">
-	    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-		<!-- Brand -->
-		<a class="navbar-brand" href="../index.html" style="font-family:Cursive;font-style:italic">HOWER CHOW</a>
 
-		<!-- Toggler/collapsibe Button -->
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-		    <span class="navbar-toggler-icon"></span>
-		</button>
-
-		<!-- Navbar links -->
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-		    <ul class="navbar-nav ms-auto">
-			<li class="nav-item">
-			    <a class="nav-link" href="../archive.html">ARCHIVES</a>
-			</li>
-			<li class="nav-item">
-			    <a class="nav-link" href="../tag.html">TAGS</a>
-			</li>
-			<li class="nav-item">
-			    <a class="nav-link" href="../about.html">ABOUT</a>
-			</li>
-		    </ul>
-		</div>
+	<header>
+	    <nav>
+		<a href="../index.html" target="_blank">HOME</a>
+		<a href="../about.html" target="_blank">ABOUT</a>
 	    </nav>
+
 	</header>
 
-	<article class="container">
-	    <center>
-		<h1>Learn Lua</h1>
-		<div>Date: <time>2023-5-7</time>. Last updated: <time>2023-5-9</time>.</div>
-	    </center>
-    
+	<h1>Learn Lua</h1>
+	<div>Date: <time>2023-5-7</time>. Last updated: <time>2023-5-9</time>.</div>
+
         <h2>弱引用表</h2>
         <p>
          在Lua中，变量没有类型，它可以是任何东西，而值有类型 <br>
@@ -110,11 +86,11 @@ print(factorial(5)) -- 120
 -- *：匹配前一字符 0 次或多次，最长匹配
 -- -: 匹配前一字符 0 次或多次，最短匹配
 -- ?: 匹配前一字符 0 次或 1次
-</code></pre>           
+</code></pre>
             截取 <br>
 <pre><code class="Lua">-- string.sub (s, i [, j])
 str = "https://www.lua.org/"
-string.sub( str, 2, 3) 
+string.sub( str, 2, 3)
 string.sub( str, -4,-2)
 </code></pre>
            替换 <br>
@@ -128,13 +104,13 @@ string.gsub( str, "w", "m",2)  -- https://mmw.lua.org/    2
 str = "https://www.lua.org/"
 string.find( str, "lua")    -- 13      15
 string.find( str, "lua",15) -- nil
-</code></pre>            
+</code></pre>
             匹配 <br>
 <pre><code class="Lua">-- string.match (s, pattern [, init])
 str = "https://www.lua.org/"
 string.match( str, "%a+")    -- https
 string.find( str, "%a+",13)  -- lua
-</code></pre>              
+</code></pre>
             迭代匹配 <br>
 <pre><code class="Lua">-- string.gmatch (s, pattern [, init])
 str = "https://www.lua.org/"
@@ -143,26 +119,26 @@ for w in string.gmatch(str,"%a+") do
     table.insert(words,w)
 end
 print(table.concat(words," ")) -- https www lua org
-</code></pre>             
+</code></pre>
            格式化 <br>
-<pre><code class="Lua">-- string.format (formatstring, ···)    
+<pre><code class="Lua">-- string.format (formatstring, ···)
 string.format("age = %d",10)
 </code></pre>
            重复 <br>
-<pre><code class="Lua">-- string.rep (s, n [, sep])  
+<pre><code class="Lua">-- string.rep (s, n [, sep])
 str = "https://www.lua.org/"
 string.rep(str,2," ") -- https://www.lua.org/ https://www.lua.org/
-</code></pre>          
+</code></pre>
            反转 <br>
 <pre><code class="Lua">-- string.reverse (s)
 str = "https://www.lua.org/"
 string.reverse(str) -- /gro.aul.www//:sptth
-</code></pre> 
+</code></pre>
             WIP <br>
 <pre><code class="Lua">-- string.pack (fmt, v1, v2, ···)
 -- string.packsize (fmt)
 -- string.unpack (fmt, s [, pos])
-</code></pre>        
+</code></pre>
             <a href="https://blog.csdn.net/Brave_boy666/article/details/118754444">Lua 字符串操作</a>
         </p>
 
@@ -173,17 +149,17 @@ string.reverse(str) -- /gro.aul.www//:sptth
 tab = {"lua","table","string"}
 table.concat(tab," "，2，3)  -- table string
 </code></pre>
-            插入 <br>   
+            插入 <br>
 <pre><code class="Lua">-- table.insert (list, [pos,] value) 数组能用, 字典不行
 tab = {"lua","table","string"}
-table.insert(tab,"function") 
+table.insert(tab,"function")
 table.concat(tab," ")  -- lua table string function
 </code></pre>
             删除 <br>
 <pre><code class="Lua">-- table.remove (list [, pos]) 数组能用, 字典不行
 tab = {"lua","table","string"}
-table.remove(tab)     -- string 
-table.concat(tab," ") -- lua table  
+table.remove(tab)     -- string
+table.concat(tab," ") -- lua table
 </code></pre>
             移动 <br>
 <pre><code class="Lua">-- table.move (a1, f, e, t [,a2])
@@ -195,7 +171,7 @@ table.concat(tab2," ") -- 128 table string
             排序 <br>
 <pre><code class="Lua">-- table.sort (list [, comp])
 tab = {"lua","table","string"}
-table.sort(tab)     
+table.sort(tab)
 table.concat(tab," ") -- lua string table
 </code></pre>
 
@@ -207,40 +183,40 @@ table.concat(tab," ") -- lua string table
 <pre><code class="Lua">-- os.date ([format [, time]]) --返回本地化的时间字符串
 os.date()  -- 05/08/23 23:52:29
 -- format
--- %a 一个星期中天数的简写(如：Wed) 
--- %A 一个星期中天数的全称(如: Wednesday) 
--- %b 月份的简写(如: Sep) 
--- %B 月份的全称(如：September) 
--- %c 日期和时间(如: 08/22/2017 10:50:05) 
--- %d 一个月中的第几天(22) [0 - 31] 
--- %H 24小时中的小时数(15) [0 - 23]  
--- %I 12小时中的小时数(8)[1 - 12]  
--- %j 一年中的第几天(259)[1 - 366]   
--- %M 分钟数 (48) [0 - 59] 
--- %m 月份数 (09) [1 - 12] 
--- %p "上午(am)"或"下午(pm)" (如: pm) 
--- %S 秒数(10) [0 - 59] 
--- %w 一个星期中的第几天(3) [0 - 6 周天-周六] 
--- %x 日期(如：08/22/17) 
--- %X 时间(如：10:50:05) 
--- %y 两位数的年份(17) [00 - 99] 
--- %Y 完整的年份(2023) 
--- %% 字符'%' 
--- *t 返回表 hour min wday day month year sec yday isdst 
+-- %a 一个星期中天数的简写(如：Wed)
+-- %A 一个星期中天数的全称(如: Wednesday)
+-- %b 月份的简写(如: Sep)
+-- %B 月份的全称(如：September)
+-- %c 日期和时间(如: 08/22/2017 10:50:05)
+-- %d 一个月中的第几天(22) [0 - 31]
+-- %H 24小时中的小时数(15) [0 - 23]
+-- %I 12小时中的小时数(8)[1 - 12]
+-- %j 一年中的第几天(259)[1 - 366]
+-- %M 分钟数 (48) [0 - 59]
+-- %m 月份数 (09) [1 - 12]
+-- %p "上午(am)"或"下午(pm)" (如: pm)
+-- %S 秒数(10) [0 - 59]
+-- %w 一个星期中的第几天(3) [0 - 6 周天-周六]
+-- %x 日期(如：08/22/17)
+-- %X 时间(如：10:50:05)
+-- %y 两位数的年份(17) [00 - 99]
+-- %Y 完整的年份(2023)
+-- %% 字符'%'
+-- *t 返回表 hour min wday day month year sec yday isdst
 
-</code></pre>   
+</code></pre>
             时间戳 <br>
-<pre><code class="Lua">-- os.time ([table]) 
+<pre><code class="Lua">-- os.time ([table])
 os.time() -- 1683561264
 os.time({year=2023, month = 5, day=8, hour=23, min=57,sec=30,isdst=false}) -- 1683561450
-</code></pre>   
+</code></pre>
 
 <pre><code class="Lua">-- os.difftime (t2, t1)
 t1 = os.time()
 t2 = os.time()
 os.difftime(t2,t1) -- 5.0
-</code></pre>   
-    
+</code></pre>
+
         <a href="https://blog.csdn.net/fightsyj/article/details/85214282">Lua中时间函数的用法整理</a>
         </p>
 
@@ -255,7 +231,7 @@ end
 -- math.random()  --> (0,1)
 -- math.random(n) --> (0,n)
 -- math.random(m,n) --> (m,n)
-</code></pre>   
+</code></pre>
         </p>
 
         <h2>数学库</h2>
@@ -272,7 +248,7 @@ math.fmod(-2,3) -- -2
 math.modf(-16.78) -- -16 -0.78
 -- + - * / 加减乘除
 --  // % ^ 整除 取余 幂运算
-</code></pre>   
+</code></pre>
 <a href="https://www.cnblogs.com/whiteyun/archive/2009/08/10/1543040.html">Lua中的数学库</a> <br>
 <a href="https://blog.csdn.net/MokeXing/article/details/78839452">数学库</a> <br>
 <a href="https://www.cnblogs.com/Fallever/p/6880710.html">lua取模运算math.fmod和% 的区别</a>
@@ -286,21 +262,19 @@ function func(tab)
     tab = { name = "AUL"}             -- 不影响t表
 end
 func(t); print(t.name) -- LUA
-</code></pre>              
+</code></pre>
                 <a href="https://blog.csdn.net/weixin_43994445/article/details/109135215">Lua踩坑记录</a>
             </p>
-        
+
 
     <blockquote>
         "Success is the ability to go from one failure to another without losing enthusiasm." --Winston Churchill
     </blockquote>
-    
-</article>
+
 
 	<footer class="container">
         <p>Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i></p>
-        <p class="text-end"><a href="#">Back to top</a></p>
 	</footer>
-		</div>
+
     </body>
 </html>
