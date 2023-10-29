@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="UTF-8">
+	<title>Network Programming</title>
+	<link rel="shortcut icon" href="../../imag/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
+    </head>
+
+    <nav>
+	<a href="../../index.html" target="_blank">HOME</a>
+	<a href="../../about.html" target="_blank">ABOUT</a>
+    </nav>
+
+    <body>
+	<header>
+	    <h1>Server</h1>
+	</header>
+	<div>Date: <time>2023-10-29</time>. Last updated: <time>2023-10-29</time>.</div>
+
+	<h2>网络编程</h2>
+	<p>
+	    对于非阻塞socket: connetct函数立即返回;
+	    send函数无法发完全部数据，立即返回, 不阻塞线程执行流;
+	    recev函数收不到任何数据，立即返回，不阻塞线程执行流;
+	    <ul><li><a href="https://rigtorp.se/sockets/">Tips for using the sockets API</a></li></ul>
+	</p>
+	<p>
+	    lsof: list opened filescriptor 去看网络链接状况 看sokcet: lsof -i -Pn <br />
+	    nc: client-> nc -v [-p 1234] 127.0.0.1 1234 server->nc -v -kl 0.0.0.1 12345 <br />
+	</p>
+
+	<h2></h2>
+	<p>
+	    <a href="https://beej.us/guide/bgnet/">Beej's Guide to Network Programming</a>
+	    <a href="http://www.52im.net/">即时通讯网</a>
+	</p>
+
+
+	<footer>
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
+    </body>
+</html>

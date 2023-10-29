@@ -24,17 +24,24 @@
 
 	<div>Date: <time>2023-07-28</time>. Last updated: <time>2023-10-09</time>.</div>
 
-	<h2>Search String</h2>
-	<h3>strspn strcspn strpbrk</h3>
+	<h2>字符串查找</h2>
+	<h3>strspn strcspn strpbrk strchar</h3>
 	<p>
 	    <pre><code class="C">
-/* strspn返回s起始部分匹配accept中任意字符的字符数，一旦从起始部分开始，不能从accept中找到匹配的字符，就截断，返回前面匹配的总的字符 */
+/* strspn返回s从起始匹配accept字符集中字符的个数
 size_t strspn(const char *s, const char *accept);
-/* strspn返回s起始部分不匹配reject中任意字符的字符数 */
+/* strspn返回s起始不匹配reject字符集中字符的个数 */
 size_t strcspn(const char *s, const char *reject);
 
 /* strpbrk在字符串s中找到与accept任何字符匹配的第一个字符（不包括终止空字符）*/
 char *strpbrk(const char *s, const char *accept);
+
+/*strchr在字符串s查找字符c第一次匹配之处*/
+/*strrchr在字符串s查找字符c最后一次匹配之处*/
+/*未找到返回NULL*/
+char *strchr(const char *s, int c);
+char *strrchr(const char *s, int c);
+
 	    </code></pre>
 
 	</p>
@@ -82,14 +89,46 @@ void test3() {
 }
 	    </code></pre>
 
-	    <h2>strdup, strndup, strdupa, strndupa - duplicate a string
-	    </h2>
+	</p>
+
+	<h2>字符串比较</h2>
+	<p>
+	    <pre><code class="C">
+/*
+ * s1 == s2 返回0
+ * s1 < s2 返回负数
+ * s1 > s2 返回正数
+*/
+int strcmp(const char *s1, const char *s2);
+
+/* 只比较前n个字节 */
+int strncmp(const char s1[.n], const char s2[.n], size_t n);
+
+	    </code></pre>
+	</p>
+
+	<h2> 字符串复制 </h2>
+	<p>
+	    <pre><code class="C">
+/* strdup, strndup, strdupa, strndupa - duplicate a string*/
+
+	    </code></pre>
+
+	</p>
+
+	<h2>字符串分割</h2>
+	<p>
+	    <pre><code class="C">
+char *strtok(char *restrict str, const char *restrict delim);
+	    </code></pre>
+
+
 	</p>
 
 
 
 
-
+	<h2>eeee</h2>
 
 
 
