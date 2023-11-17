@@ -6,6 +6,11 @@
     <link rel="shortcut icon" href="../imag/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css" type="text/css">
+
+    <!-- hightlight code -->
+    <link rel="stylesheet" href="../module/highlight/styles/default.min.css">
+    <script src="../module/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </head>
 
 
@@ -18,7 +23,7 @@
     </header>
 
     <h1>Emacs</h1>
-    <div>Date: <time>2022-06-23</time>. Last updated: <time>2022-06-23</time>.</div>
+    <div>Date: <time>2022-06-23</time>. Last updated: <time>2023-11-18</time>.</div>
     <h2>emacs news</h2>
     <p>
       <ul>
@@ -31,6 +36,15 @@
     <p>
 	emacs remove ^M <br />
 	M-x replace-string RET C-q C-m RET RET <br />
+    </p>
+
+    <h2>ClangFormat</h2>
+    <p>
+	.clang-format生成命令: <a href="https://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a>
+	<pre><code class="elisp">
+         M-x cla-r ;; format region
+         M-x cla-b ;; format buffer
+	</code></pre>
     </p>
 
     <footer>
