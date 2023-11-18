@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" href="../../imag/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
+
 	<!-- hightlight code -->
 	<link rel="stylesheet" href="../../module/highlight/styles/default.min.css">
 	<script src="../../module/highlight/highlight.min.js"></script>
@@ -13,8 +14,8 @@
     </head>
 
     <nav>
-	<a href="../index.html" target="_blank">HOME</a>
-	<a href="../about.html" target="_blank">ABOUT</a>
+	<a href="../../index.html" target="_blank">HOME</a>
+	<a href="../../about.html" target="_blank">ABOUT</a>
     </nav>
 
     <body>
@@ -22,7 +23,7 @@
 	    <h1>C Tricks</h1>
 	</header>
 
-	<div>Date: <time>2023-10-09</time>. Last updated: <time>2023-10-09</time>.</div>
+	<div>Date: <time>2023-10-09</time>. Last updated: <time>2023-11-18</time>.</div>
 
 	<h2>#define</h2>
 	<p>
@@ -32,7 +33,6 @@
 * ## 连接前后两个参数, 变成一个参数
 * #@ 给参数加上单引号, 参数字符化
 */
-
 	    </code></pre>
 
 	</p>
@@ -40,18 +40,20 @@
 	<h2>数组size</h2>
 	<p>
 	    <pre><code class="C">
-/*
-* # 把参数转换成字符串, 给参数加上双引号
-* ## 连接前后两个参数, 变成一个参数
-* #@ 给参数加上单引号, 参数字符化
-*/
-
+#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
+#define ARRAY_END(a)  ((a) + ARRAY_SIZE(a))
 	    </code></pre>
 
 	</p>
 
 
 
+	<h2>Links</h2>
+	<p>
+	    <ul>
+		<li><a href="https://c-faq-chn.sourceforge.net">C语言常见问题集(中文)</a></li>
+	    </ul>
+	</p>
 
 	<footer>
 	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
