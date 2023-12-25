@@ -1,145 +1,147 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Design Pattern</title>
-		<link rel="shortcut icon" href="../../imag/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="../../css/style.css">
-		<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
+  <head>
+    <meta charset="UTF-8">
+    <title>Design Pattern</title>
+    <link rel="shortcut icon" href="../../imag/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
 
-    </head>
+  </head>
 
-    <body>
+  <body>
 
-	<header>
-	    <nav>
-		<a href="../../index.html" target="_blank">HOME</a>
-		<a href="../../about.html" target="_blank">ABOUT</a>
-	    </nav>
-	</header>
+    <header>
+      <nav>
+	<a href="../../index.html" target="_blank">HOME</a>
+	<a href="../../about.html" target="_blank">ABOUT</a>
+      </nav>
+    </header>
 
-	<h1>Design Pattern</h1>
+    <h1>Design Pattern</h1>
 
-	<div>Date: <time>2022-05-21</time>. Last updated: <time>2023-04-03</time>.</div>
-	<p>
-	    <ol>
-		<li>
-		    <strong>Generalization</strong> <br />
-		    继承，一般与特殊的关系 <br />
-		    三角箭头实线，箭头指向父类
-		</li>
+    <div>Date: <time>2022-05-21</time>. Last updated: <time>2023-04-03</time>.</div>
+    <p>
+      <ol>
+	<li>
+	  <strong>Generalization 泛化</strong> <br />
+	  继承，一般与特殊的关系 <br />
+	  三角箭头实线，箭头指向父类
+	</li>
 
-		<li><strong>Realization</strong> <br />
-		    类与接口，类是接口所有特征和行为的实现 <br />
-		    三角箭头虚线，箭头指向接口
-		</li>
+	<li><strong>Realization 實現</strong> <br />
+	  类与接口，类是接口所有特征和行为的实现 <br />
+	  三角箭头虚线，箭头指向接口
+	</li>
 
-		<li>
-		    <strong>Association</strong> <br />
-		    拥有，一个类知道另一个类的属性和方法 <br />
-		    普通箭头实线，箭头指向被拥有者 <br />
-		    该对象持有另一个对象的指针或引用
-		</li>
+	<li>
+	  <strong>Association 關聯</strong> <br />
+	  拥有，一个类知道另一个类的属性和方法 <br />
+	  普通箭头实线，箭头指向被拥有者 <br />
+	  该对象持有另一个对象的指针或引用
+	</li>
 
-		<li>
-		    <strong>Dependency</strong> <br />
-		    使用 <br />
-		    普通箭头虚线 箭头指向被使用者 <br />
-		    局部变量、方法的参数或者对静态方法的调用
-		</li>
+	<li>
+	  <strong>Dependency 依賴</strong> <br />
+	  使用 <br />
+	  普通箭头虚线 箭头指向被使用者 <br />
+	  局部变量、方法的参数或者对静态方法的调用
+	</li>
 
-		<li>
-		    <strong>Composition</strong> <br />
-		    整体与部分 部分不可以离开整体而单独存在 <br />
-		    实心菱形实线 菱形指向整体
-		    成员变量
-		</li>
+	<li>
+	  <strong>Aggregation 聚合</strong> <br />
+	  整体与部分 部分可以离开整体而单独存在 <br />
+	  空心菱形实线 菱形指向整体 <br />
+	  存在一个容器包含别一个类
+	</li>
 
-		<li>
-		    <strong>Aggregation</strong> <br />
-		    整体与部分 部分可以离开整体而单独存在 <br />
-		    空心菱形实线 菱形指向整体 <br />
-		    存在一个容器包含别一个类
-		</li>
-	    </ol>
-	</p>
-
-	<p>
-	    泛化 实现 三角箭头 <br />
-	    关联 依赖 普通箭头 <br />
-	    组合 聚合  菱形
-	</p>
-
-	<p>
-	    <ul>
-		<li><a href="https://blog.csdn.net/LoveLion?type=blog">设计模式导学目录</a></li>
-		<li><a href="https://refactoring.guru/design-patterns/catalog">The Catalog of Design Patterns</a></li>
-	    </ul>
-	</p>
-
-	<h2>面向对象设计原则</h2>
-	<p>
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Definition</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>单一职责原则</td>
-				<td>一个类应该有且仅有一个引起它变化的原因</td>
-			</tr>
-			<tr>
-				<td>开闭原则</td>
-				<td>对扩展开放，而对修改关闭</td>
-			</tr>
-			<tr>
-				<td>依赖倒转原则</td>
-				<td>对抽象编程，不要对实现编程</td>
-			</tr>
-			<tr>
-				<td>接口隔离原则</td>
-				<td>Dooley</td>
-			</tr>
-			<tr>
-				<td>合成复用原则</td>
-				<td>Dooley</td>
-			</tr>
-			<tr>
-				<td>迪米特原则</td>
-				<td>不要和陌生说话</td>
-			</tr>
-		</tbody>
-	</table>
-	</p>
-
-	<p>
-	    六大设计原则: <br />
-	    <ol>
-		<li>依赖倒置</li>
-		<li>接口隔离</li>
-		<li>最少知识</li>
-		<li>单一职责</li>
-		<li>开放封闭</li>
-		<li>里氏替换</li>
-	    </ol>
-	    补充设计原则：<br />
-	    <ol>
-		<li>组合/聚合复用</li>
-		<li>无环依赖</li>
-		<li>共同封装</li>
-		<li>共同重用</li>
-		<li>好莱坞原则</li>
-	    </ol>
-	</p>
-
-	<footer>
-	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	</footer>
+	<li>
+	  <strong>Composition 組合</strong> <br />
+	  整体与部分 部分不可以离开整体而单独存在 <br />
+	  实心菱形实线 菱形指向整体
+	  成员变量
+	</li>
 
 
+      </ol>
+    </p>
 
-    </body>
+    <p>
+      泛化 實現 三角箭頭 <br />
+      關聯 依賴 普通箭頭 <br />
+      聚合 組合 菱形 <br/>
+    </p>
+
+    <p>
+      <ul>
+	<li><a href="https://blog.csdn.net/LoveLion?type=blog">设计模式导学目录</a></li>
+	<li><a href="https://refactoring.guru/design-patterns/catalog">The Catalog of Design Patterns</a></li>
+      </ul>
+    </p>
+
+    <h2>面向对象设计原则</h2>
+    <p>
+      <table class="table table-striped">
+	<thead>
+	  <tr>
+	    <th>Name</th>
+	    <th>Definition</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>单一职责原则</td>
+	    <td>一个类应该有且仅有一个引起它变化的原因</td>
+	  </tr>
+	  <tr>
+	    <td>开闭原则</td>
+	    <td>对扩展开放，而对修改关闭</td>
+	  </tr>
+	  <tr>
+	    <td>依赖倒转原则</td>
+	    <td>对抽象编程，不要对实现编程</td>
+	  </tr>
+	  <tr>
+	    <td>接口隔离原则</td>
+	    <td>Dooley</td>
+	  </tr>
+	  <tr>
+	    <td>合成复用原则</td>
+	    <td>Dooley</td>
+	  </tr>
+	  <tr>
+	    <td>迪米特原则</td>
+	    <td>不要和陌生说话</td>
+	  </tr>
+	</tbody>
+      </table>
+    </p>
+
+    <p>
+      六大设计原则: <br />
+      <ol>
+	<li>依赖倒置</li>
+	<li>接口隔离</li>
+	<li>最少知识</li>
+	<li>单一职责</li>
+	<li>开放封闭</li>
+	<li>里氏替换</li>
+      </ol>
+      补充设计原则：<br />
+      <ol>
+	<li>组合/聚合复用</li>
+	<li>无环依赖</li>
+	<li>共同封装</li>
+	<li>共同重用</li>
+	<li>好莱坞原则</li>
+      </ol>
+    </p>
+
+    <footer>
+      Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+    </footer>
+
+
+
+  </body>
 </html>
