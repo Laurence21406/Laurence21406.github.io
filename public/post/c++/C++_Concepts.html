@@ -22,16 +22,19 @@
 
     <h2> 抽象类(Abstract Base Class) </h2>
     <p>
-      抽象类(Abstract Base Class)： 含有一个或多个纯虚函数/抽象方法, 可以有状态，可以有被实现的方法，不能被实例化<br>
+
+	抽象类(Abstract Base Class)： 含有一个或多个纯虚函数/抽象方法, 可以有状态，可以有被实现的方法，不能被实例化<br>
         虚函数(virtual function): 虚方法 <br>
         纯虚函数(pure virtual function): 抽象方法, 子类必须实现, 行为规范
 	类纯虚函数的声明就是在告诉子类的设计者，"你必须提供一个纯虚函数的实现，但我不知道你会怎样实现它" 。
+
+	抽象类(ABC)： 含有抽象方法的类, 可以有状态，可以有被实现的方法，不能被实例化；ABC子类需要被实例化必须实现每个抽象方法 <br/>
+        纯虚函数(pure virtual function): 抽象方法(abstract methods) <br/>
     </p>
 
     <h2> 接口(Interface) </h2>
-
     <p>
-        接口(Interface): 只包含虚析构函数(virtual destructor)和纯虚函数/抽象方法(pure virtual function)；没有状态；继承接口必须实现接口所有方法;
+        接口(Interface): 只包含虚析构函数(virtual destructor)和抽象方法；没有状态；继承接口必须实现接口所有方法;
     </p>
 
     <p>
@@ -39,12 +42,12 @@
 	<blockquote>
 	    Prefer providing abstract interfaces.
 	</blockquote>
-
 	<strong>abstract interface: (pure virtual function)</strong>
     </p>
 
     <p>
-      接口是行为抽象(规范); 抽象类是类的抽象,模板设计
+	接口是行为规范,需子类实现抽象方法达到目的; <br/>
+	抽象类是类的抽象,模板设计
     </p>
 
 
