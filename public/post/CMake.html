@@ -6,6 +6,11 @@
 	<link rel="shortcut icon" href="../imag/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css" type="text/css">
+
+	<!-- hightlight code -->
+	<link rel="stylesheet" href="../module/highlight/styles/default.min.css">
+	<script src="../module/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
     </head>
 
     <nav>
@@ -56,6 +61,13 @@
 	    <em>cmake --install build/ --prefix /tmp/install_test</em> <br />
 	</p>
 
+	<h2>CMake Usage</h2>
+	<p>
+	    <pre><code class="CMake">
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+	    </code></pre>
+
+	</p>
 
 	<footer>
 	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
