@@ -25,7 +25,21 @@
 	</header>
 
 	<h1>Learn Lua</h1>
-	<div>Date: <time>2023-5-7</time>. Last updated: <time>2023-5-9</time>.</div>
+	<div>Date: <time>2023-5-7</time>. Last updated: <time>2024-1-11</time>.</div>
+
+	<h2>Lua坑</h2>
+        <p>
+	    <pre><code class="Lua"> -- function table
+local t = { name = "lua" }
+function func(tab)
+    tab.name = string.upper(tab.name) -- 改变t.name字段
+    tab = { name = "AUL"}             -- 不影响t表
+end
+func(t); print(t.name) -- LUA
+	    </code></pre>
+            <a href="https://blog.csdn.net/weixin_43994445/article/details/109135215">Lua踩坑记录</a> <br/>
+	    <a href="https://blog.csdn.net/yuliying/article/details/48733779">lua中table如何安全移除元素</a>
+        </p>
 
         <h2>弱引用表</h2>
         <p>
@@ -267,18 +281,6 @@ math.modf(-16.78) -- -16 -0.78
 	    <a href="https://www.cnblogs.com/Fallever/p/6880710.html">lua取模运算math.fmod和% 的区别</a>
         </p>
 
-        <h2>Lua坑</h2>
-        <p>
-	    <pre><code class="Lua"> -- function table
-local t = { name = "lua" }
-function func(tab)
-    tab.name = string.upper(tab.name) -- 改变t.name字段
-    tab = { name = "AUL"}             -- 不影响t表
-end
-func(t); print(t.name) -- LUA
-	    </code></pre>
-            <a href="https://blog.csdn.net/weixin_43994445/article/details/109135215">Lua踩坑记录</a>
-        </p>
 
 
 	<blockquote>
