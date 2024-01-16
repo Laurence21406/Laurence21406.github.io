@@ -61,6 +61,20 @@
 	</p>
 
 
+	<h2>Minimize Nesting</h2>
+	<p>
+	    Removing Nesting by Returning Early.  <br/>
+	    Removing Nesting Inside Loops. <br/>
+	    <pre><code class="C">
+for (int i = 0; i < ARRAY_SIZE(results); ++i) {
+if (results[i] == NULL) continue;
+non_null_count++;
+if (results[i]->name == "") continue;
+cout << "Considering candidate..." << endl;
+...
+}
+	    </code></pre>
+	</p>
 
 
 

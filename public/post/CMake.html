@@ -41,7 +41,8 @@
 		<li><a href="https://crascit.com/professional-cmake/" target="_blank">Professional CMake</a></li>
 		<li><a href="https://www.bookstack.cn/read/CMake-Cookbook/README.md" target="_blank">CMake Cookbook</a></li>
 		<li><a href="https://cmake.org/cmake/help/latest">CMake Documentation</a></li>
-	    </ul>
+		<li><a href="https://gitlab.kitware.com/cmake/community/-/wikis/home">CMake Wiki</a></li>
+  	    </ul>
 	</p>
 
 	<p>
@@ -66,6 +67,10 @@
 	    <pre><code class="CMake">
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_INSTALL_PREFIX testInstall)
+
+# Set default visibility to hidden for all targets
+set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+set(CMAKE_VISIBILITY_INLINES_HIDDEN YES)
 	    </code></pre>
 
 	</p>
@@ -76,6 +81,8 @@ set(CMAKE_INSTALL_PREFIX testInstall)
 	    libfoo.so.1   为soname 软连接指向realname: libfoo.so.1.1<br/>
 	    libfoo.so.1.1 为realname <br/>
 	    libfoo.so     为linkname  <br/>
+	    <a href="https://duerrenberger.dev/blog/2021/08/04/understanding-rpath-with-cmake/">Understanding RPATH (With CMake)</a> <br/>
+	    <a href="https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/RPATH-handling">RPATH handling</a> <br/>
 	</p>
 
 
