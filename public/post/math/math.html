@@ -34,24 +34,35 @@
 		    <p>
 			\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|}
 			\hline
-			radian & 0 & \frac{\pi}{6} & \frac{\pi}{4} & \frac{\pi}{3} & \frac{\pi}{2} & \frac{2\pi}{3} & \frac{3\pi}{4} & \frac{5\pi}{6}  & \pi & \frac{3\pi}{2} & 2\pi \\
+			\alpha & 0 & \frac{\pi}{6} & \frac{\pi}{4} & \frac{\pi}{3} & \frac{\pi}{2} & \frac{2\pi}{3} & \frac{3\pi}{4} & \frac{5\pi}{6}  & \pi & \frac{3\pi}{2} & 2\pi \\
 			\hline
-			\sin x & 0 & \frac{1}{2} & \frac{\sqrt{2}}{2} & \frac{\sqrt{3}}{2} & 1 & \frac{\sqrt{3}}{2} & \frac{\sqrt{2}}{2} & \frac{1}{2}  & 0 & -1 & 0 \\
+			\sin\alpha & 0 & \frac{1}{2} & \frac{\sqrt{2}}{2} & \frac{\sqrt{3}}{2} & 1 & \frac{\sqrt{3}}{2} & \frac{\sqrt{2}}{2} & \frac{1}{2}  & 0 & -1 & 0 \\
 			\hline
-			\cos x & 1 & \frac{\sqrt{3}}{2} & \frac{\sqrt{2}}{2} & \frac{1}{2} & 0 & -\frac{1}{2} & -\frac{\sqrt{2}}{2} & -\frac{\sqrt{3}}{2} & -1 & 0 & 1 \\
+			\cos\alpha & 1 & \frac{\sqrt{3}}{2} & \frac{\sqrt{2}}{2} & \frac{1}{2} & 0 & -\frac{1}{2} & -\frac{\sqrt{2}}{2} & -\frac{\sqrt{3}}{2} & -1 & 0 & 1 \\
 			\hline
-			\tan x & 0 & \frac{\sqrt{3}}{3} & 1 & \sqrt{3} & {\exists} & -\sqrt{3} & -1 & -\frac{\sqrt{3}}{3} & 0 & {\exists} & 0 \\
+			\tan\alpha & 0 & \frac{\sqrt{3}}{3} & 1 & \sqrt{3} & \infty & -\sqrt{3} & -1 & -\frac{\sqrt{3}}{3} & 0 & \infty & 0 \\
 			\hline
-			\cot x & {\exists} & \sqrt{3} & 1 & \frac{\sqrt{3}}{3} & 0 & -\frac{\sqrt{3}}{3} & -1 & -\sqrt{3} & {\exists} & 0 & {\exists} \\
+			\cot\alpha & \infty & \sqrt{3} & 1 & \frac{\sqrt{3}}{3} & 0 & -\frac{\sqrt{3}}{3} & -1 & -\sqrt{3} & \infty & 0 & \infty \\
 			\hline
 			\end{array}
 		    </p>
 
 		    <p>
-			二角和差公式:
-			$$\sin(\alpha \pm \beta) = \sin\alpha \cdot \cos\beta \pm \cos\alpha \cdot \sin\beta$$
-			$$\cos(\alpha \pm \beta) = \cos\alpha \cdot \cos\beta \mp \sin\alpha \cdot \sin\beta$$
-			$$\tan(\alpha \pm \beta) = \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}$$
+			二角和差公式: <br/>
+			\begin{flalign}
+			& \sin(\alpha \pm \beta) = \sin\alpha \cdot \cos\beta \pm \cos\alpha \cdot \sin\beta \\
+			& \cos(\alpha \pm \beta) = \cos\alpha \cdot \cos\beta \mp \sin\alpha \cdot \sin\beta \\
+			& \tan(\alpha \pm \beta) = \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta} \\
+			& \cot(\alpha \pm \beta) = \frac{\cot\alpha\cot\beta \mp 1}{\cot\beta \pm \cot\alpha} \\
+			\end{flalign}
+
+			二倍角公式: <br/>
+			\begin{flalign}
+			& \sin2\alpha = 2\sin\alpha\cos\alpha \\
+			& \cos2\alpha = \cos^{2}\alpha - \sin^{2}\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha \\
+			& \tan2\alpha = \frac{2\tan\alpha}{1-\tan^{2}\alpha} \\
+			& \cot2\alpha = \frac{\cot^{2} - 1}{2\cot\alpha} \\
+			\end{flalign}
 
 			积化和差公式: <br/>
 			正余余正，正加正减; <br/>
@@ -67,10 +78,9 @@
 			$$\cos\alpha + \cos\beta = 2\cos\frac{\alpha + \beta}{2} \cos\frac{\alpha - \beta}{2}$$
 			$$\cos\alpha - \cos\beta = -2\sin\frac{\alpha + \beta}{2} \sin\frac{\alpha - \beta}{2}$$
 
-			二倍角公式:
-			$$\sin2\alpha = 2\sin\alpha\cos\alpha$$
-			$$\cos2\alpha = \cos^{2}\alpha - \sin^{2}\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha$$
-			$$\tan2\alpha = \frac{2\tan\alpha}{1-\tan^{2}\alpha}$$
+			<a href="https://www.mathsisfun.com/algebra/trig-magic-hexagon.html">三角恒等式的魔法六边形</a>
+
+
 		    </p>
 	</article>
 
