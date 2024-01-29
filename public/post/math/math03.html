@@ -45,7 +45,12 @@
 		    $$ \lim\limits_{x \to 0} \frac{\sin x}{x} = 1 $$
 		    $$ \lim\limits_{x \to 0} (1 + x)^{\frac{1}{x}} = e $$
 		    $$ \lim\limits_{n \to \infty} \sqrt[n]{\alpha}(\alpha > 0) = 1 $$
-		    $$ \lim\limits_{n \to \infty} \sqrt[n]{n} = 1 $$
+		    \begin{flalign}
+		    \lim\limits_{n \to \infty} \sqrt[n]{n}
+		    &= \lim\limits_{n \to \infty} e^{\frac{1}{n} \ln n} \\
+		    & = e^{\lim\limits_{n \to \infty} \frac{\ln n}{n}} \\
+		    &= 1 \\
+		    \end{flalign}
 		    $$ \lim\limits_{n \to +\infty} \arctan x = \frac{\pi}{2} $$
 		    $$ \lim\limits_{n \to -\infty} \arctan x = -\frac{\pi}{2} $$
 		    $$ \lim\limits_{n \to +\infty} \operatorname{arccot}{x} = 0 $$
