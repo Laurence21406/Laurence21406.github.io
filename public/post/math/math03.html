@@ -37,13 +37,24 @@
 		    $$ \arcsin x \sim x $$
 		    $$ \arctan x \sim x $$
 		    $$ e^{x} - 1 \sim x $$
-		    $$ \ln(x+1) \sim x $$
+		    $$ \ln(1 + x) \sim x $$
+		    $$ \ln x \sim x - 1 (x {\rightarrow} 1) $$
+		    $$ x^x - 1 \sim x\ln x (x {\rightarrow} 1) $$
 		    $$ 1 - \cos x \sim \frac{1}{2}x^{2} $$
 		    $$ (1 + \alpha x)^{\beta} - 1 \sim \alpha\beta x $$
 		    $$ (1 + x)^{\frac{1}{n}} - 1 \sim \frac{1}{n}x $$
-		    重要公式:
-		    $$ \lim\limits_{x \to 0} \frac{\sin x}{x} = 1 $$
+		    $$ e^{\alpha} - e^{\beta} \sim \alpha - \beta$$
+		    $$ \lim\limits_{x \to 0} \frac{a^x - 1}{x} = \frac{1}{\ln a} $$
+		    $$ \lim\limits_{x \to 0} \frac{\log_a(1+x)}{x} = \frac{1}{\ln a} $$
+		    两个重要极限:
+		    $$\lim\limits_{x \to 0} \frac{\sin x}{x} = 1 $$
 		    $$ \lim\limits_{x \to 0} (1 + x)^{\frac{1}{x}} = e $$
+		    $$ \lim\limits_{x \to \infty} (1 + \frac{1}{x})^{x} = e $$
+		    $$ \lim\limits_{n \to \infty} (1 + \frac{1}{n})^{n} = e $$
+		    $$ \lim\limits_{x \to \infty} (1 - \frac{1}{x})^{x} = e $$
+		    $$ \lim\limits_{x \to \infty} (1 + \frac{a}{x})^{bx} = e^{ab} $$
+		    $$ \lim\limits_{x \to \infty} (1 + \frac{a}{x})^{bx + c} = e^{ab} $$
+		    $$ \lim\limits_{x \to \infty} (\frac{ x + a}{x + b})^x = e^{a-b} $$
 		    $$ \lim\limits_{n \to \infty} \sqrt[n]{\alpha}(\alpha > 0) = 1 $$
 		    \begin{flalign}
 		    \lim\limits_{n \to \infty} \sqrt[n]{n}
@@ -57,6 +68,7 @@
 		    $$ \lim\limits_{n \to -\infty} \operatorname{arccot}{x} = \pi $$
 		    $$ \lim\limits_{n \to -\infty} e^{x} = 0 $$
 		    $$ \lim\limits_{n \to +\infty} e^{x} = \infty $$
+		    $$ \lim\limits_{n \to \infty} \sqrt[n]{n} = 1 $$
 		    $$ \lim\limits_{n \to 0^{+}} x^{x} = 1 $$
 
 		    <a href="https://blog.csdn.net/lan_777/article/details/104231680">求极限方法总结</a> <br/>
