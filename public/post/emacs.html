@@ -41,13 +41,21 @@
     <h2>ClangFormat</h2>
     <p>
 	.clang-format生成命令: <a href="https://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a>
-	<pre><code class="elisp">
+	<pre><code class="lisp">
          M-x cla-r ;; format region
          M-x cla-b ;; format buffer
 	</code></pre>
 	<a href="https://www.cnblogs.com/__tudou__/p/13322854.html">clang-format的介绍和使用</a>
     </p>
 
+    <p>
+	光标回到上个位置  <br/>
+	<pre><code class="lisp">
+         C-SPC C-SPC
+         C-u  C-SPC ;; go back mark
+         pop-global-mark ;; all buffers
+	</code></pre>
+    </p>
     <footer>
       Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
     </footer>
