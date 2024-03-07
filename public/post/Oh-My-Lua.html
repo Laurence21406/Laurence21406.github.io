@@ -24,7 +24,7 @@
 	</header>
 
 	<h1>Learn Lua</h1>
-	<div>Date: <time>2023-5-7</time>. Last updated: <time>2024-1-11</time>.</div>
+	<div>Date: <time>2023-05-07</time>. Last updated: <time>2024-03-07</time>.</div>
 
 	<h2>Lua使用</h2>
 	<p>
@@ -38,6 +38,7 @@
 	    <li><a href="https://blog.csdn.net/cooclc/category_8840244.html">Lampard Lua</a></li>
 	    <li><a href="https://blog.csdn.net/zhanxxiao/category_10071704.html">Lua</a></li>
 	    <li><a href="https://benaiah.me/posts/everything-you-didnt-want-to-know-about-lua-multivals/">Everything You Didn’t Want to Know About Lua’s Multi-Values</a></li>
+	    <li><a href="https://www.notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts">Lua: Good, bad, and ugly parts</a></li>
 
 	</p>
 	<h2>Lua坑</h2>
@@ -54,6 +55,39 @@ func(t); print(t.name) -- LUA
 	    <a href="https://blog.csdn.net/yuliying/article/details/48733779">lua中table如何安全移除元素</a>
 
         </p>
+	<h2>Lua Lib</h2>
+	<p>
+	    <ul>
+		<li><a href="https://github.com/EvandroLG/array.lua">array</a></li>
+	    </ul>
+	</p>
+	
+	<h2>Lua Algorithm</h2>
+	<p>
+		<pre><code class="Lua">
+local function binary_search(list, value, less_than)
+    less_than = less_than or function(a, b)
+        return a < b
+    end
+    local min, max = 1, #list
+    while min <= max do
+        local pivot = min + math.floor((max - min) / 2)
+        local element = list[pivot]
+        if less_than(value, element) then
+            max = pivot - 1
+        elseif less_than(element, value) then
+            min = pivot + 1
+        else -- Neither smaller nor larger => must be equal
+            -- Index if found
+            return pivot
+        end
+    end
+    -- Negative insertion index if not found
+    return -min
+end
+		</code></pre>
+	</p>
+
 	<h2>Lua 源码</h2>
 	<p>
 	    <ul>
