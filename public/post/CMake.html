@@ -89,6 +89,45 @@ set(CMAKE_VISIBILITY_INLINES_HIDDEN YES)
 	    <ul><li><a href="https://github.com/TheLartians/ModernCppStarter">ModernCppStarter</a></li></ul>
 	</p>
 
+	<h2>Test</h2>
+	<p>
+	    <pre><code class="CMake">
+
+# CMakeLists file for the Chapter 7 example, showing a simple project which executes a test
+#
+# SPDX-License-Identifier: MIT
+
+cmake_minimum_required(VERSION 3.28)
+
+project(
+  "simple_test"
+  VERSION 1.0
+  DESCRIPTION "A simple C++ project to demonstrate basic CMake usage"
+  LANGUAGES CXX)
+
+# Enable testing for this project
+# enable_testing()
+# Ad the executalbe to test
+add_executable(simple_test)
+target_sources(simple_test PRIVATE simple_test.cpp)
+target_link_libraries(simple_test PRIVATE Catch2::Catch2WithMain)
+
+# Add a test called example_test which executes the command `ch7_simple_test`
+add_test(NAME example_test COMMAND simple_test)
+
+# Add a test called example_test_2 which executes the command `ch7_simple_test` with the argument `arg1`
+# add_test(NAME example_test_2 COMMAND ch7_simple_test arg1)
+
+	    </code></pre>
+
+	    <em>ctest --test-dir build/tests</em> <br />
+
+	</p>
+
+
+
+	<script src="../module/highlight/highlight.min.js"></script>
+
 	<footer>
 	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
 	</footer>
