@@ -68,7 +68,14 @@
 	    <em>cmake --build build --target "foo"</em> <br />
 	    <em>cmake --build build --verbose</em> <br />
 	    <em>cmake --build build --parallel --config Release</em> <br/>
+	    <em>cmake --build build --target help</em> <br/>
 	    <em>cmake --install build --prefix /tmp/install_test</em> <br />
+	</p>
+	<p>
+	    <pre><code class="CMake">
+set(CMAKE_VERBOSE_MAKEFILE on)
+cmake --build build -v
+	    </code></pre>
 	</p>
 
 	<h2>CMake Usage</h2>
