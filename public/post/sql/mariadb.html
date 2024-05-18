@@ -22,7 +22,12 @@
 	</header>
 
 	<div>Date: <time>2024-02-06</time>. Last updated: <time>2024-02-06</time>.</div>
-
+	<h2>SQL</h2>
+	<p>
+	    <ul>
+		<li><a href="https://www.w3cschool.cn/sql/">W3C SQL</a></li>
+	    </ul>
+	</p>
 	<h2>常用包</h2>
 	<p>
 	    <pre><code class="bash">
@@ -31,7 +36,18 @@
 	    systemctl stop mariadb;
 	    systemctl restart mariadb;
 	    mysqladmin -u root -p password '123456';
-            mariadb -u root -p
+            mariadb -u root -p'raymond'
+
+            show databases;
+            use sql_hr; 使用数据库
+            show tables;// employe offices
+            show create table offices;
+            drop databases ; // 删除数据库
+            create database dbtest1; // 创建数据库
+            show create table dbtest1;
+            create table emplyees(id int, name varchar(15)); //创建表
+            insert into emplyees values(1001, "TOM");  // 往表添加数据
+
 	    </code></pre>
 
 	    <pre><code class="sql">
@@ -41,12 +57,15 @@ DROP DATABASE Database_name;
 DROP TABLE table_name ;
 
 	    </code></pre>
-
-
-
-
 	</p>
 
+	<p>
+	    <pre><code class="sql">
+DDL：数据定义语言 CREATE / ALTER / DROP / RENAME / TRUNCATE
+DML: 数据操作语言 INSERT / DELETE / UPDATE / SELECT
+DCL: 数据控制语言 COMMIT / ROLLBACK / SAVEPOINT / GRANT / REVOKE
+	    </code></pre>
+	</p>
 
 
 
