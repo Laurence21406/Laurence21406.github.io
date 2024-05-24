@@ -27,9 +27,10 @@
 	    <ul>
 		<li><a href="https://www.w3cschool.cn/sql/">W3C SQL</a></li>
 		<li><a href="https://learnsql.cn/">Learn SQL</a></li>
+		<li><a href="https://www.yiibai.com/mariadb/">MariaDB教程</a></li>
 	    </ul>
 	</p>
-	<h2>常用包</h2>
+	<h2>常用命令</h2>
 	<p>
 	    <pre><code class="bash">
 	    systemctl start mariadb;
@@ -51,7 +52,7 @@
 
 	    </code></pre>
 
-	    <pre><code class="sql">
+	    <pre><code class="SQL">
 CREATE DATABASE Database_name;
 USE database_name;
 DROP DATABASE Database_name;
@@ -68,7 +69,48 @@ DCL: 数据控制语言 COMMIT / ROLLBACK / SAVEPOINT / GRANT / REVOKE
 	    </code></pre>
 	</p>
 
+	<p>
+	    <pre><code class="sql">
+SELECT department_id, MAX(salary)
+FROM employee
+WHERE department_id IN (10, 20, 30, 40) -- 过滤条件中没有聚合函数时，建议声明在WHERE子句中
+GROUP BY department_id
+HAVING MAX(salary) > 1000 -- 过滤条件中有聚合函数时, 过滤条件必须声明在HAVING子句中
+	    </code></pre>
 
+	    <pre><code class="sql">
+-- 2
+SELECT ...............(存在聚合函数)
+-- 1
+FROM .......（LEFT / RIGHT)JOIN....... ON ........ 多表连接
+WHERE
+GROUP BY ......
+HAVING .......包含聚合函数的过滤条件
+-- 3
+ORDER BY ..........(ASC/ DESC)
+LIMIT ........... 分页
+	    </code></pre>
+
+	    <pre><code class="sql">
+单行子查询/多行子查询
+	    </code></pre>
+	</p>
+
+	<p>
+	    <pre><code class="sql">
+INSERT INTO employee(id, name, salary)
+VALUES
+(1, 'jack', 8000)
+(3, 'tom', 9000)
+	    </code></pre>
+
+	    <pre><code class="sql">
+UPDATE employee(id, name, salary) -- 更新/删除可能因为约束失败
+SET salary = 1200
+WHERE id = 1
+	    </code></pre>
+
+	</p>
 
 
 
