@@ -1,75 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Emacs</title>
-    <link rel="shortcut icon" href="../imag/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css" type="text/css">
+    <head>
+	<meta charset="UTF-8">
+	<title>Emacs</title>
+	<link rel="shortcut icon" href="../imag/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css" type="text/css">
 
-    <!-- hightlight code -->
-    <link rel="stylesheet" href="../module/highlight/styles/default.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../module/bootstrap/dist/css/bootstrap.css">
+	<!-- hightlight code -->
+	<link rel="stylesheet" href="../module/highlight/styles/default.min.css">
 
-  </head>
+    </head>
+
+    <div class="container">
+	<body>
+	    <header>
+		<!-- <ul class="nav ms-auto justify-content-end">
+		     <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
+		     <li class="nav-item"><a class="nav-link" href="../about.html">ABOUT</a></li>
+		     </ul> -->
+
+		<nav>
+		    <a href="../index.html" target="_blank">HOME</a>
+		    <a href="../about.html" target="_blank">ABOUT</a>
+		</nav>
+	    </header>
+
+	    <h1> Emacs </h1>
+	    <div>Date: <time>2022-06-23</time>. Last updated: <time>2024-06-17</time>.</div>
 
 
-  <body>
-    <header>
-      <nav>
-	<a href="../index.html" target="_blank">HOME</a>
-	<a href="../about.html" target="_blank">ABOUT</a>
-      </nav>
-    </header>
+	    <h2>emacs news</h2>
+	    <p>
+		<ul>
+		    <li><a href="https://batsov.com" target="_blank">Bozhidar Batsov</a></li>
+		    <li><a href="https://protesilaos.com" target="_blank">Protesilaos Stavrou</a></li>
+		    <li><a href="https://sachachua.com" target="_blank">Sacha Chua</a></li>
+		    <li><a href="https://emacsredux.com/">Emacs Redux</a></li>
+		</ul>
+	    </p>
 
-    <h1>Emacs</h1>
-    <div>Date: <time>2022-06-23</time>. Last updated: <time>2023-11-18</time>.</div>
-    <h2>emacs news</h2>
-    <p>
-      <ul>
-	<li><a href="https://batsov.com" target="_blank">Bozhidar Batsov</a></li>
-	<li><a href="https://protesilaos.com" target="_blank">Protesilaos Stavrou</a></li>
-	<li><a href="https://sachachua.com" target="_blank">Sacha Chua</a></li>
-	<li><a href="https://emacsredux.com/">Emacs Redux</a></li>
-      </ul>
-    </p>
+	    <p class="text-warning">
+		emacs remove ^M <br />
+		M-x replace-string RET C-q C-m RET RET <br />
+	    </p>
 
-    <p>
-	emacs remove ^M <br />
-	M-x replace-string RET C-q C-m RET RET <br />
-    </p>
+	    <p>
+		<ol>
+		    <li><a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf">Refcard</a></li>
+		</ol>
+	    </p>
 
-    <h2>ClangFormat</h2>
-    <p>
-	.clang-format生成命令: <a href="https://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a>
-	<pre><code class="lisp">
+
+	    <h2>ClangFormat</h2>
+	    <p>
+		.clang-format生成命令: <a href="https://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a>
+		<pre><code class="lisp">
          M-x cla-r ;; format region
          M-x cla-b ;; format buffer
-	</code></pre>
-	<a href="https://www.cnblogs.com/__tudou__/p/13322854.html">clang-format的介绍和使用</a>
-    </p>
+		</code></pre>
+		<a href="https://www.cnblogs.com/__tudou__/p/13322854.html">clang-format的介绍和使用</a>
+	    </p>
 
-    <p>
-	光标回到上个位置  <br/>
-	<pre><code class="lisp">
+	    <p>
+		光标回到上个位置  <br/>
+		<pre><code class="lisp">
          C-SPC C-SPC
          C-u  C-SPC ;; go back mark
          pop-global-mark ;; all buffers
-	</code></pre>
-	<pre><code class="lisp">
+		</code></pre>
+		<pre><code class="lisp">
          C-h o ;; describe-symbol
-	</code></pre>
+		</code></pre>
 
-	<pre><code class="lisp">
+		<pre><code class="lisp">
          M-X ;;execute-extended-command-for-buffer
-	</code></pre>
+		</code></pre>
+	    </p>
 
-    </p>
+	    <footer>
+		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	    </footer>
 
-    <footer>
-      Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-    </footer>
+	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	    <script src="../module/highlight/highlight.min.js"></script>
+	    <script>hljs.highlightAll();</script>
 
-    <script src="../module/highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-  </body>
+	</body>
+    </div>
 </html>
