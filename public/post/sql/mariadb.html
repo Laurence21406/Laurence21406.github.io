@@ -6,35 +6,39 @@
 	<link rel="shortcut icon" href="../../imag/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
+	<!-- highlight -->
 	<link rel="stylesheet" href="../../module/highlight/styles/default.min.css">
-
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../../module/bootstrap/dist/css/bootstrap.css">
     </head>
 
-    <nav>
-	<a href="../../index.html" target="_blank">HOME</a>
-	<a href="../../about.html" target="_blank">ABOUT</a>
-    </nav>
+    <div class="container">
+	<body>
+	    <header>
+		<nav>
+		    <a href="../../index.html" target="_blank">HOME</a>
+		    <a href="../../archieve.html" target="_blank">ARCHIVE</a>
+		    <a href="../../tag.html" target="_blank">TAG</a>
+		    <a href="../../about.html" target="_blank">ABOUT</a>
+		</nav>
 
-    <body>
+	    </header>
 
-	<header>
 	    <h1>Mariadb</h1>
-	</header>
-
-	<div>Date: <time>2024-02-06</time>. Last updated: <time>2024-02-06</time>.</div>
-	<h2>SQL</h2>
-	<p>
-	    <ul>
-		<li><a href="https://www.w3cschool.cn/sql/">W3C SQL</a></li>
-		<li><a href="https://learnsql.cn/">Learn SQL</a></li>
-		<li><a href="https://www.yiibai.com/mariadb/">MariaDB教程</a></li>
-		<li><a href="https://junahan.netlify.app/post/emacs-sql/">Emacs SQL Mode 介绍</a></li>
-		<li><a href="https://emacsredux.com/blog/2013/06/13/using-emacs-as-a-database-client/">Using Emacs as a Database Client</a></li>
-	    </ul>
-	</p>
-	<h2>常用命令</h2>
-	<p>
-	    <pre><code class="bash">
+	    <div>Date: <time>2024-02-06</time>. Last updated: <time>2024-02-06</time>.</div>
+	    <h2>SQL</h2>
+	    <p>
+		<ul>
+		    <li><a href="https://www.w3cschool.cn/sql/">W3C SQL</a></li>
+		    <li><a href="https://learnsql.cn/">Learn SQL</a></li>
+		    <li><a href="https://www.yiibai.com/mariadb/">MariaDB教程</a></li>
+		    <li><a href="https://junahan.netlify.app/post/emacs-sql/">Emacs SQL Mode 介绍</a></li>
+		    <li><a href="https://emacsredux.com/blog/2013/06/13/using-emacs-as-a-database-client/">Using Emacs as a Database Client</a></li>
+		</ul>
+	    </p>
+	    <h2>常用命令</h2>
+	    <p>
+		<pre><code class="bash">
 	    systemctl start mariadb;
 	    systemctl status mariadb;
 	    systemctl stop mariadb;
@@ -52,35 +56,35 @@
             create table emplyees(id int, name varchar(15)); //创建表
             insert into emplyees values(1001, "TOM");  // 往表添加数据
 
-	    </code></pre>
+		</code></pre>
 
-	    <pre><code class="SQL">
+		<pre><code class="SQL">
 CREATE DATABASE Database_name;
 USE database_name;
 DROP DATABASE Database_name;
 DROP TABLE table_name ;
 
-	    </code></pre>
-	</p>
+		</code></pre>
+	    </p>
 
-	<p>
-	    <pre><code class="sql">
+	    <p>
+		<pre><code class="sql">
 DDL：数据定义语言 CREATE / ALTER / DROP / RENAME / TRUNCATE
 DML: 数据操作语言 INSERT / DELETE / UPDATE / SELECT
 DCL: 数据控制语言 COMMIT / ROLLBACK / SAVEPOINT / GRANT / REVOKE
-	    </code></pre>
-	</p>
+		</code></pre>
+	    </p>
 
-	<p>
-	    <pre><code class="sql">
+	    <p>
+		<pre><code class="sql">
 SELECT department_id, MAX(salary)
 FROM employee
 WHERE department_id IN (10, 20, 30, 40) -- 过滤条件中没有聚合函数时，建议声明在WHERE子句中
 GROUP BY department_id
 HAVING MAX(salary) > 1000 -- 过滤条件中有聚合函数时, 过滤条件必须声明在HAVING子句中
-	    </code></pre>
+		</code></pre>
 
-	    <pre><code class="sql">
+		<pre><code class="sql">
 -- 2
 SELECT ...............(存在聚合函数)
 -- 1
@@ -91,34 +95,39 @@ HAVING .......包含聚合函数的过滤条件
 -- 3
 ORDER BY ..........(ASC/ DESC)
 LIMIT ........... 分页
-	    </code></pre>
+		</code></pre>
 
-	    <pre><code class="sql">
+		<pre><code class="sql">
 单行子查询/多行子查询
-	    </code></pre>
-	</p>
+		</code></pre>
+	    </p>
 
-	<p>
-	    <pre><code class="sql">
+	    <p>
+		<pre><code class="sql">
 INSERT INTO employee(id, name, salary)
 VALUES
 (1, 'jack', 8000)
 (3, 'tom', 9000)
-	    </code></pre>
+		</code></pre>
 
-	    <pre><code class="sql">
+		<pre><code class="sql">
 UPDATE employee(id, name, salary) -- 更新/删除可能因为约束失败
 SET salary = 1200
 WHERE id = 1
-	    </code></pre>
+		</code></pre>
 
-	</p>
+	    </p>
 
 
 
-	<footer>
-	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	</footer>
-	<script src="../../module/highlight/highlight.min.js"></script>
-    </body>
+	    <footer>
+		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	    </footer>
+	    <!-- bootstrap -->
+	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	    <!-- highlight -->
+	    <script src="../../module/highlight/highlight.min.js"></script>
+	    <script>hljs.highlightAll();</script>
+	</body>
+    </div>
 </html>
