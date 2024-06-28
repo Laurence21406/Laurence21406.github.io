@@ -6,112 +6,134 @@
 	<link rel="shortcut icon" href="../../imag/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../../module/bootstrap/dist/css/bootstrap.css">
+	<!-- hightlight code -->
+	<link rel="stylesheet" href="../../module/highlight/styles/default.min.css">
     </head>
 
-    <nav>
-	<a href="../../index.html" target="_blank">HOME</a>
-	<a href="../../about.html" target="_blank">ABOUT</a>
-    </nav>
-
-    <body>
-
-	<header>
-	    <h1>tools</h1>
-	</header>
-
-	<div>Date: <time>2022-06-12</time>. Last updated: <time>2024-03-20</time>.</div>
-	<h2>library</h2>
-	<p>
-	    <em>ldconfig -p | grep libevent</em>
-	</p>
-
-	<h2>command</h2>
-	<p>
-	    <ol>
-		<li><em>grep -iwrn --color=auto "to_upper" /usr/include/boost/</em></li>
-		<li><em>find /usr/include/boost -name time.hpp --print</em></li>
-		<li><em>find /usr/include/boost -name "*.hpp" | xargs grep -irn --color=auto "test"</em></li>
-	    </ol>
-	</p>
-
-	<h2>c</h2>
-	<p>
-	    <ul>
-		<li>indent</li>
-		<li>valgrind</li>
-		<li>pkgconf</li>
-	    </ul>
-	</p>
-
-	<h2>debug</h2>
-	<p>
-	    <em>ls /var/lib/systemd/coredump</em> <br />
-	    <em>coredumpctl list</em>
-	    <em>coredumpctl gdb [PID]</em>
-	</p>
 
 
-	<h1>repost</h1>	<hr>
-	<h2>linux timer</h2>
-	<p>
-	    <ul>
-		<li><a href="https://cloud.tencent.com/developer/article/1763594">深入Linux C/C++ Timer定时器的实现核心原理</a></li>
-		<li><a href="https://www.cnblogs.com/luoxn28/p/5860610.html">Libevent的IO复用技术和定时事件原理 </a></li>
-		<li><a href="https://www.cnblogs.com/studywithallofyou/p/13476836.html">libevent源码解析</a></li>
-	    </ul>
-	</p>
+    <div class="container-lg pt-3 pb-3">
+	<body>
 
-	<h2>redis</h2>
-	<p>
-	    <ul>
-		<li><a href="https://cloud.tencent.com/developer/article/1763594">[Redis源码] Redis 启动过程分析</a></li>
-		<li><a href="https://cloud.tencent.com/developer/article/1417951">Redis源码分析2:Redis的事件处理模型</a></li>
-		<li><a href="https://cloud.tencent.com/developer/article/1417949">Redis的事件处理模型2：客户端命令执行过程</a></li>
-	    </ul>
-	</p>
+	    <header>
+		<nav>
+		    <a href="../../index.html" target="_blank">HOME</a>
+		    <a href="../../about.html" target="_blank">ABOUT</a>
+		    <a href="../../tag.html" target="_blank">TAG</a>
+		    <a href="../../about.html" target="_blank">ABOUT</a>
+		</nav>
+	    </header>
 
-	<h2>source code</h2>
-	<p>
-	    <blockquote cite="//www.worldwildlife.org/who/index">
-		阅读源码，我感觉最重要的是理解源码背后的意图，源码的执行流程。至于每一句话的意图，可以在理解了大体结构之后再细究。<br />
-		1.对于 js, c++等源码的阅读，我一般是打一些断点，然后研究 call stack，这样可以很方便地知道程序大体上的执行路径。<br />
-		2. 等对程序大体流程有了一些了解一后，我会尝试修改已有的一些函数。然后验证自己对于这些内部 api 的使用是否正确。<br />
-		3. 我会仔细阅读每一个功能的相关类的 API 文档，主要是一些 public API 的文档，当然如果作者没写文档这一步也不可错过。通过阅读 API，可以知道这些封装大概是干什么用的 <br />
-		4. 我会使用这些 API 去组装出一些新的玩意。<br />
-		5. 我会阅读一些高阶的文档，比如如何扩展一个模块，如何写一个插件。然后通过写一些扩展来增强我对代码库的理解。<br />
-		6.最后，我会重新发明一个最小能够工作的轮子，这样对于核心工作原理和算法会理解地更加深入。如果我的轮子不行，就加入一个好的开源轮子里面。<br />
-		以上就是我关于如何高效阅读源码的一些体会。
-	    </blockquote>
-	</p>
+	    <h1>Tools</h1>
+	    <div>Date: <time>2022-06-12</time>. Last updated: <time>2024-03-20</time>.</div>
 
-	<h2>Linux C/C++ 环境</h2>
-	<p>
-	    ulimit -a 查看所有<br />
-	    ulimit -c unlimited 设置core文件 <br />
-	    gdb + 程序名 <br />
-	    gdb attach pid <br />
-	    gdb --args nginx ../conf/nginx.conf <br />
-	    set args ../conf/nginx.cof <br />
-	    mysql -h127.0.0.1 -P3306 -uroot -p123456 <br />
-	    mysql -h101.37.25.166 -P3306 -uroot -p123456 <br />
-	</p>
-	<h2>Linux Command</h2>
-	<p>
-	    <ul>
-		<li><a href="https://strace.io/">Strace</a></li>
-	    </ul>
-	</p>
-	<h2>Linux News</h2>
-	<p>
-	    <ul>
-		<li><a href="https://lwn.net/">LWN</a></li>
-		<li><a href="https://bootlin.com/">bootlin</a></li>
-		<li><a href="https://chenweixiang.github.io/">chenweixiang</a></li>
+	    <h2>library</h2>
+	    <p>
+		<em>ldconfig -p | grep libevent</em>
+	    </p>
 
-	    </ul>
-	</p>
-	<footer>
-	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	</footer>
-    </body>
+	    <h2>command</h2>
+	    <p>
+		<ol>
+		    <li><em>grep -iwrn --color=auto "to_upper" /usr/include/boost/</em></li>
+		    <li><em>find /usr/include/boost -name time.hpp --print</em></li>
+		    <li><em>find /usr/include/boost -name "*.hpp" | xargs grep -irn --color=auto "test"</em></li>
+		</ol>
+	    </p>
+
+	    <h2>c</h2>
+	    <p>
+		<ul>
+		    <li>indent</li>
+		    <li>valgrind</li>
+		    <li>pkgconf</li>
+		</ul>
+	    </p>
+
+	    <h2>debug</h2>
+	    <p>
+		<em>ls /var/lib/systemd/coredump</em> <br />
+		<em>coredumpctl list</em>
+		<em>coredumpctl gdb [PID]</em>
+	    </p>
+
+
+	    <h1>repost</h1>	<hr>
+	    <h2>linux timer</h2>
+	    <p>
+		<ul>
+		    <li><a href="https://cloud.tencent.com/developer/article/1763594">深入Linux C/C++ Timer定时器的实现核心原理</a></li>
+		    <li><a href="https://www.cnblogs.com/luoxn28/p/5860610.html">Libevent的IO复用技术和定时事件原理 </a></li>
+		    <li><a href="https://www.cnblogs.com/studywithallofyou/p/13476836.html">libevent源码解析</a></li>
+		</ul>
+	    </p>
+
+	    <h2>redis</h2>
+	    <p>
+		<ul>
+		    <li><a href="https://cloud.tencent.com/developer/article/1763594">[Redis源码] Redis 启动过程分析</a></li>
+		    <li><a href="https://cloud.tencent.com/developer/article/1417951">Redis源码分析2:Redis的事件处理模型</a></li>
+		    <li><a href="https://cloud.tencent.com/developer/article/1417949">Redis的事件处理模型2：客户端命令执行过程</a></li>
+		</ul>
+	    </p>
+
+	    <h2>source code</h2>
+	    <p>
+		<blockquote cite="//www.worldwildlife.org/who/index">
+		    阅读源码，我感觉最重要的是理解源码背后的意图，源码的执行流程。至于每一句话的意图，可以在理解了大体结构之后再细究。<br />
+		    1.对于 js, c++等源码的阅读，我一般是打一些断点，然后研究 call stack，这样可以很方便地知道程序大体上的执行路径。<br />
+		    2. 等对程序大体流程有了一些了解一后，我会尝试修改已有的一些函数。然后验证自己对于这些内部 api 的使用是否正确。<br />
+		    3. 我会仔细阅读每一个功能的相关类的 API 文档，主要是一些 public API 的文档，当然如果作者没写文档这一步也不可错过。通过阅读 API，可以知道这些封装大概是干什么用的 <br />
+		    4. 我会使用这些 API 去组装出一些新的玩意。<br />
+		    5. 我会阅读一些高阶的文档，比如如何扩展一个模块，如何写一个插件。然后通过写一些扩展来增强我对代码库的理解。<br />
+		    6.最后，我会重新发明一个最小能够工作的轮子，这样对于核心工作原理和算法会理解地更加深入。如果我的轮子不行，就加入一个好的开源轮子里面。<br />
+		    以上就是我关于如何高效阅读源码的一些体会。
+		</blockquote>
+	    </p>
+
+	    <h2>Linux C/C++ 环境</h2>
+	    <p>
+		ulimit -a 查看所有<br />
+		ulimit -c unlimited 设置core文件 <br />
+		gdb + 程序名 <br />
+		gdb attach pid <br />
+		gdb --args nginx ../conf/nginx.conf <br />
+		set args ../conf/nginx.cof <br />
+		mysql -h127.0.0.1 -P3306 -uroot -p123456 <br />
+		mysql -h101.37.25.166 -P3306 -uroot -p123456 <br />
+	    </p>
+	    <h2>Linux Command</h2>
+	    <p>
+		<ul>
+		    <li><a href="https://strace.io/">Strace</a></li>
+		</ul>
+	    </p>
+	    <h2>Linux News</h2>
+	    <p>
+		<ul>
+		    <li><a href="https://lwn.net/">LWN</a></li>
+		    <li><a href="https://bootlin.com/">bootlin</a></li>
+		    <li><a href="https://chenweixiang.github.io/">chenweixiang</a></li>
+
+		</ul>
+	    </p>
+
+	    <p>
+		<ul>
+		    <li><a href="https://github.com/0xAX/linux-insides">Linux Insides</a></li>
+		</ul>
+	    </p>
+	    <footer>
+		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	    </footer>
+
+	    <!-- bootstrap -->
+	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	    <!-- highlight -->
+	    <script src="../module/highlight/highlight.min.js"></script>
+	    <script>hljs.highlightAll();</script>
+	</body>
+    </div>
 </html>
