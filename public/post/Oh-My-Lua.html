@@ -301,7 +301,7 @@ os.date()  -- 05/08/23 23:52:29
 		</code></pre>
 
 		时间戳 <br>
-		<pre><code class="Lua">-- os.time ([table])
+		<pre><code class="language-lua">-- os.time ([table])
 os.time() -- 1683561264
 os.time({year=2023, month = 5, day=8, hour=23, min=57,sec=30,isdst=false}) -- 1683561450
 		</code></pre>
@@ -317,7 +317,7 @@ os.difftime(t2,t1) -- 5.0
 
             <h2>随机数</h2>
             <p>
-		<pre><code class="Lua">-- math.randomseed ([x [, y]])
+		<pre><code class="language-lua">-- math.randomseed ([x [, y]])
 -- math.random ([m [, n]])
 math.randomseed(tostring(os.time()):reverse():sub(1,7))
 for i = 1, 5 do
@@ -358,7 +358,9 @@ math.modf(-16.78) -- -16 -0.78
 
 	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
 	    <script id="MathJax-script" async src="../module/mathjax/es5/tex-chtml.js"></script>
+
 	    <script src="../module/highlight/highlight.min.js"></script>
+	    <!-- <script src="../module/highlight/language/lua.min.js"></script> -->
 	    <script>hljs.highlightAll();</script>
 
 

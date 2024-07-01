@@ -8,78 +8,93 @@
 	<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="../../module/bootstrap/dist/css/bootstrap.css">
+	<!-- hightlight code -->
+	<link rel="stylesheet" href="../../module/highlight/styles/default.min.css">
     </head>
 
-    <nav>
-	<a href="../../index.html" target="_blank">HOME</a>
 
-	<a href="../../about.html" target="_blank">ABOUT</a>
-    </nav>
 
-    <body>
-	<header>
+    <div class="container-lg pt-3 pb-3">
+	<body>
+	    <header>
+		<nav>
+		    <a href="../../index.html" target="_blank">HOME</a>
+		    <a href="../../archive.html" target="_blank">ARCHIVE</a>
+		    <a href="../../tag.html" target="_blank">TAG</a>
+		    <a href="../../about.html" target="_blank">ABOUT</a>
+		</nav>
+	    </header>
+
 	    <h1>C++ Concurrency</h1>
-	</header>
+	    <div>Date: <time>2023-06-22</time>. Last updated: <time>2023-06-22</time>.</div>
 
-	<div>Date: <time>2023-06-22</time>. Last updated: <time>2023-06-22</time>.</div>
-
-	<h2>Boooks</h2>
-	<p>
-	    <ol>
-		<li><a href="https://pedrogao.github.io/patterns-of-distributed-systems/content/overview.html">分布式系统模式</a></li>
-	    </ol>
-	</p>
+	    <h2>Boooks</h2>
+	    <p>
+		<ol>
+		    <li><a href="https://pedrogao.github.io/patterns-of-distributed-systems/content/overview.html">分布式系统模式</a></li>
+		</ol>
+	    </p>
 
 
-	<h2>多线程编程</h2>
-	<p>
-	    <ul>
-		<li> <a href="https://www.bookstack.cn/read/Cpp_Concurrency_In_Action/README.md">C++并发编程(中文版)(C++ Concurrency In Action)</a> </li>
-		<li><a href="https://www.cppblog.com/kozmers/articles/67040.html">MultiThread</a></li>
-		<li><a href="https://www.cnblogs.com/ArsenalfanInECNU/p/17657495.html">c++中的多线程：概念、基本用法、锁以及条件变量和优先级调度策略</a></li>
-		<li><a href="https://www.cnblogs.com/haippy/p/3284540.html">C++11 并发指南系列</a></li>
-	    </ul>
-	</p>
+	    <h2>多线程编程</h2>
+	    <p>
+		<ul>
+		    <li> <a href="https://www.bookstack.cn/read/Cpp_Concurrency_In_Action/README.md">C++并发编程(中文版)(C++ Concurrency In Action)</a> </li>
+		    <li><a href="https://www.cppblog.com/kozmers/articles/67040.html">MultiThread</a></li>
+		    <li><a href="https://www.cnblogs.com/ArsenalfanInECNU/p/17657495.html">c++中的多线程：概念、基本用法、锁以及条件变量和优先级调度策略</a></li>
+		    <li><a href="https://www.cnblogs.com/haippy/p/3284540.html">C++11 并发指南系列</a></li>
+		</ul>
+	    </p>
 
-	<h2>条件变量</h2>
-	<p>
-	    <ul>
-		<li><a href="https://manongjc.com/detail/15-skvyvcwcmkgurum.html">虛假喚醒（spurious wakeups）的原因</a></li>
-		<li><a href="https://blog.csdn.net/Leeds1993/article/details/52738845">条件变量的虚假唤醒问题</a></li>
-		<li><a href="https://blog.csdn.net/anwh9295/article/details/120444450" target="_blank">C++併發編程之線程同步 std::condition_variable用法總結</a></li>
-		<li><a href="https://www.modernescpp.com/index.php/c-core-guidelines-be-aware-of-the-traps-of-condition-variables/" target="_blank">C++ Core Guidelines: Be Aware of the Traps of Condition Variables</a></li>
+	    <h2>条件变量</h2>
+	    <p>
+		<ul>
+		    <li><a href="https://manongjc.com/detail/15-skvyvcwcmkgurum.html">虛假喚醒（spurious wakeups）的原因</a></li>
+		    <li><a href="https://blog.csdn.net/Leeds1993/article/details/52738845">条件变量的虚假唤醒问题</a></li>
+		    <li><a href="https://blog.csdn.net/anwh9295/article/details/120444450" target="_blank">C++併發編程之線程同步 std::condition_variable用法總結</a></li>
+		    <li><a href="https://www.modernescpp.com/index.php/c-core-guidelines-be-aware-of-the-traps-of-condition-variables/" target="_blank">C++ Core Guidelines: Be Aware of the Traps of Condition Variables</a></li>
 
-	    </ul>
+		</ul>
 
-	</p>
+	    </p>
 
-	<h2>多线程</h2>
-	<p>
-	    <ul>
-		<li>互斥(资源同一时刻只能被一个进程使用)</li>
-		<li>请求并保持(进程在请求资源时，不释放自已经占有的资源)</li>
-		<li>不可剥夺(进程已经获得的资源，在进程使用前，不能强制剥夺)</li>
-		<li>循环等待(进程间形成环状的资源循环等待关系)</li>
-	    </ul>
-	</p>
+	    <h2>多线程</h2>
+	    <p>
+		<ul>
+		    <li>互斥(资源同一时刻只能被一个进程使用)</li>
+		    <li>请求并保持(进程在请求资源时，不释放自已经占有的资源)</li>
+		    <li>不可剥夺(进程已经获得的资源，在进程使用前，不能强制剥夺)</li>
+		    <li>循环等待(进程间形成环状的资源循环等待关系)</li>
+		</ul>
+	    </p>
 
-	<p>
-	    <ul>
-		<li>切勿将受保护数据的指针或引用传递到互斥锁作用域之外,无论是
-		    函数返回值,还是存储在外部可见内存,亦或是以参数的形式传递到用户提供的函数中去。</li>
-	    </ul>
+	    <p>
+		<ul>
+		    <li>切勿将受保护数据的指针或引用传递到互斥锁作用域之外,无论是
+			函数返回值,还是存储在外部可见内存,亦或是以参数的形式传递到用户提供的函数中去。</li>
+		</ul>
 
-	    <ol>
-		<li>避免嵌套锁</li>
-		<li>避免在持有锁时调用用户提供的代码</li>
-		<li>使用固定顺序获取锁</li>
-	    </ol>
+		<ol>
+		    <li>避免嵌套锁</li>
+		    <li>避免在持有锁时调用用户提供的代码</li>
+		    <li>使用固定顺序获取锁</li>
+		</ol>
 
-	</p>
+	    </p>
 
-	<footer>
-	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	</footer>
+	    <footer>
+		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+		<a href="https://www.gnu.org/software/emacs/" target="_blank">
+		    <img src="../../imag/made-with-emacs.png" style="float: right;">
+		</a>
+	    </footer>
 
-    </body>
+
+	    <!-- bootstrap -->
+	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	    <!-- highlight -->
+	    <script src="../module/highlight/highlight.min.js"></script>
+	    <script>hljs.highlightAll();</script>
+	</body>
+    </div>
 </html>
