@@ -6,50 +6,61 @@
 	<link rel="shortcut icon" href="../../imag/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../../module/bootstrap/dist/css/bootstrap.css">
+	<!-- hightlight code -->
+	<link rel="stylesheet" href="../../module/highlight/styles/default.min.css">
     </head>
 
-    <nav>
-	<a href="../../index.html" target="_blank">HOME</a>
-	<a href="../../about.html" target="_blank">ABOUT</a>
-    </nav>
+    <div class="container-lg pt-3 pb-3">
+	<body>
 
-    <body>
+	    <header>
+		<nav>
+		    <a href="../../index.html" target="_blank">HOME</a>
+		    <a href="../../archive.html" target="_blank">ARCHIVE</a>
+		    <a href="../../tag.html" target="_blank">TAG</a>
+		    <a href="../../about.html" target="_blank">ABOUT</a>
+		</nav>
+	    </header>
 
-	<header>
 	    <h1>MMORPG</h1>
-	</header>
+	    <div>Date: <time>2024-01-24</time>. Last updated: <time>2024-07-03</time>.</div>
+	    <h2>buff</h2>
+	    <p>
+		<blockquote>
+		    技能和buff的全套架构不算小，源码就不放了，给你些思路吧 <br/>
+		    首先一个技能并不只是对对方造成HP伤害，产生的效果会有很多，比如消耗自身MP，给对方/自己加buff等等很多种结果，所以在设计的时候需要设计很多种结果类。而结果ID可以直接填写在外部资源当中，比如表格等。<br/>
 
-	<div>Date: <time>2024-01-24</time>. Last updated: <time>2024-01-24</time>.</div>
-	<h2>buff</h2>
-	<p>
-	    <blockquote>
-		技能和buff的全套架构不算小，源码就不放了，给你些思路吧 <br/>
-		首先一个技能并不只是对对方造成HP伤害，产生的效果会有很多，比如消耗自身MP，给对方/自己加buff等等很多种结果，所以在设计的时候需要设计很多种结果类。而结果ID可以直接填写在外部资源当中，比如表格等。<br/>
+		    其次，技能在进行结算的时候会受到buff的处理，比如目标身上有个伤害加深的buff，技能产生的伤害结果通过这个buff的处理后数值会改变。而且buff效果的种类也会有很多，在目标身上会记录一个buff列表，技能效果会通过这个buff列表来进行处理，所以buff部分直接用责任链就可以实现了。 <br/>
 
-		其次，技能在进行结算的时候会受到buff的处理，比如目标身上有个伤害加深的buff，技能产生的伤害结果通过这个buff的处理后数值会改变。而且buff效果的种类也会有很多，在目标身上会记录一个buff列表，技能效果会通过这个buff列表来进行处理，所以buff部分直接用责任链就可以实现了。 <br/>
+		    然后，技能效果在受到buff处理之后就可以执行了，执行部分需要根据不同的效果进行不同的执行，最简单的设计方法就是子类实现基类的纯虚函数的方式，由外部代码统一调用执行。<br/>
 
-		然后，技能效果在受到buff处理之后就可以执行了，执行部分需要根据不同的效果进行不同的执行，最简单的设计方法就是子类实现基类的纯虚函数的方式，由外部代码统一调用执行。<br/>
+		    最后提醒一下，技能产生的效果会有很多，生成的会是一个树形结构而不是一个简单的链。 <br/>
+		</blockquote>
 
-		最后提醒一下，技能产生的效果会有很多，生成的会是一个树形结构而不是一个简单的链。 <br/>
-	    </blockquote>
-
-	    <blockquote>
-		为“宿主”带来增益(Buff)或损害(Debuff)，效果多是持续的并可被叠加。
-	    </blockquote>
+		<blockquote>
+		    为“宿主”带来增益(Buff)或损害(Debuff)，效果多是持续的并可被叠加。
+		</blockquote>
 
 
 
-	    <a href="https://zhuanlan.zhihu.com/p/38326478">五：方便扩展的被动技能，Buffer系统（和编辑器）</a> <br/>
-	    <a href="https://www.cnblogs.com/KillerAery">KillerAery</a> <br/>
-	</p>
+		<a href="https://zhuanlan.zhihu.com/p/38326478">五：方便扩展的被动技能，Buffer系统（和编辑器）</a> <br/>
+		<a href="https://www.cnblogs.com/KillerAery">KillerAery</a> <br/>
+		<a href="https://skynetclub.github.io/book/">skynet入门实践</a>
+	    </p>
 
 
+	    <footer>
+		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	    </footer>
 
-
-
-
-	<footer>
-	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	</footer>
-    </body>
+	    <!-- bootstrap -->
+	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	    <!-- highlight -->
+	    <script src="../module/highlight/highlight.min.js"></script>
+	    <script>hljs.highlightAll();</script>
+	</body>
+    </div>
 </html>
