@@ -32,10 +32,123 @@
 		<pre><code class="CPP">
                     std::map<int, std::string> myMap = {{1, "ele1"},{2, "ele2"},{3, "ele3"},};
 		    for (auto&& [key, val] : myMap) {
-		          std::cout << key << ": " << val << std::endl;
+		    std::cout << key << ": " << val << std::endl;
 		    }
 		</code></pre>
 	    </p>
+
+	    <p>
+		constexpr constinit constinit: <br/>
+		<pre><code class="CPP">
+		    consteval int CompileConst(int n) {
+                            return n + 1;
+		    }
+
+		    constexpr int RunCompileConst(int n) {
+		            return n + 1;
+		    }
+
+		    constexpr int constVar1 = CompileConst(5);
+		    constinit int constVar2 = CompileConst(5);
+
+		    int main() {
+		            constexpr int n1 = CompileConst(100);
+                            constexpr int n2 = RunCompileConst(100);
+		            static_assert(n1 == 101);
+		            static_assert(n2 == 101);
+
+		            int i = 100;
+		            // int nnn = CompileConst(i);
+		            int nnn = RunCompileConst(i);
+		            assert(nnn == 101);
+
+		            // ++constVar1;
+		            ++constVar2;
+		    }
+
+		</code></pre>
+
+		显示推导this(Deduce This): <br/>
+		<pre>
+		    <code class="c++">
+                   struct Base
+                   {
+                    template &lt typename Self &gt
+		    void interface( this Self&& self ) // deduce this
+		    {
+		            self.implementation();
+		    }
+		    void implementation()
+		    {
+		            std::cout << "Implementation Base" << '\n';
+		    }
+		    };
+
+		    struct Derived1 : Base
+		    {
+		            void implementation()
+		    {
+    		    std::cout << "Implementation Derived1" << '\n';
+		    }
+		    };
+
+		    struct Derived2 : Base
+		    {
+		            void implementation()
+		            {
+		                    std::cout << "Implementation Derived2" << '\n';
+		            }
+		    };
+
+		    struct Derived3 : Base
+		    {
+		    };
+
+		    int main()
+		    {
+		            Derived1 d1;
+			   d1.interface(); // Implementation Derived1
+
+			   Derived2 d2;
+			   d2.interface(); // Implementation Derived2
+
+			   Derived3 d3;
+			   d3.interface(); // Implementation Base
+
+		    }
+
+		    </code>
+		</pre>
+	    </p>
+
+
+
+
+
+	    <h2>ModernCPP Feature</h2>
+	    <p>
+		<ul>
+		    <li><a href="https://blog.csdn.net/guxch/article/details/113641104">C++20新特性—consteval与constinit</a></li>
+		</ul>
+	    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
