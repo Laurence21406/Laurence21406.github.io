@@ -10,261 +10,264 @@
 	<link rel="stylesheet" href="../module/bootstrap/dist/css/bootstrap.css">
 
     </head>
+    <div class="container-lg pt-3 pb-3">
+	<body>
 
-    <body>
+	    <header>
 
-	<header>
-	    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-		<!-- Brand -->
-		<a class="navbar-brand" href="../index.html" style="font-family:Cursive;font-style:italic">HOWER CHOW</a>
+		<nav class="navbar navbar-expand-md bg-light navbar-light">
+		    <!-- Brand -->
+		    <a class="navbar-brand" href="../index.html" style="font-family:Cursive;font-style:italic">HOWER CHOW</a>
 
-		<!-- Toggler/collapsibe Button -->
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-		    <span class="navbar-toggler-icon"></span>
-		</button>
+		    <!-- Toggler/collapsibe Button -->
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		    </button>
 
-		<!-- Navbar links -->
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-		    <ul class="navbar-nav ms-auto">
-			<li class="nav-item">
-			    <a class="nav-link" href="../archive.html">ARCHIVE</a>
-			</li>
-			<li class="nav-item">
-			    <a class="nav-link" href="../tag.html">TAG</a>
-			</li>
-			<li class="nav-item">
-			    <a class="nav-link" href="../about.html">ABOUT</a>
-			</li>
-		    </ul>
-		</div>
-	    </nav>
-	</header>
+		    <!-- Navbar links -->
+		    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav ms-auto justify-content-end">
+			    <li class="nav-item">
+				<a class="nav-link active" href="../archive.html">ARCHIVE</a>
+			    </li>
+			    <li class="nav-item">
+				<a class="nav-link" href="../tag.html">TAG</a>
+			    </li>
+			    <li class="nav-item">
+				<a class="nav-link" href="../about.html">ABOUT</a>
+			    </li>
+			</ul>
+		    </div>
+		</nav>
 
-	<article>
-	    <center>
+	    </header>
+
+	    <article>
+		<br/>
 		<h1>Learn html5</h1>
 		<div>Date: <time>2021-12-12</time>. Last updated: <time>2022-11-16</time>.</div>
-	    </center>
-	    <section>
-		<h2>head2</h2>
-		<p>hello world, I feel good 😂;</p>
-		<div>I'm div</div>
-		<span>I'm <ruby>span<rt>naps</rt></ruby></span>
-		<p>I'm <mark>Tom cat</mark>,do you like <strong>Tom</strong> and <em>Jerry</em></p>
-		<p>I've <ins>readed<ins> a lot of books about <b>Linux and C/C++.</b></p>
 
-		    <div>
-			<p>My family and I visited <a href="../imag/books.png" download="Epcot.png">The Epcot center</a> this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-			<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-			<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-		    </div>
-		    <aside>
-			<p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-		    </aside>
+		<section>
+		    <h2>head2</h2>
+		    <p>hello world, I feel good 😂;</p>
+		    <div>I'm div</div>
+		    <span>I'm <ruby>span<rt>naps</rt></ruby></span>
+		    <p>I'm <mark>Tom cat</mark>,do you like <strong>Tom</strong> and <em>Jerry</em></p>
+		    <p>I've <ins>readed<ins> a lot of books about <b>Linux and C/C++.</b></p>
 
-		    <p>Please press <kbd>CTRL</kbd> + <kbd>C</kbd> to resfash <i>this page.</i></p>
-		    <p><s>Struck-throuht text here</s></p>
+			<div>
+			    <p>My family and I visited <a href="../imag/books.png" download="Epcot.png">The Epcot center</a> this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+			    <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+			    <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+			</div>
+			<aside>
+			    <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+			</aside>
 
-		    <h3>link</h3>
-		    <!--
-			 图片：
-			 alt    图片的描述
-			 width  图片的宽度
-			 height 图片的高度
-			 注意：
-			 一般情况下，不建议修改图片的大小，需要多大的图片就裁多大
-			 但是在移动端，经常需要对图片进行缩放(大图片缩小)
+			<p>Please press <kbd>CTRL</kbd> + <kbd>C</kbd> to resfash <i>this page.</i></p>
+			<p><s>Struck-throuht text here</s></p>
 
-			 图片的格式：
-			 jpeg(jpg) 支持的颜色比较丰富，不支持动图，不支持动图 一般用来显示照片
-			 gif       支持的颜色比较少，支持简单透明，支持动图
-			 png       支持的颜色丰富，支持复杂透明，不支持动图
-			 webp      google推出,具备其他图片的所有优点，文件小，但兼容性不好
-			 base64    将图片使用base64进行编码，通过字符的形式来引入图片；
-			 一般都是一些需要和网页一起加载的图片才会使用base64
+			<h3>link</h3>
+			<!--
+			     图片：
+			     alt    图片的描述
+			     width  图片的宽度
+			     height 图片的高度
+			     注意：
+			     一般情况下，不建议修改图片的大小，需要多大的图片就裁多大
+			     但是在移动端，经常需要对图片进行缩放(大图片缩小)
 
-			 效果一样,用小的；效果不一样，用效果好的
+			     图片的格式：
+			     jpeg(jpg) 支持的颜色比较丰富，不支持动图，不支持动图 一般用来显示照片
+			     gif       支持的颜色比较少，支持简单透明，支持动图
+			     png       支持的颜色丰富，支持复杂透明，不支持动图
+			     webp      google推出,具备其他图片的所有优点，文件小，但兼容性不好
+			     base64    将图片使用base64进行编码，通过字符的形式来引入图片；
+			     一般都是一些需要和网页一起加载的图片才会使用base64
 
-		    -->
-		    <picture>
-			<img src="../imag/books.png" alt="I love books" title="Books about C++" width="700" height="400" style="float: right;">
-			<!-- <figcaption>Fig.1 - Another picture about picture.</figcaption> -->
-		    </picture>
-		    <p style="">
-			My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!
-			My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!
-			My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!
-		    </p>
+			     效果一样,用小的；效果不一样，用效果好的
 
-		    <!-- _blank 在新標籤中打開
-			 _self  在当前页面中打开
-		    -->
-		    <!-- <strong>Note:</strong> The  <a href="../post/assembly_programming.html" target="_blank" class="link-secondary" >Calibre</a> is a cross-platform software.
-			 </section> -->
+			-->
+			<picture>
+			    <img src="../imag/books.png" alt="I love books" title="Books about C++" width="700" height="400" style="float: right;">
+			    <!-- <figcaption>Fig.1 - Another picture about picture.</figcaption> -->
+			</picture>
+			<p style="">
+			    My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!
+			    My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!
+			    My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!
+			</p>
 
-		    <h3 style="clear: right">table</h3>
-		    <table class="table table-striped">
-			<thead>
-			    <tr>
-				<th>Firstname</th>
-				<th>Lastname</th>
-				<th>Email</th>
-			    </tr>
-			</thead>
-			<tbody>
-			    <tr>
-				<td>John</td>
-				<td>Doe</td>
-				<td>john@example.com</td>
-			    </tr>
-			    <tr>
-				<td>Mary</td>
-				<td>Moe</td>
-				<td>mary@example.com</td>
-			    </tr>
-			    <tr>
-				<td>July</td>
-				<td>Dooley</td>
-				<td>july@example.com</td>
-			    </tr>
-			</tbody>
-		    </table>
+			<!-- _blank 在新標籤中打開
+			     _self  在当前页面中打开
+			-->
+			<!-- <strong>Note:</strong> The  <a href="../post/assembly_programming.html" target="_blank" class="link-secondary" >Calibre</a> is a cross-platform software.
+			     </section> -->
 
-		    <h4>Math</h4>
-		    <p>
-			In equation, we find the value of an
-			interesting integral:
+			<h3 style="clear: right">table</h3>
+			<table class="table table-striped">
+			    <thead>
+				<tr>
+				    <th>Firstname</th>
+				    <th>Lastname</th>
+				    <th>Email</th>
+				</tr>
+			    </thead>
+			    <tbody>
+				<tr>
+				    <td>John</td>
+				    <td>Doe</td>
+				    <td>john@example.com</td>
+				</tr>
+				<tr>
+				    <td>Mary</td>
+				    <td>Moe</td>
+				    <td>mary@example.com</td>
+				</tr>
+				<tr>
+				    <td>July</td>
+				    <td>Dooley</td>
+				    <td>july@example.com</td>
+				</tr>
+			    </tbody>
+			</table>
 
-			\begin{equation}
-			\int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
-			\label{eq:sample}
-			\end{equation}
-		    </p>
+			<h4>Math</h4>
+			<p>
+			    In equation, we find the value of an
+			    interesting integral:
 
-		    <p>
-			\begin{equation}\begin{split}
-			H(Y|X)&=\sum_{x\in X} p(x)H(Y|X)\\
-			&=-\sum_{x\in X} p(x)\sum_{y\in Y}p(y|x)\log p(y|x)\\
-			&=-\sum_{x\in X} \sum_{y\in Y}p(y,x)\log p(y|x)
-			\end{split}\end{equation}
-		    </p>
+			    \begin{equation}
+			    \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+			    \label{eq:sample}
+			    \end{equation}
+			</p>
 
-		    <p>
-			\begin{array}{*{20}{l}}
-			{{}_{ }^{ } \int _{ }^{ }k \text{d} x=kx+C}\\
-			{{}_{ }^{ } \int _{ }^{ }\mathop{{x}}\nolimits^{{ \mu }} \text{d} x=\frac{{\mathop{{x}}\nolimits^{{ \mu +1}}}}{{ \mu +1}}+C,{ \left( { \mu  \neq -1} \right) }}\\
-			{{}_{ }^{ } \int _{ }^{ }\frac{{1}}{{x}} \text{d} x= \text{ln} { \left| {x} \right| }+C}\\
-			{{}_{ }^{ } \int _{ }^{ }\frac{{1}}{{1+\mathop{{x}}\nolimits^{{2}}}} \text{d} x= \text{arctan} x+C}\\
-			{{}_{ }^{ } \int _{ }^{ }\frac{{1}}{{\sqrt{{1-\mathop{{x}}\nolimits^{{2}}}}}} \text{d} x= \text{arcsin} x+C}
-			\end{array}
-		    </p>
+			<p>
+			    \begin{equation}\begin{split}
+			    H(Y|X)&=\sum_{x\in X} p(x)H(Y|X)\\
+			    &=-\sum_{x\in X} p(x)\sum_{y\in Y}p(y|x)\log p(y|x)\\
+			    &=-\sum_{x\in X} \sum_{y\in Y}p(y,x)\log p(y|x)
+			    \end{split}\end{equation}
+			</p>
 
-		    <h4>縮寫</h4>
-		    <p>
-			The <abbr title="World Health Organization">WHO</abbr> was founded in 1948. </p>
+			<p>
+			    \begin{array}{*{20}{l}}
+			    {{}_{ }^{ } \int _{ }^{ }k \text{d} x=kx+C}\\
+			    {{}_{ }^{ } \int _{ }^{ }\mathop{{x}}\nolimits^{{ \mu }} \text{d} x=\frac{{\mathop{{x}}\nolimits^{{ \mu +1}}}}{{ \mu +1}}+C,{ \left( { \mu  \neq -1} \right) }}\\
+			    {{}_{ }^{ } \int _{ }^{ }\frac{{1}}{{x}} \text{d} x= \text{ln} { \left| {x} \right| }+C}\\
+			    {{}_{ }^{ } \int _{ }^{ }\frac{{1}}{{1+\mathop{{x}}\nolimits^{{2}}}} \text{d} x= \text{arctan} x+C}\\
+			    {{}_{ }^{ } \int _{ }^{ }\frac{{1}}{{\sqrt{{1-\mathop{{x}}\nolimits^{{2}}}}}} \text{d} x= \text{arcsin} x+C}
+			    \end{array}
+			</p>
 
-		    <h4>Blockquote</h4>
-		    <p>
-			Jerry Lee:<br>
-			<blockquote cite="//www.worldwildlife.org/who/index">
-			    For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization,WWF works in <em>100 countries</em> and is supported by 1.2 million members in <u>the United States</u> and <del>close to 5 million globally</del>.
-			</blockquote>
-		    </p>
+			<h4>縮寫</h4>
+			<p>
+			    The <abbr title="World Health Organization">WHO</abbr> was founded in 1948. </p>
 
-
-		    <details>
-			<summary>Epcot Center</summary>
-			<p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-		    </details>
-
-		    <!-- <p align="right"> -->
-		    <!--   <a href="#header">back to begin</a> -->
-		    <!-- </p> -->
-
-		    <!-- <address> -->
-		    <!--   Written by <a href="mailto:2962539335@qq.com">Hower Chow</a>.<br> -->
-		    <!--   Visit us at:<br> -->
-		    <!--   Example.com<br> -->
-		    <!--   Box 564, Disneyland<br> -->
-		    <!--   USA -->
-		    <!-- </address> -->
-
-		    <p class="text-end">
-
-		    </p>
-
-		    <p>
-			<a class="link-primary" href="https://www.baidu.com">baidu</a>
-		    </p>
-
-		    <div class="alert alert-primary">
-			A simple primary alert—check it out!
-		    </div>
+			<h4>Blockquote</h4>
+			<p>
+			    Jerry Lee:<br>
+			    <blockquote cite="//www.worldwildlife.org/who/index">
+				For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization,WWF works in <em>100 countries</em> and is supported by 1.2 million members in <u>the United States</u> and <del>close to 5 million globally</del>.
+			    </blockquote>
+			</p>
 
 
-		    <div class="alert alert-primary" role="alert">
-			A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-		    </div>
+			<details>
+			    <summary>Epcot Center</summary>
+			    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+			</details>
 
+			<!-- <p align="right"> -->
+			<!--   <a href="#header">back to begin</a> -->
+			<!-- </p> -->
 
+			<!-- <address> -->
+			<!--   Written by <a href="mailto:2962539335@qq.com">Hower Chow</a>.<br> -->
+			<!--   Visit us at:<br> -->
+			<!--   Example.com<br> -->
+			<!--   Box 564, Disneyland<br> -->
+			<!--   USA -->
+			<!-- </address> -->
 
-		    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-			<div class="btn-group me-2" role="group" aria-label="First group">
-			    <button type="button" class="btn btn-primary">1</button>
-			    <button type="button" class="btn btn-primary">2</button>
-			    <button type="button" class="btn btn-primary">3</button>
-			    <button type="button" class="btn btn-primary">4</button>
+			<p class="text-end">
+
+			</p>
+
+			<p>
+			    <a class="link-primary" href="https://www.baidu.com">baidu</a>
+			</p>
+
+			<div class="alert alert-primary">
+			    A simple primary alert—check it out!
 			</div>
 
-			<div class="btn-group me-2" role="group" aria-label="Second group">
-			    <button type="button" class="btn btn-secondary">5</button>
-			    <button type="button" class="btn btn-secondary">6</button>
-			    <button type="button" class="btn btn-secondary">7</button>
-			</div>
-			<div class="btn-group" role="group" aria-label="Third group">
-			    <button type="button" class="btn btn-info">8</button>
-			</div>
-		    </div>
 
-		    <div class=“container”>
-			<div class=“row”>
-			    <div class=“col”>
-				Column
+			<div class="alert alert-primary" role="alert">
+			    A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+			</div>
+
+
+
+			<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+			    <div class="btn-group me-2" role="group" aria-label="First group">
+				<button type="button" class="btn btn-primary">1</button>
+				<button type="button" class="btn btn-primary">2</button>
+				<button type="button" class="btn btn-primary">3</button>
+				<button type="button" class="btn btn-primary">4</button>
 			    </div>
-			    <div class=“col”>
-				Column
+
+			    <div class="btn-group me-2" role="group" aria-label="Second group">
+				<button type="button" class="btn btn-secondary">5</button>
+				<button type="button" class="btn btn-secondary">6</button>
+				<button type="button" class="btn btn-secondary">7</button>
 			    </div>
-			    <div class=“col”>
-				Column
+			    <div class="btn-group" role="group" aria-label="Third group">
+				<button type="button" class="btn btn-info">8</button>
 			    </div>
 			</div>
-		    </div>
 
-		    <p>
-			<dl>
-			    <dt>Coffee</dt>
-			    <dd>- black hot drink</dd>
-			    <dd>- black hot watter</dd>
-			    <dd>- black warmer watter</dd>
-			    <dt>Milk</dt>
-			    <dd>- white cold drink</dd>
-			</dl>
-		    </p>
-	</article>
+			<div class=“container”>
+			    <div class=“row”>
+				<div class=“col”>
+				    Column
+				</div>
+				<div class=“col”>
+				    Column
+				</div>
+				<div class=“col”>
+				    Column
+				</div>
+			    </div>
+			</div>
+
+			<p>
+			    <dl>
+				<dt>Coffee</dt>
+				<dd>- black hot drink</dd>
+				<dd>- black hot watter</dd>
+				<dd>- black warmer watter</dd>
+				<dt>Milk</dt>
+				<dd>- white cold drink</dd>
+			    </dl>
+			</p>
+	    </article>
 
 
-	<p class="text-end">
-	    <a href="#">Back to top</a>
-	</p>
-
-	<footer>
-	    <p>
-		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	    <p class="text-end">
+		<a href="#">Back to top</a>
 	    </p>
-	</footer>
 
-	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	<script id="MathJax-script" async src="../module/MathJax-3.2.2/es5/tex-chtml.js"></script>
+	    <footer>
+		<p>
+		    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+		</p>
+	    </footer>
 
-    </body>
+	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	    <script id="MathJax-script" async src="../module/MathJax-3.2.2/es5/tex-chtml.js"></script>
+
+	</body>
+    </div>
 </html>
