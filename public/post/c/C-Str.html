@@ -7,24 +7,32 @@
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
 	<link rel="stylesheet" href="../../module/highlight/styles/default.min.css">
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../../module/bootstrap/dist/css/bootstrap.css">
+	<!-- hightlight code -->
+	<link rel="stylesheet" href="../../module/highlight/styles/default.min.css">
     </head>
 
-    <nav>
-	<a href="../../index.html" target="_blank">HOME</a>
-	<a href="../../about.html" target="_blank">ABOUT</a>
-    </nav>
 
-    <body>
-	<header>
+    <div class="container-lg pt-3 pb-3">
+	<body>
+	    <header>
+				<nav>
+		    <a href="../../index.html" target="_blank">HOME</a>
+		    <a href="../../archive.html" target="_blank">ARCHIVE</a>
+		    <a href="../../tag.html" target="_blank">TAG</a>
+		    <a href="../../about.html" target="_blank">ABOUT</a>
+				</nav>
+
+	    </header>
 	    <h1>C String</h1>
-	</header>
+	    <div>Date: <time>2023-07-28</time>. Last updated: <time>2023-10-09</time>.</div>
 
-	<div>Date: <time>2023-07-28</time>. Last updated: <time>2023-10-09</time>.</div>
-
-	<h2>字符串查找</h2>
-	<h3>strspn strcspn strpbrk strchar</h3>
-	<p>
-	    <pre><code class="C">
+	    <h2>字符串查找</h2>
+	    <h3>strspn strcspn strpbrk strchar</h3>
+	    <p>
+		<pre><code class="C">
 /* strspn返回s从起始匹配accept字符集中字符的个数
 size_t strspn(const char *s, const char *accept);
 /* strspn返回s起始不匹配reject字符集中字符的个数 */
@@ -39,27 +47,27 @@ char *strpbrk(const char *s, const char *accept);
 char *strchr(const char *s, int c);
 char *strrchr(const char *s, int c);
 
-	    </code></pre>
+		</code></pre>
 
-	</p>
+	    </p>
 
-	<h3>strstr的三种用法</h3>
-	<p>
-	    <pre><code class="C">
+	    <h3>strstr的三种用法</h3>
+	    <p>
+		<pre><code class="C">
 /* strstr函数在第一个字符串haystack中搜索第二个字符串needle, 找到返回第二字符串needle首地址，未找到返回NULL*/
 char *strstr(const char *haystack, const char *needle);
-	    </code></pre>
-	    1.单次查找，返回查找成功的字符串以及后面的字符串 <br/>
-	    <pre><code class="C">
+		</code></pre>
+		1.单次查找，返回查找成功的字符串以及后面的字符串 <br/>
+		<pre><code class="C">
 void test1() {
   char *haystck = "The  strstr() function finds the first occurrence of the substring nee‐";
   char *needle  = "substring";
   char *p = strstr(haystck, needle);
   puts(p); // substring nee‐
 }
-	    </code></pre>
-	    2. 单次查找,返回子串在母串中位置 <br/>
-	    <pre><code class="C">
+		</code></pre>
+		2. 单次查找,返回子串在母串中位置 <br/>
+		<pre><code class="C">
 void test2() {
   char *haystck = "The substring nee‐";
   char *needle  = "substring";
@@ -69,9 +77,9 @@ void test2() {
   printf("%td\n", pdf);
  }
 }
-	    </code></pre>
-	    3. 多次查找,记录子串在母串中出现次数 <br/>
-	    <pre><code class="C">
+		</code></pre>
+		3. 多次查找,记录子串在母串中出现次数 <br/>
+		<pre><code class="C">
 void test3() {
   char *haystck = "The substring nee‐substring， substring";
   char *needle  = "substring";
@@ -84,13 +92,13 @@ void test3() {
   }
   printf("%d\n", k);
 }
-	    </code></pre>
+		</code></pre>
 
-	</p>
+	    </p>
 
-	<h2>字符串比较</h2>
-	<p>
-	    <pre><code class="C">
+	    <h2>字符串比较</h2>
+	    <p>
+		<pre><code class="C">
 /*
  * s1 == s2 返回0
  * s1 < s2 返回负数
@@ -101,40 +109,45 @@ int strcmp(const char *s1, const char *s2);
 /* 只比较前n个字节 */
 int strncmp(const char s1[.n], const char s2[.n], size_t n);
 
-	    </code></pre>
-	</p>
+		</code></pre>
+	    </p>
 
-	<h2> 字符串复制 </h2>
-	<p>
-	    <pre><code class="C">
+	    <h2> 字符串复制 </h2>
+	    <p>
+		<pre><code class="C">
 /* strdup, strndup, strdupa, strndupa - duplicate a string*/
 
-	    </code></pre>
+		</code></pre>
 
-	</p>
+	    </p>
 
-	<h2>字符串分割</h2>
-	<p>
-	    <pre><code class="C">
+	    <h2>字符串分割</h2>
+	    <p>
+		<pre><code class="C">
 char *strtok(char *restrict str, const char *restrict delim);
-	    </code></pre>
+		</code></pre>
 
 
-	</p>
-
-
-
-
-	<h2>eeee</h2>
+	    </p>
 
 
 
 
-	<footer>
-	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	</footer>
+	    <h2>eeee</h2>
 
-	<script src="../../module/highlight/highlight.min.js"></script>
-	<script>hljs.highlightAll();</script>
-    </body>
+
+
+
+	    <footer>
+		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	    </footer>
+
+	    <!-- bootstrap -->
+	    <script src="../../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	    <!-- highlight -->
+	    <script src="../../module/highlight/highlight.min.js"></script>
+	    <script>hljs.highlightAll();</script>
+
+	</body>
+    </div>
 </html>
