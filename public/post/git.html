@@ -1,110 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Git</title>
-    <link rel="shortcut icon" href="../imag/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css" type="text/css">
-  </head>
+    <head>
+	<meta charset="UTF-8">
+	<title>Git</title>
+	<link rel="shortcut icon" href="../imag/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="../module/cc-icons/css/cc-icons.min.css" type="text/css">
 
-  <nav>
-    <a href="../index.html" target="_blank">HOME</a>
-    <a href="../about.html" target="_blank">ABOUT</a>
-  </nav>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../module/bootstrap/dist/css/bootstrap.css">
+	<!-- hightlight code -->
+	<link rel="stylesheet" href="../module/highlight/styles/default.min.css>"
 
-  <body>
+    </head>
 
-    <header>
-      <h1>Git</h1>
-    </header>
+    <div class="container-lg pt-3 pb-3 ps-1">
+	<body>
+	    <header>
+		<nav>
+	    	    <a href="../index.html" target="_blank">HOME</a>
+		    <a href="../archive.html" target="_blank">ARCHIVE</a>
+		    <a href="../tag.html" target="_blank">TAG</a>
+		    <a href="../about.html" target="_blank">ABOUT</a>
+		</nav>
+	    </header>
+	    <h1>Git</h1>
+	    <div>Date: <time>2022-1-3</time>. Last updated: <time>2022-3-29</time>.</div>
 
-    <div>Date: <time>2022-1-3</time>. Last updated: <time>2022-3-29</time>.</div>
+	    <h2>Git Diff</h2>
+	    <p>
+		<ul>
+		    <li>
+			Working tree vs Index <br />
+			<em>git diff</em>
+		    </li>
 
-    <h2>Git Diff</h2>
-    <p>
-      <ul>
-	<li>
-	  Working tree vs Index <br />
-	  <em>git diff</em>
-	</li>
+		    <li>
+			Index vs Commit <br />
+			<em>git diff --cached</em>
+		    </li>
 
-	<li>
-	  Index vs Commit <br />
-	  <em>git diff --cached</em>
-	</li>
+		    <li>
+			Working tree vs Commit <br />
+			<em>git diff HEAD</em>
+		    </li>
+		</ul>
+	    </p>
 
-	<li>
-	  Working tree vs Commit <br />
-	  <em>git diff HEAD</em>
-	</li>
-      </ul>
-    </p>
+	    <h2>Git Reset</h2>
+	    <p>
+		<ul>
+		    <li><em>git reset --soft commit-id</em></li>
+		    <li><em>git reset --mixed commit-id</em></li>
+		    <li><em>git reset --hard commit-id</em></li>
+		</ul>
+	    </p>
 
-    <h2>Git Reset</h2>
-    <p>
-      <ul>
-	<li><em>git reset --soft commit-id</em></li>
-	<li><em>git reset --mixed commit-id</em></li>
-	<li><em>git reset --hard commit-id</em></li>
-      </ul>
-    </p>
-    <h2>Git Rebase</h2>
-    <p>
-      <ul>
-	<li>
-	  <em>git switch -c branch1</em> <br />
-	  <em>git rebase master</em> <br />
-	  <em>git switch master</em> <br />
-	  <em>git merge branch1</em>
-	</li>
-	<li><a href="https://www.cnblogs.com/chenny7/p/7644318.html" target="_blank">git rebase</a></li>
-      </ul>
-    </p>
+	    <h2>Git Rebase</h2>
+	    <p>
+		<ul>
+		    <li>
+			<em>git switch -c branch1</em> <br />
+			<em>git rebase master</em> <br />
+			<em>git switch master</em> <br />
+			<em>git merge branch1</em>
+		    </li>
+		    <li><a href="https://www.cnblogs.com/chenny7/p/7644318.html" target="_blank">git rebase</a></li>
+		</ul>
+	    </p>
 
-    <h2>Git Stash</h2>
-    <p>
-      <ul>
-	<li>
-	  <em>git stash</em> <br />
-	  <em>git stash list</em> <br />
-	  <em>git stash apply</em> <br />
-	  <em>git stash drop</em> <br />
-	</li>
-      </ul>
-    </p>
+	    <h2>Git Stash</h2>
+	    <p>
+		<ul>
+		    <li>
+			<em>git stash</em> <br />
+			<em>git stash list</em> <br />
+			<em>git stash apply</em> <br />
+			<em>git stash drop</em> <br />
+		    </li>
+		</ul>
+	    </p>
 
-    <h2>Git Submodule</h2>
-    <p>
-	<ul>
-	    <li><em>git submodule init</em></li>
-	    <li><em>git submodule add https://github.com/libevent/libevent.git<em></li>
-		<li><em>git submodule update</em></li>
-		<li><em>git checkout release-2.1.8-stable</em></li>
-		<li><em>add_subdirectory(extern/libevent)</em></li>
-		<li><em>git submodule update --init --recursive</em></li>
-	</ul>
-    </p>
-    <p>
-	git下載子模塊 <br />
-	<ul>
-	    <li><em>git clone --recursive</em></li>
-	    <li><em>git submodule update --init</em></li>
-	</ul>
-    </p>
+	    <h2>Git Submodule</h2>
+	    <p>
+		<ul>
+		    <li><em>git submodule init</em></li>
+		    <li><em>git submodule add https://github.com/libevent/libevent.git<em></li>
+			<li><em>git submodule update</em></li>
+			<li><em>git checkout release-2.1.8-stable</em></li>
+			<li><em>add_subdirectory(extern/libevent)</em></li>
+			<li><em>git submodule update --init --recursive</em></li>
+		</ul>
+	    </p>
+	    <p>
+		git下載子模塊 <br />
+		<ul>
+		    <li><em>git clone --recursive</em></li>
+		    <li><em>git submodule update --init</em></li>
+		</ul>
+	    </p>
 
-    <h2>Proxy</h2>
-    <p>
-      git config --global --add remote.origin.proxy "127.0.0.1:7890"
-    </p>
+	    <h2>Proxy</h2>
+	    <p>
+		git config --global --add remote.origin.proxy "127.0.0.1:7890"
+	    </p>
 
-    <p>
-	git log --oneline --all -n4 --graph
-    </p>
-    <footer>
-      Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-    </footer>
+	    <p>
+		git log --oneline --all -n4 --graph
+	    </p>
 
 
-  </body>
+
+
+
+
+
+
+	    <footer>
+		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	    </footer>
+
+    	    <!-- bootstrap -->
+	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	    <!-- highlight -->
+	    <script src="../module/highlight/highlight.min.js"></script>
+	    <script>hljs.highlightAll();</script>
+
+	</body>
+    </div>
 </html>
