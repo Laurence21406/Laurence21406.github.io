@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="../module/bootstrap/dist/css/bootstrap.css">
     </head>
 
-    <div class="container-lg pt-3 pb-3">
+    <div class="container-xl pt-3 pb-3">
 	<body>
 	    <header>
 		<nav>
@@ -157,7 +157,6 @@ add_test(NAME example_test COMMAND simple_test)
 
 	    </p>
 
-
 	    <p>
 		<ul>
 		    <li>编译标志: 使用target_compile_option</li>
@@ -167,18 +166,27 @@ add_test(NAME example_test COMMAND simple_test)
 	    </p>
 
 
+	    <h2>CMake Commands</h2>
+
+	    <h3>find_package</h3>
+	    <p>
+		<b>Module mode</b>: Find&ltPackageName&gt.cmake  搜索路径: CMAKE_MODULE_PATH CMAKE_ROOT<br/>
+
+		<b>Config mode</b>: 由package自身提供 &ltPackageName&gtConfig.cmake 或者 &ltlower-case-package-name&gt-config.cmake 搜索路径: &ltPackageName&gt_DIR CMAKE_PREFIX_PATH
+
+	    </p>
 
 
-	    <script src="../module/highlight/highlight.min.js"></script>
+
 
 	    <footer>
 		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
 	    </footer>
 
+	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
 	    <script src="../module/highlight/highlight.min.js"></script>
 	    <script>hljs.highlightAll();</script>
 
-	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
 	</body>
     </div>
 </html>
