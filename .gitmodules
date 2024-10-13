@@ -1,0 +1,3 @@
+[submodule "public/post/transcripts/friends"]
+	path = public/post/transcripts/friends
+	url = https://gitlab.com/howerchow/friends.git
