@@ -1,3 +1,6 @@
 [submodule "public/post/transcripts/friends"]
 	path = public/post/transcripts/friends
 	url = https://gitlab.com/howerchow/friends.git
+[submodule "public/module/bootstrap"]
+	path = public/module/bootstrap
+	url = https://github.com/twbs/bootstrap.git
