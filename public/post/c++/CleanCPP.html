@@ -37,7 +37,28 @@
 
 
 
+	    <h2>C++ API TIP</h2>
+	    <p>
+		<ul>
+		    <li>Prefer the use of enums over Booleans and integers to improve code readability.</li>
+		    <li>Avoid functions with multiple parameters of the same type.</li>
+		    <li>Use consistent function naming and parameter ordering</li>
+		    <li>An orthogonal API means that functions do not have side effects.</li>
+		    <li>Return a dynamically allocated object using a smart pointer wherever possible.</li>
+		    <li>Think of resource allocation and deallocation as object construction and destruction.</li>
+		    <li>Never put platform-specific #if or #ifdef statements into your public APIs. It exposes
+			implementation details and makes your API behave differently on differently platforms.</li>
+		    <li>Good APIs exhibit loose coupling and high cohesion.</li>
+		    <li>Use a forward declaration for a class unless you actually need to #include its full
+			definition.</li>
+		    <li>Prefer using nonmember nonfriend functions instead of member functions to reduce
+			coupling.</li>
+		    <li>Data redundancy can sometimes be justified to reduce coupling between classes</li>
+		    <li>Manager classes can reduce coupling by encapsulating several lower-level classes. They
+			can be implemented using the Fac¸ade or Mediator design patterns.</li>
 
+		</ul>
+	    </p>
 
 
 
