@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>C++ Concepts</title>
-    <link rel="shortcut icon" href="../../imag/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
-  </head>
-
-  <nav>
-    <a href="../../index.html" target="_blank">HOME</a>
-    <a href="../../about.html" target="_blank">ABOUT</a>
-  </nav>
-
-  <body>
-    <header>
-      <h1>C++ Concepts</h1>
-    </header>
-
-    <div>Date: <time>2023-06-13</time>. Last updated: <time>2023-06-13</time>.</div>
-
-    <h2> 抽象基类(Abstract Base Class) </h2>
-    <p>
-
-        虚函数(Virtual Function): 虚方法 <br>
-        纯虚函数(Pure Virtual Function): 抽象方法, 子类必须实现, 行为规范
-	类纯虚函数的声明就是在告诉子类的设计者，"你必须提供一个纯虚函数的实现，但我不知道你会怎样实现它" 。
-
-	抽象基类(ABC)： 含有Pure Virtual Function的类, 可以有状态，可以有被实现的方法，不能被实例化；ABC子类需要被实例化必须实现每个Pure Virtual Function <br/>
-	虚基类： 虚拟继承的主要目的是解决多重继承中的菱形继承问题和冗余数据问题
-        纯虚函数(Pure Virtual Function): 抽象方法(Abstract Methods) <br/>
-
-    </p>
-
-    <h2> 接口(Interface) </h2>
-    <p>
-        接口(Interface): 只包含虚析构函数(Virtual Destructor)和抽象方法(Pure Virtual Function)；没有状态；继承接口必须实现接口所有方法;
-    </p>
-
-    <p>
-      抽象类是类的抽象,模板设计
-	<blockquote>
-	    Prefer providing abstract interfaces.
-	</blockquote>
-	<strong>abstract interface: (pure virtual function)</strong>
-    </p>
-
-    <p>
-	接口是行为规范,需子类实现抽象方法达到目的; <br/>
-	抽象类是类的抽象,模板设计
-    </p>
+    <head>
+	<meta charset="UTF-8">
+	<title>C++ Concepts</title>
+	<link rel="shortcut icon" href="../../imag/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" href="../../module/cc-icons/css/cc-icons.min.css" type="text/css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../../module/bootstrap/dist/css/bootstrap.css">
+    </head>
 
 
 
+    <body>
+	<nav>
+	    <a href="../../index.html" target="_blank">HOME</a>
+	    <a href="../../about.html" target="_blank">ABOUT</a>
+	</nav>
 
-    <footer>
-      Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-    </footer>
+	<main class="container">
+	    <div class="row justify-content-center">
+		<div class="col">
+		    <header>
+			<h1>C++ Concepts</h1>
+		    </header>
 
-  </body>
+		    <div class="lead">Date: <time>2023-06-13</time>. Last updated: <time>2023-06-13</time>.</div>
+
+		    <h2> 抽象基类(Abstract Base Class) </h2>
+		    <p>
+
+			虚函数(Virtual Function): 虚方法 <br>
+			纯虚函数(Pure Virtual Function): 抽象方法, 子类必须实现, 行为规范
+			类纯虚函数的声明就是在告诉子类的设计者，"你必须提供一个纯虚函数的实现，但我不知道你会怎样实现它" 。
+
+			抽象基类(ABC)： 含有Pure Virtual Function的类, 可以有状态，可以有被实现的方法，不能被实例化；ABC子类需要被实例化必须实现每个Pure Virtual Function <br/>
+			虚基类： 虚拟继承的主要目的是解决多重继承中的菱形继承问题和冗余数据问题
+			纯虚函数(Pure Virtual Function): 抽象方法(Abstract Methods) <br/>
+
+		    </p>
+
+		    <h2> 接口(Interface) </h2>
+		    <p>
+			接口(Interface): 只包含虚析构函数(Virtual Destructor)和抽象方法(Pure Virtual Function)；没有状态；继承接口必须实现接口所有方法;
+		    </p>
+
+		    <p>
+			抽象类是类的抽象,模板设计
+			<blockquote>
+			    Prefer providing abstract interfaces.
+			</blockquote>
+			<strong>abstract interface: (pure virtual function)</strong>
+		    </p>
+
+		    <p>
+			接口是行为规范,需子类实现抽象方法达到目的; <br/>
+			抽象类是类的抽象,模板设计
+		    </p>
+
+		</div>
+	    </div>
+	</main>
+
+	<footer class="text-center text-body-secondary">
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
+
+	<!-- bootstrap -->
+	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
 </html>
