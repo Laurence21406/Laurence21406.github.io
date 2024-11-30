@@ -14,89 +14,101 @@
 
     </head>
 
-    <div class="container-xl pt-3 pb-3 ps-1">
-	<body>
-	    <header>
-		<nav>
-		    <a href="../index.html" target="_blank">HOME</a>
-		    <a href="../archive.html" target="_blank">ARCHIVE</a>
-		    <a href="../tag.html" target="_blank">TAG</a>
-		    <a href="../about.html" target="_blank">ABOUT</a>
-		</nav>
-	    </header>
 
-	    <h1> Emacs </h1>
-	    <div>Date: <time>2022-06-23</time>. Last updated: <time>2024-06-17</time>.</div>
+    <body>
+	<header>
+	    <nav>
+		<a href="../index.html" target="_blank">HOME</a>
+		<a href="../archive.html" target="_blank">ARCHIVE</a>
+		<a href="../tag.html" target="_blank">TAG</a>
+		<a href="../about.html" target="_blank">ABOUT</a>
+	    </nav>
+	</header>
 
+	<div class="container">
+	    <div class="row">
+		<div class="col">
 
-	    <h2>emacs news</h2>
-	    <p>
-		<ul>
-		    <li><a href="https://batsov.com" target="_blank" class="link-warning">Bozhidar Batsov</a></li>
-		    <li><a href="https://protesilaos.com" target="_blank">Protesilaos Stavrou</a></li>
-		    <li><a href="https://sachachua.com" target="_blank">Sacha Chua</a></li>
-		    <li><a href="https://emacsredux.com/">Emacs Redux</a></li>
-		</ul>
-	    </p>
-
-	    <p class="text-danger">
-		emacs remove ^M <br />
-		M-x replace-string RET C-q C-m RET RET <br />
-	    </p>
-
-	    <p>
-		<ol>
-		    <li><a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf">Refcard</a></li>
-		</ol>
-	    </p>
+		    <h1 class="display-2"> Emacs </h1>
+		    <div class="lead">Date: <time>2022-06-23</time>. Last updated: <time>2024-06-17</time>.</div>
 
 
-	    <h2>ClangFormat</h2>
-	    <p>
-		.clang-format生成命令: <a href="https://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a>
-		<pre><code class="lisp">
+		    <h2 class="display-4">emacs news</h2>
+		    <p>
+			<ul>
+			    <li><a href="https://batsov.com" target="_blank" class="link-warning">Bozhidar Batsov</a></li>
+			    <li><a href="https://protesilaos.com" target="_blank">Protesilaos Stavrou</a></li>
+			    <li><a href="https://sachachua.com" target="_blank">Sacha Chua</a></li>
+			    <li><a href="https://emacsredux.com/">Emacs Redux</a></li>
+			</ul>
+		    </p>
+
+		    <p class="text-danger">
+			emacs remove ^M <br />
+			M-x replace-string RET C-q C-m RET RET <br />
+		    </p>
+
+		    <p>
+			<ol>
+			    <li><a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf">Refcard</a></li>
+			</ol>
+		    </p>
+
+
+		    <h2 class="display-4">ClangFormat</h2>
+		    <p>
+			.clang-format生成命令: <a href="https://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a>
+			<pre><code class="lisp">
          M-x cla-r ;; format region
          M-x cla-b ;; format buffer
-		</code></pre>
-		<a href="https://www.cnblogs.com/__tudou__/p/13322854.html">clang-format的介绍和使用</a>
-	    </p>
+			</code></pre>
+			<a href="https://www.cnblogs.com/__tudou__/p/13322854.html">clang-format的介绍和使用</a>
+		    </p>
 
-	    <p>
-		光标回到上个位置: <br/>
-		<kbd>C-SPC C-SPC</kbd> <kbd>C-u  C-SPC</kbd> <br/>
-                整体左移: <br/>
-		<kbd>C-x Tab</kbd> <kbd>left/right</kbd>
+		    <p>
+			光标回到上个位置: <br/>
+			<kbd>C-SPC C-SPC</kbd> <kbd>C-u  C-SPC</kbd> <br/>
+			整体左移: <br/>
+			<kbd>C-x Tab</kbd> <kbd>left/right</kbd>
 
-		<pre><code class="lisp">
+			<pre><code class="lisp">
          pop-global-mark ;; all buffers
-		</code></pre>
+			</code></pre>
 
-		<pre><code class="lisp">
+			<pre><code class="lisp">
          C-h o ;; describe-symbol
-		</code></pre>
+			</code></pre>
 
-		<pre><code class="lisp">
+			<pre><code class="lisp">
          M-X ;;execute-extended-command-for-buffer
-		</code></pre>
+			</code></pre>
 
-		<pre><code class="shell">
+			<pre><code class="shell">
         # Chang Emacs Config Directory
         $ emacs --init-dir ~/emacs-distros/prelude
-		</code></pre>
+			</code></pre>
 
 
-	    </p>
+		    </p>
 
-	    <footer>
-		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	    </footer>
+		</div>
+	    </div>
+	</div>
 
-	    <!-- bootstrap -->
-	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	    <!-- highlight -->
-	    <script src="../module/highlight/highlight.min.js"></script>
-	    <script>hljs.highlightAll();</script>
+	<!-- <p class="text-end">
+	     <a href="#">Back to top</a>
+	     </p> -->
 
-	</body>
-    </div>
+	<footer class="py-2 text-center text-body-secondary">
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
+
+	<!-- bootstrap -->
+	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	<!-- highlight -->
+	<script src="../module/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+
+    </body>
+
 </html>
