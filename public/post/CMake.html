@@ -13,81 +13,85 @@
 	<link rel="stylesheet" href="../module/bootstrap/dist/css/bootstrap.css">
     </head>
 
-    <div class="container-xl pt-3 pb-3">
-	<body>
-	    <header>
-		<nav>
-		    <a href="../index.html" target="_blank">HOME</a>
-		    <a href="../archive.html" target="_blank">ARCHIVE</a>
-		    <a href="../tag.html" target="_blank">TAG</a>
-		    <a href="../about.html" target="_blank">ABOUT</a>
-		</nav>
-	    </header>
 
-	    <h1>Learn CMake</h1>
-	    <div>Date: <time>2022-1-6</time>. Last updated: <time>2022-1-6</time>.</div>
+    <body>
+	<header>
+	    <nav>
+		<a href="../index.html" target="_blank">HOME</a>
+		<a href="../archive.html" target="_blank">ARCHIVE</a>
+		<a href="../tag.html" target="_blank">TAG</a>
+		<a href="../about.html" target="_blank">ABOUT</a>
+	    </nav>
+	</header>
 
-	    <h2>Modern CMake</h2>
-	    <p>
-		<ul>
-		    <li><a href="http://cliutils.gitlab.io/modern-cmake/" target="_blank">Modern CMake</a></li>
-		    <li><a href="https://hsf-training.github.io/hsf-training-cmake-webpage/aio/index.html" target="_blank">More Modern CMake</a></li>
-		</ul>
-	    </p>
+	<main class="container">
+	    <div class="row justify-content-center">
+		<div class="col">
 
-	    <h2>CMake Book</h2>
-	    <p>
-		<ul>
-		    <li><a href="https://www.amazon.com/Modern-CMake-Discover-approach-packaging/dp/1801070059/ref=sr_1_1?crid=3KIF66EL5U0OI&keywords=cmake&qid=1651529304&sprefix=cmake%2Caps%2C280&sr=8-1" target="_blank">Modern CMake for C++</a></li>
-		    <li><a href="https://crascit.com/professional-cmake/" target="_blank">Professional CMake</a></li>
-		    <li><a href="https://www.bookstack.cn/read/CMake-Cookbook/README.md" target="_blank">CMake Cookbook</a></li>
-		    <li><a href="https://cmake.org/cmake/help/latest">CMake Documentation</a></li>
-		    <li><a href="https://gitlab.kitware.com/cmake/community/-/wikis/home">CMake Wiki</a></li>
-  		</ul>
-	    </p>
+		    <h1 class="display-3">Learn CMake</h1>
+		    <div class="lead">Date: <time>2022-1-6</time>. Last updated: <time>2022-1-6</time>.</div>
+
+		    <h2 class="display-6">Modern CMake</h2>
+		    <p>
+			<ul>
+			    <li><a href="http://cliutils.gitlab.io/modern-cmake/" target="_blank">Modern CMake</a></li>
+			    <li><a href="https://hsf-training.github.io/hsf-training-cmake-webpage/aio/index.html" target="_blank">More Modern CMake</a></li>
+			</ul>
+		    </p>
+
+		    <h2 class="display-6">CMake Book</h2>
+		    <p>
+			<ul>
+			    <li><a href="https://www.amazon.com/Modern-CMake-Discover-approach-packaging/dp/1801070059/ref=sr_1_1?crid=3KIF66EL5U0OI&keywords=cmake&qid=1651529304&sprefix=cmake%2Caps%2C280&sr=8-1" target="_blank">Modern CMake for C++</a></li>
+			    <li><a href="https://crascit.com/professional-cmake/" target="_blank">Professional CMake</a></li>
+			    <li><a href="https://www.bookstack.cn/read/CMake-Cookbook/README.md" target="_blank">CMake Cookbook</a></li>
+			    <li><a href="https://cmake.org/cmake/help/latest">CMake Documentation</a></li>
+			    <li><a href="https://gitlab.kitware.com/cmake/community/-/wikis/home">CMake Wiki</a></li>
+  			</ul>
+		    </p>
 
 
 
-	    <p>
-		<div class="alert alert-info">
-		    <blockquote>
-			<strong>Note:</strong> Not only are there three categories of variables – normal, cache, and environment – but they also reside in different scopes,
-			with specific rules on how one scope affects the other.
-		    </blockquote>
-		</div>
+		    <p>
+			<div class="alert alert-info">
+			    <blockquote>
+				<strong>Note:</strong> Not only are there three categories of variables – normal, cache, and environment – but they also reside in different scopes,
+				with specific rules on how one scope affects the other.
+			    </blockquote>
+			</div>
 
-	    </p>
+		    </p>
 
-	    <p>
-		CMake is building the solution in three stages: <b>configuration</b>, <b>generation</b>, and <b>running the build
-		tool</b>.
-	    </p>
+		    <p>
+			CMake is building the solution in three stages: <b>configuration</b>, <b>generation</b>, and <b>running the build
+			tool</b>.
+		    </p>
 
-	    <h2>Link</h2>
-	    <p>
-		<ul>
-		    <li><a href="https://www.cnblogs.com/fang-d/p/Configure_CMake_Compile_and_Link_Options_with_Generator_Expression.html">CMake使用生成器表达式（Generator Expression）添加编译和链接选项</a></li>
-		    <li><a href="https://www.zhihu.com/column/c_1369781372333240320">CMake实践应用专题</a></li>
-		    <li><a href="https://blog.csdn.net/jjjstephen?type=blog">jjjstephen</a></li>
-		    <li><a href="https://blog.csdn.net/wzj_110/category_10357507.html">CMake DSL语言</a></li>
-		    <li><a href="https://blog.csdn.net/zhanghm1995/article/details/105466372">find_package用法详解</a></li>
-		</ul>
-	    </p>
+		    <h2 class="display-6">Link</h2>
+		    <p>
+			<ul>
+			    <li><a href="https://www.cnblogs.com/fang-d/p/Configure_CMake_Compile_and_Link_Options_with_Generator_Expression.html">CMake使用生成器表达式（Generator Expression）添加编译和链接选项</a></li>
+			    <li><a href="https://www.zhihu.com/column/c_1369781372333240320">CMake实践应用专题</a></li>
+			    <li><a href="https://blog.csdn.net/jjjstephen?type=blog">jjjstephen</a></li>
+			    <li><a href="https://blog.csdn.net/wzj_110/category_10357507.html">CMake DSL语言</a></li>
+			    <li><a href="https://blog.csdn.net/zhanghm1995/article/details/105466372">find_package用法详解</a></li>
+			</ul>
+		    </p>
 
-	    <h2>CMake Command</h2>
-	    <p>
-		<em>rm -rf build/ && cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug && cmake --build build --parallel</em>
-		<em>cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1</em> <br />
-		<em>cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_COMPILER=/usr/bin/g++-10  -G "Unix Makefiles"</em> <br />
-		<em>cmake --build build --clean-first --parallel 10</em> <br />
-		<em>cmake --build build --target "foo"</em> <br />
-		<em>cmake --build build --verbose</em> <br />
-		<em>cmake --build build --parallel --config Release</em> <br/>
-		<em>cmake --build build --target help</em> <br/>
-		<em>cmake --install build --prefix /tmp/install_test</em> <br />
-	    </p>
-	    <p>
-		<pre><code class="CMake">
+		    <h2 class="display-6">CMake Command</h2>
+		    <p>
+			<em>rm -rf build/ && cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug && cmake --build build --parallel</em>
+			<em>cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1</em> <br />
+			<em>cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_COMPILER=/usr/bin/g++-10  -G "Unix Makefiles"</em> <br />
+			<em>cmake --build build --clean-first --parallel 10</em> <br />
+			<em>cmake --build build --target "foo"</em> <br />
+			<em>cmake --build build --verbose</em> <br />
+			<em>cmake --build build --parallel --config Release</em> <br/>
+			<em>cmake --build build --target help</em> <br/>
+			<em>cmake --install build --prefix /tmp/install_test</em> <br />
+		    </p>
+		    <p>
+			<pre><code class="CMake">
 set(CMAKE_VERBOSE_MAKEFILE on)
 cmake --build build -v
 
@@ -96,40 +100,40 @@ set(CMAKE_DEBUG_TARGET_PROPERTIES
 INCLUDE_DIRECTORIES
 INTERFACE_INCLUDE_DIRECTORIES
 )
-		</code></pre>
-	    </p>
+			</code></pre>
+		    </p>
 
-	    <h2>CMake Usage</h2>
-	    <p>
-		<pre><code class="CMake">
+		    <h2 class="display-6">CMake Usage</h2>
+		    <p>
+			<pre><code class="CMake">
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_INSTALL_PREFIX testInstall)
 
 # Set default visibility to hidden for all targets
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 set(CMAKE_VISIBILITY_INLINES_HIDDEN YES)
-		</code></pre>
+			</code></pre>
 
-	    </p>
+		    </p>
 
 
-	    <h2>Library</h2>
-	    <p>
-		libfoo.so.1   为soname 软连接指向realname: libfoo.so.1.1<br/>
-		libfoo.so.1.1 为realname <br/>
-		libfoo.so     为linkname  <br/>
-		<a href="https://duerrenberger.dev/blog/2021/08/04/understanding-rpath-with-cmake/">Understanding RPATH (With CMake)</a> <br/>
-		<a href="https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/RPATH-handling">RPATH handling</a> <br/>
-	    </p>
+		    <h2 class="display-6">Library</h2>
+		    <p>
+			libfoo.so.1   为soname 软连接指向realname: libfoo.so.1.1<br/>
+			libfoo.so.1.1 为realname <br/>
+			libfoo.so     为linkname  <br/>
+			<a href="https://duerrenberger.dev/blog/2021/08/04/understanding-rpath-with-cmake/">Understanding RPATH (With CMake)</a> <br/>
+			<a href="https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/RPATH-handling">RPATH handling</a> <br/>
+		    </p>
 
-	    <h2>Project</h2>
-	    <p>
-		<ul><li><a href="https://github.com/TheLartians/ModernCppStarter">ModernCppStarter</a></li></ul>
-	    </p>
+		    <h2 class="display-6">Project</h2>
+		    <p>
+			<ul><li><a href="https://github.com/TheLartians/ModernCppStarter">ModernCppStarter</a></li></ul>
+		    </p>
 
-	    <h2>Test</h2>
-	    <p>
-		<pre><code class="CMake">
+		    <h2 class="display-6">Test</h2>
+		    <p>
+			<pre><code class="CMake">
 
 # CMakeLists file for the Chapter 7 example, showing a simple project which executes a test
 #
@@ -156,57 +160,60 @@ add_test(NAME example_test COMMAND simple_test)
 # Add a test called example_test_2 which executes the command `ch7_simple_test` with the argument `arg1`
 # add_test(NAME example_test_2 COMMAND ch7_simple_test arg1)
 
-		</code></pre>
+			</code></pre>
 
-		<em>ctest --test-dir build/tests</em> <br />
+			<em>ctest --test-dir build/tests</em> <br />
 
-	    </p>
+		    </p>
 
-	    <p>
-		<ul>
-		    <li>编译标志: 使用target_compile_option</li>
-		    <li>预处理宏标志: 使用target_compile_definitions</li>
-		    <li>链接标志: 使用target_link_options</li>
-		</ul>
-	    </p>
-
-
-	    <h2>CMake Commands</h2>
-
-	    <h3>find_package</h3>
-	    <p>
-		<b>Module mode</b>: Find&ltPackageName&gt.cmake  搜索路径: CMAKE_MODULE_PATH CMAKE_ROOT<br/>
-
-		<b>Config mode</b>: 由package自身提供 &ltPackageName&gtConfig.cmake 或者 &ltlower-case-package-name&gt-config.cmake 搜索路径: &ltPackageName&gt_DIR CMAKE_PREFIX_PATH
-
-	    </p>
-
-	    <h3>set_target_properties</h3>
-	    <p>
-		<a href="https://blog.csdn.net/challenglistic/article/details/130130789">set_target_properties 常见属性以及获取target 属性</a>
-	    </p>
-
-	    <h2>Function</h2>
-	    <p>
-		<ol>
-
-		    <li>${ARGC}: The count of arguments</li>
-		    <li>${ARGV}: All arguments as list</li>
-		    <li>${ARGV&ltindex&gt}: The value of an argument at a specific index (starting from 0), regardless of whether this argument was expected or not</li>
-		    <li>${ARGN}: A list of anonymous arguments that were passed by a caller after the last ex-pected argument</li>
-		</ol>
-	    </p>
+		    <p>
+			<ul>
+			    <li>编译标志: 使用target_compile_option</li>
+			    <li>预处理宏标志: 使用target_compile_definitions</li>
+			    <li>链接标志: 使用target_link_options</li>
+			</ul>
+		    </p>
 
 
+		    <h2 class="display-6">CMake Commands</h2>
 
-	    <footer>
-		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	    </footer>
+		    <h3>find_package</h3>
+		    <p>
+			<b>Module mode</b>: Find&ltPackageName&gt.cmake  搜索路径: CMAKE_MODULE_PATH CMAKE_ROOT<br/>
 
-	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	    <script src="../module/highlight/highlight.min.js"></script>
-	    <script>hljs.highlightAll();</script>
+			<b>Config mode</b>: 由package自身提供 &ltPackageName&gtConfig.cmake 或者 &ltlower-case-package-name&gt-config.cmake 搜索路径: &ltPackageName&gt_DIR CMAKE_PREFIX_PATH
 
-	</body>
-    </div>
+		    </p>
+
+		    <h3>set_target_properties</h3>
+		    <p>
+			<a href="https://blog.csdn.net/challenglistic/article/details/130130789">set_target_properties 常见属性以及获取target 属性</a>
+		    </p>
+
+		    <h2 class="display-6">Function</h2>
+		    <p>
+			<ol>
+
+			    <li>${ARGC}: The count of arguments</li>
+			    <li>${ARGV}: All arguments as list</li>
+			    <li>${ARGV&ltindex&gt}: The value of an argument at a specific index (starting from 0), regardless of whether this argument was expected or not</li>
+			    <li>${ARGN}: A list of anonymous arguments that were passed by a caller after the last ex-pected argument</li>
+			</ol>
+		    </p>
+
+
+		</div>
+	    </div>
+	</main>
+
+	<footer class="py-2 text-center text-body-secondary">
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
+
+	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	<script src="../module/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+
+    </body>
+
 </html>
