@@ -14,76 +14,106 @@
 
     </head>
 
+    <body>
+	<header>
+	    <nav class="navbar navbar-expand-lg">
 
-    <div class="container-lg pt-3 pb-3 ps-1">
-	<body>
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
 
-	    <header>
-		<nav>
-		    <a href="../index.html" target="_blank">HOME</a>
-		    <a href="../archive.html" target="_blank">ARCHIVE</a>
-		    <a href="../tag.html" target="_blank">TAG</a>
-		    <a href="../about.html" target="_blank">ABOUT</a>
-		</nav>
-	    </header>
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+		    <ul class="navbar-nav ">
 
-	    <h1>GDB</h1>
-	    <div>Date: <time>2021-12-14</time>. Last updated: <time>2022-08-28</time>.</div>
+			<li class="nav-item">
+			    <a class="nav-link" href="../index.html" target="_blank">HOME</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../archive.html" target="_blank">ARCHIVE</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../tag.html" target="_blank">TAG</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../about.html" target="_blank">ABOUT</a>
+			</li>
 
-	    <h2>backup</h2>
-	    <p>
-		<em>info vtbl EXPRESSION</em> <br />
-		<em>ptype/o EXPRESSION</em> <br />
-	    </p>
-
-	    <p>
-		x/nfu ADDR <br />
-		x/4xb &a 4个字节 16进制的形式<br />
-	    </p>
-
-	    <p>
-		disassemble /s 汇编 源码
-	    </p>
-
-	    <h2>debug</h2>
-	    <p>
-		<em>ls /var/lib/systemd/coredump</em> <br />
-		<em>coredumpctl list</em>
-		<em>coredumpctl gdb [PID]</em>
-	    </p>
-
-	    <h2>Link</h2>
-	    <p>
-		<ul>
-		    <li><a href="https://wizardforcel.gitbooks.io/100-gdb-tips/content/index.html">100個gdb小技巧</a></li>
-		    <li><a href="https://nanxiao.me/en/the-core-dump-file-in-arch-linux/">The core dump file in Arch Linux</a></li>
-		</ul>
-	    </p>
+		    </ul>
+		</div>
+	    </nav>
+	</header>
 
 
-	    <h2>命令</h2>
-	    <p>
-		<ul>
-		    <li><a href="https://gabriellesc.github.io/teaching/resources/GDB-cheat-sheet.pdf">GDB Cheat Sheet</a></li>
-		    <li><a href="https://quickref.cn/docs/gdb.html">GDB 备忘清单</a></li>
-		    <li><a href="https://cheatsheets.zip/">Quick Reference</a></li>
-		</ul>
-	    </p>
+	<article class="container-lg">
+	    <div class="row justify-content-center">
+		<div class="col">
+
+		    <h1 class="display-2">GDB</h1>
+		    <div class="lead">Date: <time>2021-12-14</time>. Last updated: <time>2022-08-28</time>.</div>
+
+		    <h2 class="display-4">backup</h2>
+		    <p>
+			<em>info vtbl EXPRESSION</em> <br />
+			<em>ptype/o EXPRESSION</em> <br />
+		    </p>
+
+		    <p>
+			x/nfu ADDR <br />
+			x/4xb &a 4个字节 16进制的形式<br />
+		    </p>
+
+		    <p>
+			disassemble /s 汇编 源码
+		    </p>
+
+		    <h2 class="display-4">debug</h2>
+		    <p>
+			<em>ls /var/lib/systemd/coredump</em> <br />
+			<em>coredumpctl list</em>
+			<em>coredumpctl gdb [PID]</em>
+		    </p>
+
+		    <h2 class="display-4">Link</h2>
+		    <p>
+			<ul>
+			    <li><a href="https://wizardforcel.gitbooks.io/100-gdb-tips/content/index.html">100個gdb小技巧</a></li>
+			    <li><a href="https://nanxiao.me/en/the-core-dump-file-in-arch-linux/">The core dump file in Arch Linux</a></li>
+
+			</ul>
+		    </p>
 
 
+		    <h2 class="display-4">命令</h2>
+		    <p>
+			<ul>
+			    <li><a href="https://gabriellesc.github.io/teaching/resources/GDB-cheat-sheet.pdf">GDB Cheat Sheet</a></li>
+			    <li><a href="https://quickref.cn/docs/gdb.html">GDB 备忘清单</a></li>
+			    <li><a href="https://cheatsheets.zip/">Quick Reference</a></li>
+			</ul>
+		    </p>
 
 
+		</div>
+	    </div>
+	</article>
 
+	<!-- <p class="text-end">
+	     <button type="button" class="btn btn-dark">
+	     <a class="link-underline link-info text-decoration-none" href="#">Back to top</a>
+	     </button>
+	     </p> -->
 
-	    <footer>
-		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	    </footer>
+	<footer class="py-2 text-center text-body-secondary">
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
 
-    	    <!-- bootstrap -->
-	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	    <!-- highlight -->
-	    <script src="../module/highlight/highlight.min.js"></script>
-	    <script>hljs.highlightAll();</script>
-	</body>
-    </div>
+    	<!-- bootstrap -->
+	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	<!-- highlight -->
+	<script src="../module/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+    </body>
+
 </html>
