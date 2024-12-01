@@ -15,61 +15,92 @@
     </head>
 
 
-    <div class="container-lg pt-3 pb-3">
-	<body>
-	    <header>
-		<nav>
-		    <a href="../../index.html" target="_blank">HOME</a>
-		    <a href="../../archive.html" target="_blank">ARCHIVE</a>
-		    <a href="../../tag.html" target="_blank">TAG</a>
-		    <a href="../../about.html" target="_blank">ABOUT</a>
-		</nav>
-	    </header>
 
-	    <h1>C Tricks</h1>
-	    <div>Date: <time>2023-10-09</time>. Last updated: <time>2023-11-18</time>.</div>
+    <body>
+	<header>
+	    <!-- <nav>
+		 <a href="../../index.html" target="_blank">HOME</a>
+		 <a href="../../archive.html" target="_blank">ARCHIVE</a>
+		 <a href="../../tag.html" target="_blank">TAG</a>
+		 <a href="../../about.html" target="_blank">ABOUT</a>
+		 </nav> -->
 
-	    <h2>#define</h2>
-	    <p>
-		<pre><code class="C">
+	    <nav class="navbar navbar-expand-lg">
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+		    <ul class="navbar-nav ">
+
+			<li class="nav-item">
+			    <a class="nav-link text-decoration-underline" href="../../index.html" target="_blank">HOME</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link text-decoration-underline" href="../../archive.html" target="_blank">ARCHIVE</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link text-decoration-underline" href="../../tag.html" target="_blank">TAG</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link text-decoration-underline" href="../../about.html" target="_blank">ABOUT</a>
+			</li>
+
+		    </ul>
+		</div>
+	    </nav>
+	</header>
+
+	<article class="container-lg">
+	    <div class="row justify-content-center">
+		<div class="col">
+		    <h1 class="display-2">C Tricks</h1>
+		    <div>Date: <time>2023-10-09</time>. Last updated: <time>2023-11-18</time>.</div>
+
+		    <h2 class="display-4">#define</h2>
+		    <p>
+			<pre><code class="C">
 /*
 * # 把参数转换成字符串, 给参数加上双引号
 * ## 连接前后两个参数, 变成一个参数
 * #@ 给参数加上单引号, 参数字符化
 */
-		</code></pre>
+			</code></pre>
 
-	    </p>
+		    </p>
 
-	    <h2>数组size</h2>
-	    <p>
-		<pre><code class="language-c">
+		    <h2 class="display-4">数组size</h2>
+		    <p>
+			<pre><code class="language-c">
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
 #define ARRAY_END(a)  ((a) + ARRAY_SIZE(a))
-		</code></pre>
-	    </p>
+			</code></pre>
+		    </p>
 
-	    <h2>Links</h2>
-	    <p>
-		<ul>
-		    <li><a href="https://c-faq-chn.sourceforge.net">C语言常见问题集(中文)</a></li>
-		</ul>
-	    </p>
+		    <h2 class="display-4">Links</h2>
+		    <p>
+			<ul>
+			    <li><a href="https://c-faq-chn.sourceforge.net">C语言常见问题集(中文)</a></li>
+			</ul>
+		    </p>
 
-	    <h2>Time</h2>
-	    <p>
-		<picture>
-		    <img src="../../imag/TimeFuction.png">
-		    <!-- <figcaption>Fig.1 - Another picture about picture.</figcaption> -->
-		</picture>
-	    </p>
+		    <h2 class="display-4">Time</h2>
+		    <p>
+			<picture>
+			    <img src="../../imag/TimeFuction.png">
+			    <!-- <figcaption>Fig.1 - Another picture about picture.</figcaption> -->
+			</picture>
+		    </p>
 
 
-	    <h2>Minimize Nesting</h2>
-	    <p>
-		Removing Nesting by Returning Early.  <br/>
-		Removing Nesting Inside Loops. <br/>
-		<pre><code class="language-c">
+		    <h2 class="display-4">Minimize Nesting</h2>
+		    <p>
+			Removing Nesting by Returning Early.  <br/>
+			Removing Nesting Inside Loops. <br/>
+			<pre><code class="language-c">
 for (int i = 0; i < ARRAY_SIZE(results); ++i) {
 if (results[i] == NULL) continue;
 non_null_count++;
@@ -77,43 +108,56 @@ if (results[i]->name == "") continue;
 cout << "Considering candidate..." << endl;
 ...
 }
-		</code></pre>
-	    </p>
+			</code></pre>
+		    </p>
 
 
 
-	    <p>
-		<ol>
-		    <li><a href="https://queue.acm.org/detail.cfm?id=3588242">Catch-23: The New C Standard</a></li>
-		    <li><a href="https://wallace-lais-notes.readthedocs.io/zh-cn/latest/index.html">wallace-lai’s notes</a></li>
-		    <li><a href="http://www.literateprogramming.com/ifdefs.pdf">#ifdef Considered Harmful, or
-			Portability Experience With C News</a></li>
-		</ol>
+		    <p>
+			<ol>
+			    <li><a href="https://queue.acm.org/detail.cfm?id=3588242">Catch-23: The New C Standard</a></li>
+			    <li><a href="https://wallace-lais-notes.readthedocs.io/zh-cn/latest/index.html">wallace-lai’s notes</a></li>
+			    <li><a href="http://www.literateprogramming.com/ifdefs.pdf">#ifdef Considered Harmful, or
+				Portability Experience With C News</a></li>
+			</ol>
 
-	    </p>
+		    </p>
 
-	    <p>
-		gcc -S -masm=intel code.c
-	    </p>
-
-
+		    <p>
+			gcc -S -masm=intel code.c
+		    </p>
 
 
+		    <p>
+			<ol>
+			    <li><a href="https://blog.aaronballman.com/2023/10/whats-new-in-c-in-2023/">What’s New in C in 2023?</a></li>
+			</ol>
+		    </p>
+
+		</div>
+	    </div>
+	</article>
 
 
-	    <footer>
-		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	    </footer>
+	<p class="text-end">
+	    <button type="button" class="btn btn-dark">
+		<a class="link-underline link-light text-decoration-none" href="#">Back to top</a>
+	    </button>
+	</p>
+
+	<footer class="py-2 text-center text-body-secondary">
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
 
 
-	    <!-- bootstrap -->
-	    <script src="../../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	    <!-- highlight -->
-	    <script src="../../module/highlight/highlight.min.js"></script>
-	    <script>hljs.highlightAll();</script>
+	<!-- bootstrap -->
+	<script src="../../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	<!-- highlight -->
+	<script src="../../module/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
 
 
-	</body>
-    </div>
+    </body>
+
 
 </html>
