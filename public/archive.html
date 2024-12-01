@@ -10,71 +10,97 @@
 	<link rel="stylesheet" href="./module/bootstrap/dist/css/bootstrap.css">
     </head>
 
-    <div class="container-lg pt-3 pb-3">
-	<body>
-	    <header>
-		<nav>
-		    <a href="./index.html" target="_blank">HOME</a>
-		    <a href="./archive.html" target="_blank">ARCHIVE</a>
-		    <a href="./tag.html" target="_blank">TAG</a>
-		    <a href="./about.html" target="_blank">ABOUT</a>
-		</nav>
-	    </header>
+    <body>
+	<header>
+	    <nav class="navbar navbar-expand-md">
 
-	    <table>
-		<thead>
-		    <tr><td>Date</td><td>Title</td></tr>
-		</thead>
-		<tbody>
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
 
-		    <tr><td>2024-06-17</td><td><a href="post/c++/c++_collection.html"> C++ Collection
-			<span class="badge rounded-pill text-bg-primary">New</span>
-		    </a></td></tr>
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+		    <ul class="navbar-nav ">
 
-		    <tr><td>2024-06-17</td><td><a href="post/c++/C++_Concurrency.html">C++ Concurrency</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/softwareEngineering/design_pattern.html">Design Pattern</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/softwareEngineering/refactor.html">Refactor</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/linux/linux.html">Linux Tools</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/linux/linux_server.html">Linux Server</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/linux/network_programming.html">Network Programming</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/CMake.html">CMake</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/emacs.html">Emacs</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/git.html">Git</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/https.html">HTTPS</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/shell.html">Shell</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/gdb.html">GDB</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/life/movie.html">Movie</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/Assembly-Language.html">Assembly Language</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/money/How-To-Get-Rich(Naval).html">How to Get Rich(Naval)</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/money/13-Point-Plan-For-Honest-Living(Franklin).html">13-Point Plan For Honest Living(Franklin)</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/money/The-Seven-Habits-of-Highly-Effective-People.html">The Seven Habits of Highly Effective People</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/Oh-My-Lua.html">Oh My Lua</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/Aha-LaTeX.html">Aha LaTeX</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/TODO.html">TODO</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/sql/mariadb.html">Mariadb Test</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/math/Linear-Algebra.html">Linear Algebra</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/life/Health-Tips.html">Health Tips</a></td></tr>
-		    <tr><td>2024-06-17</td><td><a href="post/japanese/basis.html">Fifty Phonogram</a></td></tr>
+			<li class="nav-item">
+			    <a class="nav-link" href="index.html" target="_blank">HOME</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="archive.html" target="_blank">ARCHIVE</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="tag.html" target="_blank">TAG</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="about.html" target="_blank">ABOUT</a>
+			</li>
 
-		</tbody>
-	    </table>
+		    </ul>
+		</div>
+	    </nav>
+	</header>
 
-	    <!--
-		 <nav aria-label="my-5 Page navigation example">
-		 <ul class="pagination">
-		 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-		 <li class="page-item"><a class="page-link" href="#">1</a></li>
-		 <li class="page-item"><a class="page-link" href="#">2</a></li>
-		 <li class="page-item"><a class="page-link" href="#">3</a></li>
-		 <li class="page-item"><a class="page-link" href="#">Next</a></li>
-		 </ul>
-		 </nav> -->
+	<div class="container">
+	    <div class="row justify-content-center">
+		<div class="col">
+
+		    <table>
+			<thead>
+			    <tr><td>Date</td><td>Title</td></tr>
+			</thead>
+			<tbody>
+
+			    <tr><td>2024-06-17</td><td><a href="post/c++/c++_collection.html"> C++ Collection
+				<span class="badge rounded-pill text-bg-primary">New</span>
+			    </a></td></tr>
+
+			    <tr><td>2024-06-17</td><td><a href="post/c++/C++_Concurrency.html">C++ Concurrency</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/softwareEngineering/design_pattern.html">Design Pattern</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/softwareEngineering/refactor.html">Refactor</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/linux/linux.html">Linux Tools</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/linux/linux_server.html">Linux Server</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/linux/network_programming.html">Network Programming</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/CMake.html">CMake</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/emacs.html">Emacs</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/git.html">Git</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/https.html">HTTPS</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/shell.html">Shell</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/gdb.html">GDB</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/life/movie.html">Movie</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/Assembly-Language.html">Assembly Language</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/money/How-To-Get-Rich(Naval).html">How to Get Rich(Naval)</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/money/13-Point-Plan-For-Honest-Living(Franklin).html">13-Point Plan For Honest Living(Franklin)</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/money/The-Seven-Habits-of-Highly-Effective-People.html">The Seven Habits of Highly Effective People</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/Oh-My-Lua.html">Oh My Lua</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/Aha-LaTeX.html">Aha LaTeX</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/TODO.html">TODO</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/sql/mariadb.html">Mariadb Test</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/math/Linear-Algebra.html">Linear Algebra</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/life/Health-Tips.html">Health Tips</a></td></tr>
+			    <tr><td>2024-06-17</td><td><a href="post/japanese/basis.html">Fifty Phonogram</a></td></tr>
+
+			</tbody>
+		    </table>
+
+		    <!--
+			 <nav aria-label="my-5 Page navigation example">
+			 <ul class="pagination">
+			 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+			 <li class="page-item"><a class="page-link" href="#">1</a></li>
+			 <li class="page-item"><a class="page-link" href="#">2</a></li>
+			 <li class="page-item"><a class="page-link" href="#">3</a></li>
+			 <li class="page-item"><a class="page-link" href="#">Next</a></li>
+			 </ul>
+			 </nav> -->
 
 
 
-	    <!-- bootstrap -->
-	    <script src="./module/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	</body>
-    </div>
+		</div>
+	    </div>
+	</div>
+	<!-- bootstrap -->
+	<script src="./module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
 
 </html>
