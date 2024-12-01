@@ -13,59 +13,83 @@
 	<link rel="stylesheet" href="../module/bootstrap/dist/css/bootstrap.css">
     </head>
 
-    <div class="container-lg pt-3 pb-3">
-	<body id="top">
-	    <header>
-		<nav>
-		    <a href="../index.html" target="_blank">HOME</a>
-		    <a href="../archive.html" target="_blank">ARCHIVE</a>
-		    <a href="../tag.html" target="_blank">TAG</a>
-		    <a href="../about.html" target="_blank">ABOUT</a>
-		</nav>
-	    </header>
 
-	    <h1>Learn Lua</h1>
-	    <div>Date: <time>2023-05-07</time>. Last updated: <time>2024-03-07</time>.</div>
+    <body id="top">
+	<header>
+	    <nav class="navbar navbar-expand-md">
 
-	    <h2>Lua使用</h2>
-	    <p>
-		元表的使用场景 <br/>
-		作为table的元表 <br/>
-		通过为table设置元表可以在lua中实现面向对象编程 <br/>
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
 
-		作为userdata的元表 <br/>
-		通过对userdata和元表可以实现在lua中对c中的结构进行面向对象式的访问 <br/>
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+		    <ul class="navbar-nav ">
 
-		<li><a href="https://blog.csdn.net/cooclc/category_8840244.html">Lampard Lua</a></li>
-		<li><a href="https://blog.csdn.net/zhanxxiao/category_10071704.html">Lua</a></li>
-		<li><a href="https://benaiah.me/posts/everything-you-didnt-want-to-know-about-lua-multivals/">Everything You Didn’t Want to Know About Lua’s Multi-Values</a></li>
-		<li><a href="https://www.notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts">Lua: Good, bad, and ugly parts</a></li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../index.html" target="_blank">HOME</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../archive.html" target="_blank">ARCHIVE</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../tag.html" target="_blank">TAG</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link" href="../about.html" target="_blank">ABOUT</a>
+			</li>
 
-	    </p>
-	    <h2>Lua坑</h2>
-            <p>
-		<pre><code class="Lua"> -- function table
+		    </ul>
+		</div>
+	    </nav>
+	</header>
+
+	<article class="container">
+	    <div class="row justify-content-center">
+		<div class="col">
+		    <h1 class="display-2">Learn Lua</h1>
+		    <div>Date: <time>2023-05-07</time>. Last updated: <time>2024-03-07</time>.</div>
+
+		    <h2 class="display-4">Lua使用</h2>
+		    <p>
+			元表的使用场景 <br/>
+			作为table的元表 <br/>
+			通过为table设置元表可以在lua中实现面向对象编程 <br/>
+
+			作为userdata的元表 <br/>
+			通过对userdata和元表可以实现在lua中对c中的结构进行面向对象式的访问 <br/>
+
+			<li><a href="https://blog.csdn.net/cooclc/category_8840244.html">Lampard Lua</a></li>
+			<li><a href="https://blog.csdn.net/zhanxxiao/category_10071704.html">Lua</a></li>
+			<li><a href="https://benaiah.me/posts/everything-you-didnt-want-to-know-about-lua-multivals/">Everything You Didn’t Want to Know About Lua’s Multi-Values</a></li>
+			<li><a href="https://www.notebook.kulchenko.com/programming/lua-good-different-bad-and-ugly-parts">Lua: Good, bad, and ugly parts</a></li>
+
+		    </p>
+		    <h2 class="display-4">Lua坑</h2>
+		    <p>
+			<pre><code class="Lua"> -- function table
 local t = { name = "lua" }
 function func(tab)
     tab.name = string.upper(tab.name) -- 改变t.name字段
     tab = { name = "AUL"}             -- 不影响t表
 end
 func(t); print(t.name) -- LUA
-		</code></pre>
-		<a href="https://blog.csdn.net/weixin_43994445/article/details/109135215">Lua踩坑记录</a> <br/>
-		<a href="https://blog.csdn.net/yuliying/article/details/48733779">lua中table如何安全移除元素</a>
+			</code></pre>
+			<a href="https://blog.csdn.net/weixin_43994445/article/details/109135215">Lua踩坑记录</a> <br/>
+			<a href="https://blog.csdn.net/yuliying/article/details/48733779">lua中table如何安全移除元素</a>
 
-            </p>
-	    <h2>Lua Lib</h2>
-	    <p>
-		<ul>
-		    <li><a href="https://github.com/EvandroLG/array.lua">array</a></li>
-		</ul>
-	    </p>
+		    </p>
+		    <h2 class="display-4">Lua Lib</h2>
+		    <p>
+			<ul>
+			    <li><a href="https://github.com/EvandroLG/array.lua">array</a></li>
+			</ul>
+		    </p>
 
-	    <h2>Lua Algorithm</h2>
-	    <p>
-		<pre><code class="Lua">
+		    <h2 class="display-4">Lua Algorithm</h2>
+		    <p>
+			<pre><code class="Lua">
 local function binary_search(list, value, less_than)
     less_than = less_than or function(a, b)
         return a < b
@@ -86,51 +110,51 @@ local function binary_search(list, value, less_than)
     -- Negative insertion index if not found
     return -min
 end
-		</code></pre>
-	    </p>
+			</code></pre>
+		    </p>
 
-	    <h2>Lua 源码</h2>
-	    <p>
-		<ul>
-		    <li><a href="https://www.zhihu.com/column/c_1605146109818380288">lua5.4.4源码赏析</a></li>
-		    <li><a href="https://www.zhihu.com/column/c_1595011738562494465">Lua5.4源代码剖析</a></li>
-		    <li><a href="https://www.zhihu.com/column/c_1167186465141870592">Lua in depth</a></li>
-		</ul>
-	    </p>
+		    <h2 class="display-4">Lua 源码</h2>
+		    <p>
+			<ul>
+			    <li><a href="https://www.zhihu.com/column/c_1605146109818380288">lua5.4.4源码赏析</a></li>
+			    <li><a href="https://www.zhihu.com/column/c_1595011738562494465">Lua5.4源代码剖析</a></li>
+			    <li><a href="https://www.zhihu.com/column/c_1167186465141870592">Lua in depth</a></li>
+			</ul>
+		    </p>
 
-	    <h2>C++ Lua</h2>
-	    <p>
-		<ul>
-		    <li><a href="https://wiki.luatos.com/_static/lua53doc/manual.html">Lua 5.3 参考手册</a></li>
-		    <li><a href="https://www.bookstack.cn/read/lua-5.3/README.md">Lua5.3手册</a></li>
-		</ul>
+		    <h2 class="display-4">C++ Lua</h2>
+		    <p>
+			<ul>
+			    <li><a href="https://wiki.luatos.com/_static/lua53doc/manual.html">Lua 5.3 参考手册</a></li>
+			    <li><a href="https://www.bookstack.cn/read/lua-5.3/README.md">Lua5.3手册</a></li>
+			</ul>
 
-	    </p>
+		    </p>
 
 
-            <h2>弱引用表</h2>
-            <p>
-		在Lua中，变量没有类型，它可以是任何东西，而值有类型 <br>
-		如果一个对象只有弱引用指向它，那么gc会自动回收该对象的内存并删除这些弱引用<br>
-		弱引用表weak table的用途一般都是出于GC考虑的 <br>
-            </p>
-            <h2>函数</h2>
-            <p>
-		多返回值 <br>
-		可变参数 <br>
-		函数闭包 主要应用在嵌套函数和匿名函数<br>
-		高阶函数 函数作参数;返回函数 <br/>
-		闭包应用:
-		<ul>
-                    <li>作为高阶函数的参数，比如像table.sort函数的参数</li>
-                    <li>创建其他的函数的函数，即函数返回一个闭包(工厂)</li>
-                    <li>闭包对于回调函数也非常有用。典型的例子就是界面上按钮的回调函数，这些函数代码逻辑可能是一模一样，只是回调函数参数不一样而已，即upvalue的值不一样而已。</li>
-                    <li>创建一个安全的运行环境，即所谓的沙盒（sandbox）。当执行一些未受信任的代码时就需要一个安全的运行环境</li>
-                    <li>实现迭代器,每个迭代器都需要在每次成功调用之间保持一些状态，这样才能知道它所在的位置及如何进到下一个位置</li>
-		</ul>
-		尾调用: 某个函数的最后一步操作是调用另一个函数 <br>
-		尾递归：
-		<pre><code class="Lua">
+		    <h2 class="display-4">弱引用表</h2>
+		    <p>
+			在Lua中，变量没有类型，它可以是任何东西，而值有类型 <br>
+			如果一个对象只有弱引用指向它，那么gc会自动回收该对象的内存并删除这些弱引用<br>
+			弱引用表weak table的用途一般都是出于GC考虑的 <br>
+		    </p>
+		    <h2 class="display-4">函数</h2>
+		    <p>
+			多返回值 <br>
+			可变参数 <br>
+			函数闭包 主要应用在嵌套函数和匿名函数<br>
+			高阶函数 函数作参数;返回函数 <br/>
+			闭包应用:
+			<ul>
+			    <li>作为高阶函数的参数，比如像table.sort函数的参数</li>
+			    <li>创建其他的函数的函数，即函数返回一个闭包(工厂)</li>
+			    <li>闭包对于回调函数也非常有用。典型的例子就是界面上按钮的回调函数，这些函数代码逻辑可能是一模一样，只是回调函数参数不一样而已，即upvalue的值不一样而已。</li>
+			    <li>创建一个安全的运行环境，即所谓的沙盒（sandbox）。当执行一些未受信任的代码时就需要一个安全的运行环境</li>
+			    <li>实现迭代器,每个迭代器都需要在每次成功调用之间保持一些状态，这样才能知道它所在的位置及如何进到下一个位置</li>
+			</ul>
+			尾调用: 某个函数的最后一步操作是调用另一个函数 <br>
+			尾递归：
+			<pre><code class="Lua">
 function factorial(n,total)
     total = total or 1 -- default parameter
     if(n == 1) then
@@ -139,16 +163,16 @@ function factorial(n,total)
     return factorial(n-1,n*total)
 end
 print(factorial(5)) -- 120
-		</code></pre>
-		<br> upvalue 实际指的是变量而不是值，这些变量可以在内部函数之间共享，即 upvalue 提供一种闭包之间共享数据的方法 <br>
-		<a href="https://blog.csdn.net/maximuszhou/article/details/44280109">深入理解Lua的闭包一：概念、应用和实现原理</a> <br>
-		<a href="https://www.cnblogs.com/zzy-frisrtblog/category/881943.html">lua成长笔记</a>
-            </p>
+			</code></pre>
+			<br> upvalue 实际指的是变量而不是值，这些变量可以在内部函数之间共享，即 upvalue 提供一种闭包之间共享数据的方法 <br>
+			<a href="https://blog.csdn.net/maximuszhou/article/details/44280109">深入理解Lua的闭包一：概念、应用和实现原理</a> <br>
+			<a href="https://www.cnblogs.com/zzy-frisrtblog/category/881943.html">lua成长笔记</a>
+		    </p>
 
-            <h2>字符串</h2>
-            <p>
-		正则 <br>
-		<pre><code class="Lua"> -- string.find, string.match, string.gmatch, string.gsub
+		    <h2 class="display-4">字符串</h2>
+		    <p>
+			正则 <br>
+			<pre><code class="Lua"> -- string.find, string.match, string.gmatch, string.gsub
 -- . ：表示任何字符
 -- %a: 表示任何字母。
 -- %c: 表示任何控制字符。
@@ -167,114 +191,114 @@ print(factorial(5)) -- 120
 -- *：匹配前一字符 0 次或多次，最长匹配
 -- -: 匹配前一字符 0 次或多次，最短匹配
 -- ?: 匹配前一字符 0 次或 1次
-		</code></pre>
+			</code></pre>
 
-		截取 <br>
-		<pre><code class="Lua">-- string.sub (s, i [, j])
+			截取 <br>
+			<pre><code class="Lua">-- string.sub (s, i [, j])
 str = "https://www.lua.org/"
 string.sub( str, 2, 3)
 string.sub( str, -4,-2)
-		</code></pre>
+			</code></pre>
 
-		替换 <br>
-		<pre><code class="Lua">-- string.gsub (s, pattern, repl [, n])
+			替换 <br>
+			<pre><code class="Lua">-- string.gsub (s, pattern, repl [, n])
 str = "https://www.lua.org/"
 string.gsub( str, "w", "m")    -- https://mmm.lua.org/    3
 string.gsub( str, "w", "m",2)  -- https://mmw.lua.org/    2
-		</code></pre>
+			</code></pre>
 
-		查找 <br>
-		<pre><code class="Lua">-- string.find (s, pattern [, init [, plain]]) plain->true 关闭正则
+			查找 <br>
+			<pre><code class="Lua">-- string.find (s, pattern [, init [, plain]]) plain->true 关闭正则
 str = "https://www.lua.org/"
 string.find( str, "lua")    -- 13      15
 string.find( str, "lua",15) -- nil
-		</code></pre>
+			</code></pre>
 
-		匹配 <br>
-		<pre><code class="Lua">-- string.match (s, pattern [, init])
+			匹配 <br>
+			<pre><code class="Lua">-- string.match (s, pattern [, init])
 str = "https://www.lua.org/"
 string.match( str, "%a+")    -- https
 string.find( str, "%a+",13)  -- lua
-		</code></pre>
+			</code></pre>
 
-		迭代匹配 <br>
-		<pre><code class="Lua">-- string.gmatch (s, pattern [, init])
+			迭代匹配 <br>
+			<pre><code class="Lua">-- string.gmatch (s, pattern [, init])
 str = "https://www.lua.org/"
 local words = {}
 for w in string.gmatch(str,"%a+") do
     table.insert(words,w)
 end
 print(table.concat(words," ")) -- https www lua org
-		</code></pre>
+			</code></pre>
 
-		格式化 <br>
-		<pre><code class="Lua">-- string.format (formatstring, ···)
+			格式化 <br>
+			<pre><code class="Lua">-- string.format (formatstring, ···)
 string.format("age = %d",10)
-		</code></pre>
+			</code></pre>
 
-		重复 <br>
-		<pre><code class="Lua">-- string.rep (s, n [, sep])
+			重复 <br>
+			<pre><code class="Lua">-- string.rep (s, n [, sep])
 str = "https://www.lua.org/"
 string.rep(str,2," ") -- https://www.lua.org/ https://www.lua.org/
-		</code></pre>
+			</code></pre>
 
-		反转 <br>
-		<pre><code class="Lua">-- string.reverse (s)
+			反转 <br>
+			<pre><code class="Lua">-- string.reverse (s)
 str = "https://www.lua.org/"
 string.reverse(str) -- /gro.aul.www//:sptth
-		</code></pre>
+			</code></pre>
 
-		WIP <br>
-		<pre><code class="Lua">-- string.pack (fmt, v1, v2, ···)
+			WIP <br>
+			<pre><code class="Lua">-- string.pack (fmt, v1, v2, ···)
 -- string.packsize (fmt)
 -- string.unpack (fmt, s [, pos])
-		</code></pre>
-		<a href="https://blog.csdn.net/Brave_boy666/article/details/118754444">Lua 字符串操作</a>
-            </p>
+			</code></pre>
+			<a href="https://blog.csdn.net/Brave_boy666/article/details/118754444">Lua 字符串操作</a>
+		    </p>
 
-            <h2>表</h2>
-            <p>
-		拼接 <br>
-		<pre><code class="Lua">-- table.concat (list [, sep [, i [, j]]])
+		    <h2 class="display-4">表</h2>
+		    <p>
+			拼接 <br>
+			<pre><code class="Lua">-- table.concat (list [, sep [, i [, j]]])
 tab = {"lua","table","string"}
 table.concat(tab," "，2，3)  -- table string
-		</code></pre>
+			</code></pre>
 
-		插入 <br>
-		<pre><code class="Lua">-- table.insert (list, [pos,] value) 数组能用, 字典不行
+			插入 <br>
+			<pre><code class="Lua">-- table.insert (list, [pos,] value) 数组能用, 字典不行
 tab = {"lua","table","string"}
 table.insert(tab,"function")
 table.concat(tab," ")  -- lua table string function
-		</code></pre>
+			</code></pre>
 
-		删除 <br>
-		<pre><code class="Lua">-- table.remove (list [, pos]) 数组能用, 字典不行
+			删除 <br>
+			<pre><code class="Lua">-- table.remove (list [, pos]) 数组能用, 字典不行
 tab = {"lua","table","string"}
 table.remove(tab)     -- string
 table.concat(tab," ") -- lua table
-		</code></pre>
+			</code></pre>
 
-		移动 <br>
-		<pre><code class="Lua">-- table.move (a1, f, e, t [,a2])
+			移动 <br>
+			<pre><code class="Lua">-- table.move (a1, f, e, t [,a2])
 tab1 = {"lua","table","string"}
 tab2 = {128}
 table.move(tab1,2,3,2,tab2)  -- table: 000001bd5dec0e10
 table.concat(tab2," ") -- 128 table string
-		</code></pre>
+			</code></pre>
 
-		排序 <br>
-		<pre><code class="Lua">-- table.sort (list [, comp])
+			排序 <br>
+			<pre><code class="Lua">-- table.sort (list [, comp])
 tab = {"lua","table","string"}
 table.sort(tab)
 table.concat(tab," ") -- lua string table
-		</code></pre>
+			</code></pre>
 
-            </p>
+		    </p>
 
-            <h2>时间</h2>
-            <p>
-		日期 <br>
-		<pre><code class="Lua">-- os.date ([format [, time]]) --返回本地化的时间字符串
+		    <h2 class="display-4">时间</h2>
+		    <p>
+			日期 <br>
+			<pre><code class="Lua">-- os.date ([format [, time]]) --返回本地化的时间字符串
 os.date()  -- 05/08/23 23:52:29
 -- format
 -- %a 一个星期中天数的简写(如：Wed)
@@ -298,26 +322,26 @@ os.date()  -- 05/08/23 23:52:29
 -- %% 字符'%'
 -- *t 返回表 hour min wday day month year sec yday isdst
 
-		</code></pre>
+			</code></pre>
 
-		时间戳 <br>
-		<pre><code class="language-lua">-- os.time ([table])
+			时间戳 <br>
+			<pre><code class="language-lua">-- os.time ([table])
 os.time() -- 1683561264
 os.time({year=2023, month = 5, day=8, hour=23, min=57,sec=30,isdst=false}) -- 1683561450
-		</code></pre>
+			</code></pre>
 
-		<pre><code class="Lua">-- os.difftime (t2, t1)
+			<pre><code class="Lua">-- os.difftime (t2, t1)
 t1 = os.time()
 t2 = os.time()
 os.difftime(t2,t1) -- 5.0
-		</code></pre>
+			</code></pre>
 
-		<a href="https://blog.csdn.net/fightsyj/article/details/85214282">Lua中时间函数的用法整理</a>
-            </p>
+			<a href="https://blog.csdn.net/fightsyj/article/details/85214282">Lua中时间函数的用法整理</a>
+		    </p>
 
-            <h2>随机数</h2>
-            <p>
-		<pre><code class="language-lua">-- math.randomseed ([x [, y]])
+		    <h2 class="display-4">随机数</h2>
+		    <p>
+			<pre><code class="language-lua">-- math.randomseed ([x [, y]])
 -- math.random ([m [, n]])
 math.randomseed(tostring(os.time()):reverse():sub(1,7))
 for i = 1, 5 do
@@ -326,12 +350,12 @@ end
 -- math.random()  --> (0,1)
 -- math.random(n) --> (0,n)
 -- math.random(m,n) --> (m,n)
-		</code></pre>
-            </p>
+			</code></pre>
+		    </p>
 
-            <h2>数学库</h2>
-            <p>
-		<pre><code class="Lua">-- math.abs (x) -- 取绝对值
+		    <h2 class="display-4">数学库</h2>
+		    <p>
+			<pre><code class="Lua">-- math.abs (x) -- 取绝对值
 math.abs(-2023.511) -- 2023.511
 -- math.ceil (x) -- 向上取整
 math.ceil(2.5) -- 3
@@ -343,33 +367,43 @@ math.fmod(-2,3) -- -2
 math.modf(-16.78) -- -16 -0.78
 -- + - * / 加减乘除
 --  // % ^ 整除 取余 幂运算
-		</code></pre>
-		<a href="https://www.cnblogs.com/whiteyun/archive/2009/08/10/1543040.html">Lua中的数学库</a> <br>
-		<a href="https://blog.csdn.net/MokeXing/article/details/78839452">数学库</a> <br>
-		<a href="https://www.cnblogs.com/Fallever/p/6880710.html">lua取模运算math.fmod和% 的区别</a>
-            </p>
+			</code></pre>
+			<a href="https://www.cnblogs.com/whiteyun/archive/2009/08/10/1543040.html">Lua中的数学库</a> <br>
+			<a href="https://blog.csdn.net/MokeXing/article/details/78839452">数学库</a> <br>
+			<a href="https://www.cnblogs.com/Fallever/p/6880710.html">lua取模运算math.fmod和% 的区别</a>
+		    </p>
 
 
 
-	    <blockquote>
-		"Success is the ability to go from one failure to another without losing enthusiasm." --Winston Churchill
-	    </blockquote>
+		    <blockquote>
+			"Success is the ability to go from one failure to another without losing enthusiasm." --Winston Churchill
+		    </blockquote>
 
-	    <p class="text-end">
-		<a href="#top" class="back-to-top"> Back to top </a>
+
+		</div>
+	    </div>
+	</article>
+
+	<!-- <p class="text-end">
+	     <a href="#top" class="back-to-top"> Back to top </a>
+	     </p> -->
+
+	<p class="text-end">
+	    <button type="button" class="btn btn-dark">
+		<a class="link-underline link-success text-decoration-none" href="#">Back to top</a>
+	    </button>
+	</p>
+
+	<footer class="py-2 text-center text-body-secondary">
+	    <p>
+		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
 	    </p>
+	</footer>
 
-	    <footer>
-		<p>
-		    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-		</p>
-	    </footer>
+	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	<script src="../module/highlight/highlight.min.js"></script>
+	<!-- <script src="../module/highlight/language/lua.min.js"></script> -->
+	<script>hljs.highlightAll();</script>
 
-	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	    <script src="../module/highlight/highlight.min.js"></script>
-	    <!-- <script src="../module/highlight/language/lua.min.js"></script> -->
-	    <script>hljs.highlightAll();</script>
-
-	</body>
-    </div>
+    </body>
 </html>
