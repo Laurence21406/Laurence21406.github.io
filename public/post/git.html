@@ -14,122 +14,148 @@
 
     </head>
 
-    <div class="container-lg pt-3 pb-3 ps-1">
-	<body>
-	    <header>
-		<nav>
-	    	    <a href="../index.html" target="_blank">HOME</a>
-		    <a href="../archive.html" target="_blank">ARCHIVE</a>
-		    <a href="../tag.html" target="_blank">TAG</a>
-		    <a href="../about.html" target="_blank">ABOUT</a>
-		</nav>
-	    </header>
-	    <h1>Git</h1>
-	    <div>Date: <time>2022-1-3</time>. Last updated: <time>2022-3-29</time>.</div>
+    <body>
+	<header>
+	    <nav class="navbar navbar-expand-lg">
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
 
-	    <h2>Git Diff</h2>
-	    <p>
-		<ul>
-		    <li>
-			Working tree vs Index <br />
-			<em>git diff</em>
-		    </li>
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+		    <ul class="navbar-nav ">
 
-		    <li>
-			Index vs Commit <br />
-			<em>git diff --cached</em>
-		    </li>
+			<li class="nav-item">
+			    <a class="nav-link text-decoration-underline" href="../index.html" target="_blank">HOME</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link text-decoration-underline" href="../archive.html" target="_blank">ARCHIVE</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link text-decoration-underline" href="../tag.html" target="_blank">TAG</a>
+			</li>
+			<li class="nav-item">
+			    <a class="nav-link text-decoration-underline" href="../about.html" target="_blank">ABOUT</a>
+			</li>
 
-		    <li>
-			Working tree vs Commit <br />
-			<em>git diff HEAD</em>
-		    </li>
-		</ul>
-		<a href="https://liam.page/2017/02/20/git-diff-with-cached-files/">使用 git diff 查看差异</a>
-	    </p>
+		    </ul>
+		</div>
+	    </nav>
+	</header>
 
-	    <h2>Git Reset</h2>
-	    <p>
-		<ul>
-		    <li><em>git reset --soft commit-id</em></li>
-		    <li><em>git reset --mixed commit-id</em></li>
-		    <li><em>git reset --hard commit-id</em></li>
-		</ul>
-	    </p>
-
-	    <h2>Git Rebase</h2>
-	    <p>
-		<ul>
-		    <li>
-			<em>git switch -c branch1</em> <br />
-			<em>git rebase master</em> <br />
-			<em>git switch master</em> <br />
-			<em>git merge branch1</em>
-		    </li>
-		    <li><a href="https://www.cnblogs.com/chenny7/p/7644318.html" target="_blank">git rebase</a></li>
-		</ul>
-	    </p>
-
-	    <h2>Git Stash</h2>
-	    <p>
-		<ul>
-		    <li>
-			<em>git stash</em> <br />
-			<em>git stash list</em> <br />
-			<em>git stash apply</em> <br />
-			<em>git stash drop</em> <br />
-		    </li>
-		</ul>
-	    </p>
-
-	    <h2>Git Submodule</h2>
-	    <p>
-		<ul>
-		    <li><em>git submodule init</em></li>
-		    <li><em>git submodule add https://github.com/libevent/libevent.git<em></li>
-			<li><em>git submodule update</em></li>
-			<li><em>git checkout release-2.1.8-stable</em></li>
-			<li><em>add_subdirectory(extern/libevent)</em></li>
-			<li><em>git submodule update --init --recursive</em></li>
-		</ul>
-	    </p>
-	    <p>
-		git下載子模塊 <br />
-		<ul>
-		    <li><em>git clone --recursive</em></li>
-		    <li><em>git submodule update --init</em></li>
-		</ul>
-
-		<a href="https://www.runoob.com/git/git-submodule.html">git submodule 命令</a>
-
-	    </p>
-
-	    <h2>Proxy</h2>
-	    <p>
-		git config --global --add remote.origin.proxy "127.0.0.1:7890"
-	    </p>
-
-	    <p>
-		git log --oneline --all -n4 --graph
-	    </p>
+	<article class="container-lg">
+	    <div class="row justify-content-center">
+		<div class="col">
 
 
+		    <h1 class="display-2">Git</h1>
+		    <div class="lead">Date: <time>2022-1-3</time>. Last updated: <time>2022-3-29</time>.</div>
+
+		    <h2 class="display-4">Git Diff</h2>
+		    <p>
+			<ul>
+			    <li>
+				Working tree vs Index <br />
+				<em>git diff</em>
+			    </li>
+
+			    <li>
+				Index vs Commit <br />
+				<em>git diff --cached</em>
+			    </li>
+
+			    <li>
+				Working tree vs Commit <br />
+				<em>git diff HEAD</em>
+			    </li>
+			</ul>
+			<a href="https://liam.page/2017/02/20/git-diff-with-cached-files/">使用 git diff 查看差异</a>
+		    </p>
+
+		    <h2 class="display-4">Git Reset</h2>
+		    <p>
+			<ul>
+			    <li><em>git reset --soft commit-id</em></li>
+			    <li><em>git reset --mixed commit-id</em></li>
+			    <li><em>git reset --hard commit-id</em></li>
+			</ul>
+		    </p>
+
+		    <h2 class="display-4">Git Rebase</h2>
+		    <p>
+			<ul>
+			    <li>
+				<em>git switch -c branch1</em> <br />
+				<em>git rebase master</em> <br />
+				<em>git switch master</em> <br />
+				<em>git merge branch1</em>
+			    </li>
+			    <li><a href="https://www.cnblogs.com/chenny7/p/7644318.html" target="_blank">git rebase</a></li>
+			</ul>
+		    </p>
+
+		    <h2 class="display-4">Git Stash</h2>
+		    <p>
+			<ul>
+			    <li>
+				<em>git stash</em> <br />
+				<em>git stash list</em> <br />
+				<em>git stash apply</em> <br />
+				<em>git stash drop</em> <br />
+			    </li>
+			</ul>
+		    </p>
+
+		    <h2 class="display-4">Git Submodule</h2>
+		    <p>
+			<ul>
+			    <li><em>git submodule init</em></li>
+			    <li><em>git submodule add https://github.com/libevent/libevent.git<em></li>
+				<li><em>git submodule update</em></li>
+				<li><em>git checkout release-2.1.8-stable</em></li>
+				<li><em>add_subdirectory(extern/libevent)</em></li>
+				<li><em>git submodule update --init --recursive</em></li>
+			</ul>
+		    </p>
+		    <p>
+			git下載子模塊 <br />
+			<ul>
+			    <li><em>git clone --recursive</em></li>
+			    <li><em>git submodule update --init</em></li>
+			</ul>
+
+			<a href="https://www.runoob.com/git/git-submodule.html">git submodule 命令</a>
+
+		    </p>
+
+		    <h2 class="display-4">Proxy</h2>
+		    <p>
+			git config --global --add remote.origin.proxy "127.0.0.1:7890"
+		    </p>
+
+		    <p>
+			git log --oneline --all -n4 --graph
+		    </p>
+
+
+
+		</div>
+	    </div>
+	</article>
 
 
 
 
+	<footer class="py-2 text-center text-body-secondary">
+	    Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
+	</footer>
 
+    	<!-- bootstrap -->
+	<script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	<!-- highlight -->
+	<script src="../module/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
 
-	    <footer>
-		Copyright &copy; <a href="mailto:2962539335@qq.com">Hower Chow</a> 2021 - <script>document.write(new Date().getFullYear())</script> <i class="cc cc-by-nc-sa-eu"></i>
-	    </footer>
-
-    	    <!-- bootstrap -->
-	    <script src="../module/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	    <!-- highlight -->
-	    <script src="../module/highlight/highlight.min.js"></script>
-	    <script>hljs.highlightAll();</script>
-
-	</body>
-    </div>
+    </body>
 </html>
