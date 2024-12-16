@@ -1,371 +1,415 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
 	<meta charset="UTF-8">
 	<title>0104</title>
 	<!-- <link rel="shortcut icon" href="../../../imag/favicon.ico"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="../../../css/style.css"> -->
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<style>
+         :root {
+             --bs-body-font-size: 1.25rem; /* 默认字体大小 */
+         }
+
+	 p,table {
+	     font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック" , "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
+	 }
+
+	</style>
+
+
     </head>
 
 
     <body>
+	<article class="container-lg">
+	    <div class="row justify-content-center">
+		<div class="col">
 
-	<p>
-	    <table>
-		<tr>
-		    <td>日文</td>
-		    <td>假名</td>
-		    <td>中文</td>
-		    <td>发音</td>
-		</tr>
-		<tr>
-		    <td>起きます</td>
-		    <td>おきます</td>
-		    <td>起床，起来</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>寝ます</td>
-		    <td>ねます</td>
-		    <td>睡觉，就寝</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>働きます</td>
-		    <td>はたらきます</td>
-		    <td>工作</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>休みます</td>
-		    <td>やすみます</td>
-		    <td>休息</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>勉強します</td>
-		    <td>べんきょうします</td>
-		    <td>念书，用功</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>終わります</td>
-		    <td>おわります</td>
-		    <td>结束</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>デパート</td>
-		    <td>デパート</td>
-		    <td>百货公司</td>
-		    <td>2</td>
-		</tr>
-		<tr>
-		    <td>銀行</td>
-		    <td>ぎんこう</td>
-		    <td>银行</td>
-		    <td>0</td>
-		</tr>
-		<tr>
-		    <td>郵便局</td>
-		    <td>ゆうびんきょく</td>
-		    <td>邮局</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>図書館</td>
-		    <td>としょかん</td>
-		    <td>图书馆</td>
-		    <td>2</td>
-		</tr>
-		<tr>
-		    <td>美術館</td>
-		    <td>びじゅつかん</td>
-		    <td>美术馆</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>今</td>
-		    <td>いま</td>
-		    <td>现在</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>…時</td>
-		    <td>…じ</td>
-		    <td>…点（钟）</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>…分</td>
-		    <td>…ふん（…ぷん）</td>
-		    <td>…分（钟）</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>半</td>
-		    <td>はん</td>
-		    <td>半</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>何時</td>
-		    <td>なんじ</td>
-		    <td>几点</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>何分</td>
-		    <td>なんぷん</td>
-		    <td>几分</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>午前；早晨</td>
-		    <td>ごぜん</td>
-		    <td>上午</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>午後</td>
-		    <td>ごご</td>
-		    <td>下午</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>朝</td>
-		    <td>あさ</td>
-		    <td>早上</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>昼</td>
-		    <td>ひる</td>
-		    <td>白天，中午</td>
-		    <td>2</td>
-		</tr>
-		<tr>
-		    <td>晩（夜）</td>
-		    <td>ばん（よる）</td>
-		    <td>晚上，夜晚</td>
-		    <td>0</td>
-		</tr>
-		<tr>
-		    <td>おととい</td>
-		    <td>おととい</td>
-		    <td>前天</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>きのう</td>
-		    <td>きのう</td>
-		    <td>昨天</td>
-		    <td>2</td>
-		</tr>
-		<tr>
-		    <td>きょう</td>
-		    <td>きょう</td>
-		    <td>今天</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>あした</td>
-		    <td>あした</td>
-		    <td>明天</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>あさって</td>
-		    <td>あさって</td>
-		    <td>后天</td>
-		    <td>2</td>
-		</tr>
-		<tr>
-		    <td>けさ</td>
-		    <td>けさ</td>
-		    <td>今天早上</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>今晩</td>
-		    <td>こんばん</td>
-		    <td>今天晚上</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>休み</td>
-		    <td>やすみ</td>
-		    <td>休息，休假</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>昼休み</td>
-		    <td>ひるやすみ</td>
-		    <td>午休</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>毎朝</td>
-		    <td>まいあさ</td>
-		    <td>每天早上</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>毎晩</td>
-		    <td>まいばん</td>
-		    <td>每天晚上</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>毎日</td>
-		    <td>まいにち</td>
-		    <td>每天</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>月曜日</td>
-		    <td>げつようび</td>
-		    <td>星期一</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>火曜日</td>
-		    <td>かようび</td>
-		    <td>星期二</td>
-		    <td>2</td>
-		</tr>
-		<tr>
-		    <td>水曜日</td>
-		    <td>すいようび</td>
-		    <td>星期三</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>木曜日</td>
-		    <td>もくようび</td>
-		    <td>星期四</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>金曜日</td>
-		    <td>きんようび</td>
-		    <td>星期五</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>土曜日</td>
-		    <td>どようび</td>
-		    <td>星期六</td>
-		    <td>2</td>
-		</tr>
-		<tr>
-		    <td>日曜日</td>
-		    <td>にちようび</td>
-		    <td>星期天</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>何曜日</td>
-		    <td>なんようび</td>
-		    <td>星期几</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>番号</td>
-		    <td>ばんごう</td>
-		    <td>号码</td>
-		    <td>3</td>
-		</tr>
-		<tr>
-		    <td>何番</td>
-		    <td>なんばん</td>
-		    <td>几号</td>
-		    <td>1</td>
-		</tr>
-		<tr>
-		    <td>～から</td>
-		    <td>～から</td>
-		    <td>从～</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>～まで</td>
-		    <td>～まで</td>
-		    <td>到～</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>～と～</td>
-		    <td>～と～</td>
-		    <td>和（用于连接名词）</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>そちら</td>
-		    <td>そちら</td>
-		    <td>那里</td>
-		    <td>0</td>
-		</tr>
-		<tr>
-		    <td>大変ですね。</td>
-		    <td>たいへんですね。</td>
-		    <td>够呛。/（表示同情和慰问对方的心情）</td>
-		    <td></td>
-		</tr>
-		<tr>
-		    <td>え―と</td>
-		    <td>え―と</td>
-		    <td>嗯，我看看</td>
-		    <td></td>
-		</tr>
-	    </table>
-	</p>
+		    <h1 class="display-4">第4课</h1>
+		    <h2 class="display-6">单词</h2>
+		    <p>
+
+			<table class="table table-borderless table-hover">
+			    <thead class="table-secondary">
+				<tr>
+				    <td>日文</td>
+				    <td>假名</td>
+				    <td>中文</td>
+				    <td>发音</td>
+				</tr>
+			    </thead>
+			    <tbody>
+				<tr>
+				    <td>起きます</td>
+				    <td>おきます</td>
+				    <td>起床，起来</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>寝ます</td>
+				    <td>ねます</td>
+				    <td>睡觉，就寝</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>働きます</td>
+				    <td>はたらきます</td>
+				    <td>工作</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>休みます</td>
+				    <td>やすみます</td>
+				    <td>休息</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>勉強します</td>
+				    <td>べんきょうします</td>
+				    <td>念书，用功</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>終わります</td>
+				    <td>おわります</td>
+				    <td>结束</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>デパート</td>
+				    <td>デパート</td>
+				    <td>百货公司</td>
+				    <td>2</td>
+				</tr>
+				<tr>
+				    <td>銀行</td>
+				    <td>ぎんこう</td>
+				    <td>银行</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>郵便局</td>
+				    <td>ゆうびんきょく</td>
+				    <td>邮局</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>図書館</td>
+				    <td>としょかん</td>
+				    <td>图书馆</td>
+				    <td>2</td>
+				</tr>
+				<tr>
+				    <td>美術館</td>
+				    <td>びじゅつかん</td>
+				    <td>美术馆</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>今</td>
+				    <td>いま</td>
+				    <td>现在</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>…時</td>
+				    <td>…じ</td>
+				    <td>…点（钟）</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>…分</td>
+				    <td>…ふん（…ぷん）</td>
+				    <td>…分（钟）</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>半</td>
+				    <td>はん</td>
+				    <td>半</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>何時</td>
+				    <td>なんじ</td>
+				    <td>几点</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>何分</td>
+				    <td>なんぷん</td>
+				    <td>几分</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>午前；早晨</td>
+				    <td>ごぜん</td>
+				    <td>上午</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>午後</td>
+				    <td>ごご</td>
+				    <td>下午</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>朝</td>
+				    <td>あさ</td>
+				    <td>早上</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>昼</td>
+				    <td>ひる</td>
+				    <td>白天，中午</td>
+				    <td>2</td>
+				</tr>
+				<tr>
+				    <td>晩（夜）</td>
+				    <td>ばん（よる）</td>
+				    <td>晚上，夜晚</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>おととい</td>
+				    <td>おととい</td>
+				    <td>前天</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>きのう</td>
+				    <td>きのう</td>
+				    <td>昨天</td>
+				    <td>2</td>
+				</tr>
+				<tr>
+				    <td>きょう</td>
+				    <td>きょう</td>
+				    <td>今天</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>あした</td>
+				    <td>あした</td>
+				    <td>明天</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>あさって</td>
+				    <td>あさって</td>
+				    <td>后天</td>
+				    <td>2</td>
+				</tr>
+				<tr>
+				    <td>けさ</td>
+				    <td>けさ</td>
+				    <td>今天早上</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>今晩</td>
+				    <td>こんばん</td>
+				    <td>今天晚上</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>休み</td>
+				    <td>やすみ</td>
+				    <td>休息，休假</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>昼休み</td>
+				    <td>ひるやすみ</td>
+				    <td>午休</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>毎朝</td>
+				    <td>まいあさ</td>
+				    <td>每天早上</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>毎晩</td>
+				    <td>まいばん</td>
+				    <td>每天晚上</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>毎日</td>
+				    <td>まいにち</td>
+				    <td>每天</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>月曜日</td>
+				    <td>げつ-ようび</td>
+				    <td>星期一</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>火曜日</td>
+				    <td>か-ようび</td>
+				    <td>星期二</td>
+				    <td>2</td>
+				</tr>
+				<tr>
+				    <td>水曜日</td>
+				    <td>すい-ようび</td>
+				    <td>星期三</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>木曜日</td>
+				    <td>もく-ようび</td>
+				    <td>星期四</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>金曜日</td>
+				    <td>きん-ようび</td>
+				    <td>星期五</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>土曜日</td>
+				    <td>ど-ようび</td>
+				    <td>星期六</td>
+				    <td>2</td>
+				</tr>
+				<tr>
+				    <td>日曜日</td>
+				    <td>にち-ようび</td>
+				    <td>星期天</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>何曜日</td>
+				    <td>なん-ようび</td>
+				    <td>星期几</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>番号</td>
+				    <td>ばんごう</td>
+				    <td>号码</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>何番</td>
+				    <td>なんばん</td>
+				    <td>几号</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>～から</td>
+				    <td>～から</td>
+				    <td>从～</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>～まで</td>
+				    <td>～まで</td>
+				    <td>到～</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>～と～</td>
+				    <td>～と～</td>
+				    <td>和（用于连接名词）</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>そちら</td>
+				    <td>そちら</td>
+				    <td>那里</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>大変ですね。</td>
+				    <td>たいへんですね。</td>
+				    <td>够呛。/（表示同情和慰问对方的心情）</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>え―と</td>
+				    <td>え―と</td>
+				    <td>嗯，我看看</td>
+				    <td></td>
+				</tr>
+			    </tbody>
+			</table>
+		    </p>
 
 
-	<p>4课</p>
-	<p>文型</p>
-	<p>今 4時5分です。#现在是4点5分。</p>
-	<p>わたしは 9時から 5時まで 働きます。#我从9点工作到5点。</p>
-	<p>わたしは 朝 6時に 起きます。#我早上6点钟起床。</p>
-	<p>わたしは きのう 勉強しました。#我昨天学习了。</p>
+		    <br/>
 
-	<br/>
+		    <h2 class="display-6">句子</h2>
 
-	<p>例文 </p>
-	<p>今 何時ですか。#现在几点钟？</p>
-	<p> … 2時10分です。#…2点10分。</p>
-	<p> ニューヨークは 今 何時ですか。#纽约现在是几点？</p>
-	<p> …午前 0時10分です。#…午夜12点10分。</p>
-	<p>銀行は 何時から 何時までですか。#银行从几点到几点营业？</p>
-	<p> …9時から 3時までです。#…9点到3点。</p>
-	<p> 休みは 何曜日ですか。#星期几休息？</p>
-	<p> …土曜日と 日曜日です。#…星期六和星期天。</p>
-	<p> 毎晩 何時に 寝ますか。#你每晚几点睡觉？</p>
-	<p> …11時に 寝ます。#…11点睡觉。</p>
-	<p>土曜日 働きますか。#星期六工作吗？</p>
-	<p> …いいえ、働きません。#…不，不工作。</p>
-	<p>きのう 勉強しましたか。#昨天学习了吗？</p>
-	<p> …いいえ、勉強しませんでした。#…不，没有学习。</p>
-	<p>IMCの 電話番号は 何番ですか。#IMC的电话号码是几号？</p>
-	<p> …341の 2597です。#…是341-2597。</p>
+		    <p>文型</p>
+		    <p><ruby>今<rt>いま</rt></ruby>4<ruby>時<rt>じ</rt></ruby>5<ruby>分<rt>ふん</rt></ruby>です。#现在是4点5分。</p>
+		    <p>わたしは 9<ruby>時<rt>じ</rt></ruby><u>から</u> 5時<u>まで</u> <ruby>働<rt>はたら</rt></ruby>きます。#我从9点工作到5点。</p>
+		    <p>わたしは <ruby>朝<rt>あさ</rt></ruby> 6<ruby>時<rt>じ</rt></ruby>に <ruby>起<rt>お</rt></ruby>きます。
+			#我早上6点钟起床。[时间名词 + に: 表示动作发生时间]</p>
+		    <p>わたしは きのう <ruby>勉強<rt>べんきょう</rt></ruby>し<u>ました</u>。#我昨天学习了。</p>
 
-	<br/>
+		    <p>
+			休みます <br/>
+			过去时: 休みました <br/>
+			否定时: 休みません <br/>
+			过去否定时: 休みませんでした <br/>
+		    </p>
 
-	<p>会話</p>
-	<p>そちらは 何時から 何時までですか#你们那儿从几点到几点开馆</p>
-	<p>はい、 104の 石田です。#你好，我是104查号台的服务员-石田。</p>
-	<p>やまと美術館の 電話番号を お願いします。#请给我查一下大和美术馆的电话号码。</p>
-	<p>やまと美術館ですね。 かしこまりました。#要查大和美术馆吧。知道了。</p>
-	<p>---------------------------- </p>
-	<p> お問い合わせの 番号は 0797の 38の 5432です。#您查询的电话号码是0797-38-5432。</p>
-	<p>---------------------------- </p>
-	<p> </p>
-	<p>はい、やまと美術館です。#你好，这里是大和美术馆。</p>
-	<p>すみません。 そちらは 何時から 何時までですか。#对不起。请问你们那儿从几点到几点开馆？</p>
-	<p>9時から 4時までです。#从9点到4点。</p>
-	<p>休みは 何曜日ですか。#星期几闭馆？</p>
-	<p>月曜日です。#星期一。</p>
-	<p>どうも ありがとう ございました。#谢谢。</p>
+		    <br/>
+
+		    <p>例文 </p>
+		    <p><ruby>今<rt>いま</rt></ruby> <ruby>何時<rt>なんじ</rt></ruby> ですか。#现在几点钟？</p>
+		    <p> … 2<ruby>時<rt>じ</rt></ruby>10<ruby>分<rt>ふん</rt></ruby>です。#…2点10分。</p>
+		    <p> ニューヨーク <u>は</u> <ruby>今<rt>いま</rt></ruby> <ruby>何時<rt>なんじ</rt></ruby> <u>ですか</u>。#纽约现在是几点？</p>
+		    <p> … <ruby>午前<rt>ごぜん</rt></ruby>0<ruby>時<rt>じ</rt></ruby>10<ruby>分<rt>ふん</rt></ruby>です。#…午夜12点10分。</p>
+		    <p><ruby>銀行<rt>ぎんこう</rt></ruby>は <ruby>何時<rt>なんじ</rt></ruby><u>から</u> <ruby>何時<rt>なんじ</rt></ruby><u>まで</u> ですか。#银行从几点到几点营业？</p>
+		    <p> …9時から 3時まで です。#…9点到3点。</p>
+		    <p> <ruby>休<rt>やす</rt></ruby>みは <ruby>何曜日<rt>なんようび</rt></ruby>ですか。#星期几休息？</p>
+		    <p> …<ruby>土曜日<rt>どようび</rt></ruby><u>と</u><ruby>日曜日<rt>にちようび</rt></ruby>です。#…星期六和星期天。</p>
+		    <p> <ruby>毎晩<rt>まいばん</rt></ruby> <ruby>何時<rt>なんじ</rt></ruby>に <ruby>寝<rt>ね</rt></ruby>ますか。#你每晚几点睡觉？</p>
+		    <p> …11時に 寝ます。#…11点睡觉。</p>
+		    <p>土曜日 働きますか。#星期六工作吗？</p>
+		    <p> …いいえ、働きません。#…不，不工作。</p>
+		    <p>きのう 勉強しましたか。#昨天学习了吗？</p>
+		    <p> …いいえ、勉強しませんでした。#…不，没有学习。</p>
+		    <p>IMCの 電話番号は 何番ですか。#IMC的电话号码是几号？</p>
+		    <p> …341の 2597です。#…是341-2597。</p>
+
+		    <br/>
+
+		    <p>会話</p>
+		    <p>そちらは 何時から 何時までですか#你们那儿从几点到几点开馆</p>
+		    <p>はい、 104の 石田です。#你好，我是104查号台的服务员-石田。</p>
+		    <p>やまと美術館の 電話番号を お願いします。#请给我查一下大和美术馆的电话号码。</p>
+		    <p>やまと美術館ですね。 かしこまりました。#要查大和美术馆吧。知道了。</p>
+		    <p>---------------------------- </p>
+		    <p> お問い合わせの 番号は 0797の 38の 5432です。#您查询的电话号码是0797-38-5432。</p>
+		    <p>---------------------------- </p>
+		    <p> </p>
+		    <p>はい、やまと美術館です。#你好，这里是大和美术馆。</p>
+		    <p>すみません。 そちらは 何時から 何時までですか。#对不起。请问你们那儿从几点到几点开馆？</p>
+		    <p>9時から 4時までです。#从9点到4点。</p>
+		    <p>休みは 何曜日ですか。#星期几闭馆？</p>
+		    <p>月曜日です。#星期一。</p>
+		    <p>どうも ありがとう ございました。#谢谢。</p>
+
+		</div>
+	    </div>
+	</article>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     </body>
 
 </html>
