@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+	<meta charset="UTF-8">
+	<title>0105</title>
+	<!-- <link rel="shortcut icon" href="../../../imag/favicon.ico"> -->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<style>
+         :root {
+             --bs-body-font-size: 1.25rem; /* 默认字体大小 */
+         }
+
+	 p,table {
+	     font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo,
+	     "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック" , "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
+	 }
+
+	</style>
+
+
+    </head>
+
+
+    <body>
+	<article class="container-lg">
+	    <div class="row justify-content-center">
+		<div class="col">
+
+		    <h2 class="display-6">单词</h2>
+		    <p>
+			<table class="table table-borderless table-hover">
+			    <thead class="table-secondary">
+				<tr>
+				    <td>日文</td>
+				    <td>假名</td>
+				    <td>中文</td>
+				    <td>发音</td>
+				</tr>
+			    </thead>
+			    <tbody>
+				<tr>
+				    <td>行きます</td>
+				    <td>いきます</td>
+				    <td>去</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>来ます</td>
+				    <td>きます</td>
+				    <td>来</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>帰ります</td>
+				    <td>かえります</td>
+				    <td>回家，回去</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>学校</td>
+				    <td>がっこう</td>
+				    <td>学校</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>スーパー</td>
+				    <td>スーパー</td>
+				    <td>超市</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>駅</td>
+				    <td>えき</td>
+				    <td>车站;火车站</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>飛行機</td>
+				    <td>ひこうき</td>
+				    <td>飞机</td>
+				    <td>2</td>
+				</tr>
+				<tr>
+				    <td>船</td>
+				    <td>ふね</td>
+				    <td>船</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>電車</td>
+				    <td>でんしゃ</td>
+				    <td>电车</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>地下鉄</td>
+				    <td>ちかてつ</td>
+				    <td>地下铁</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>新幹線</td>
+				    <td>しんかんせん</td>
+				    <td>新干线</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>バス</td>
+				    <td>バス</td>
+				    <td>公车，巴士</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>タクシー</td>
+				    <td>タクシー</td>
+				    <td>出租车</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>自転車</td>
+				    <td>じてんしゃ</td>
+				    <td>自行车，脚踏车</td>
+				    <td>2</td>
+				</tr>
+				<tr>
+				    <td>歩いて</td>
+				    <td>あるいて</td>
+				    <td>步行</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>人</td>
+				    <td>ひと</td>
+				    <td>人</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>友達</td>
+				    <td>ともだち</td>
+				    <td>朋友</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>彼</td>
+				    <td>かれ</td>
+				    <td>他，男朋友，情人</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>彼女</td>
+				    <td>かのじょ</td>
+				    <td>她，女朋友，情人</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>家族</td>
+				    <td>かぞく</td>
+				    <td>家人，家属</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>一人で</td>
+				    <td>ひとりで</td>
+				    <td>一个人，独自</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>先週</td>
+				    <td>せんしゅう</td>
+				    <td>上周，上星期</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>今週</td>
+				    <td>こんしゅう</td>
+				    <td>本周，这星期</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>来週</td>
+				    <td>らいしゅう</td>
+				    <td>下周，下星期</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>先月</td>
+				    <td>せんげつ</td>
+				    <td>上个月</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>今月</td>
+				    <td>こんげつ</td>
+				    <td>这个月</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>来月</td>
+				    <td>らいげつ</td>
+				    <td>下个月</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>去年</td>
+				    <td>きょねん</td>
+				    <td>去年</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>ことし</td>
+				    <td>ことし</td>
+				    <td>今年</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>来年</td>
+				    <td>らいねん</td>
+				    <td>明年</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>…月</td>
+				    <td>…がつ</td>
+				    <td>…月</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>何月</td>
+				    <td>なんがつ</td>
+				    <td>几月</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>1日</td>
+				    <td>ついたち</td>
+				    <td>1日，1号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>2日</td>
+				    <td>ふつか</td>
+				    <td>2日，2号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>3日</td>
+				    <td>みっか</td>
+				    <td>3日，3号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>4日</td>
+				    <td>よっか</td>
+				    <td>4日，4号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>5日</td>
+				    <td>いつか</td>
+				    <td>5日，5号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>6日</td>
+				    <td>むいか</td>
+				    <td>6日，6号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>7日</td>
+				    <td>なのか</td>
+				    <td>7日，7号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>8日</td>
+				    <td>ようか</td>
+				    <td>8日，8号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>9日</td>
+				    <td>ここのか</td>
+				    <td>9日，9号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>10日</td>
+				    <td>とおか</td>
+				    <td>10日，10号</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>14日</td>
+				    <td>じゅうよっか</td>
+				    <td>14日，14号</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>20日</td>
+				    <td>はつか</td>
+				    <td>20日，20号</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>24日</td>
+				    <td>にじゅうよっか</td>
+				    <td>24日，24号</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>…日</td>
+				    <td>…にち</td>
+				    <td>…日，…号</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>何日</td>
+				    <td>なんにち</td>
+				    <td>几日，几号</td>
+				    <td></td>
+				</tr>
+				<tr>
+				    <td>いつ</td>
+				    <td>いつ</td>
+				    <td>什么时候</td>
+				    <td>1</td>
+				</tr>
+				<tr>
+				    <td>誕生日</td>
+				    <td>たんじょうび</td>
+				    <td>生日</td>
+				    <td>3</td>
+				</tr>
+				<tr>
+				    <td>普通</td>
+				    <td>ふつう</td>
+				    <td>普通车</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>急行</td>
+				    <td>きゅうこう</td>
+				    <td>快车</td>
+				    <td>0</td>
+				</tr>
+				<tr>
+				    <td>次の</td>
+				    <td>つぎの</td>
+				    <td>下一个，下一次</td>
+				    <td>0</td>
+				</tr>
+			    </tbody>
+			</table>
+		    </p>
+
+
+		    <br/>
+
+		    <h2 class="display-6">文型</h2>
+		    <p>わたしは 京都へ 行きます。#我到京都去。</p>
+		    <p>わたしは タクシーで うちへ 帰ります。#我坐出租车回家。</p>
+		    <p>わたしは 家族と 日本へ 来ました。#我和家人来到了日本。</p>
+
+
+		    <br/>
+
+		    <h2 class="display-6">例文</h2>
+		    <p>あした どこへ 行きますか。#明天去哪儿？</p>
+		    <p>…奈良へ 行きます。#…去奈良。</p>
+
+		    <p>日曜日 どこへ 行きましたか。#星期天去哪儿了？</p>
+		    <p>…どこ［へ］も 行きませんでした。#…哪儿也没去。</p>
+
+		    <p>何で 東京へ 行きますか。#坐什么去东京呢？</p>
+		    <p> …新幹線で 行きます。#…坐新干线去。</p>
+
+		    <p>だれと 東京へ 行きますか。#和谁去东京呢？</p>
+		    <p>…山田さんと 行きます。#…和山田一起去。</p>
+
+		    <p>いつ 日本へ 来ましたか。#什么时候来日本的？</p>
+		    <p> …3月25日に 来ました。#…3月25日来的。</p>
+
+		    <p>誕生日は いつですか。#生日是什么时候？</p>
+		    <p>…6月13日です。#…6月13日。</p>
+		    <br/>
+
+		    <h2 class="display-6">会話</h2>
+		    <p>甲子園へ 行きますか#去甲子园吗</p>
+
+		    <p>すみません。 甲子園まで いくらですか。#请问一下，到甲子园多少钱？</p>
+		    <p>350円です。#350日元。</p>
+		    <p> 350円ですね。 ありがとう ございました。#350日元啊，谢谢。</p>
+		    <p>どう いたしまして。#不客气。</p>
+
+		    ------------------------------
+
+		    <p>すみません。 甲子園は 何番線ですか。#请问，到甲子园是几号站台？</p>
+		    <p> 5番線です。#5号站台。</p>
+		    <p>どうも。#谢谢。</p>
+
+		    -----------------------------
+
+		    <p>あのう、この 電車は 甲子園へ 行きますか。#请问，这趟电车去甲子园吗？</p>
+		    <p> いいえ。 次の 「普通」 ですよ。#不去。下一趟“慢车”去。</p>
+		    <p>そうですか。 どうも。#是吗，谢谢。</p>
+
+		</div>
+	    </div>
+	</article>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
